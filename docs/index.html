@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WAI-Research — Women in AI Weekly Dashboard</title>
+<meta name="description" content="Weekly evidence-based dashboard tracking women's participation, advancement, and pay in AI. Citation-backed statistics from Stanford HAI, WEF, UNESCO, McKinsey, BLS, CRA Taulbee, and other Tier 1 sources.">
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-2: #161b22;
+    --bg-3: #1f2630;
+    --fg: #e6edf3;
+    --fg-muted: #9da7b3;
+    --fg-dim: #6e7681;
+    --accent: #d29bfd;
+    --accent-2: #79c0ff;
+    --good: #56d364;
+    --warn: #f0b849;
+    --bad: #ff7b72;
+    --border: #30363d;
+    --link: #79c0ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+  header { padding: 8px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+  .eyebrow { color: var(--accent); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+  h1 { font-size: 34px; line-height: 1.15; margin: 6px 0 8px; font-weight: 700; letter-spacing: -0.01em; }
+  .subtitle { color: var(--fg-muted); font-size: 16px; max-width: 760px; margin: 0; }
+  .meta { color: var(--fg-dim); font-size: 13px; margin-top: 14px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .meta b { color: var(--fg); font-weight: 600; }
+  section { margin: 36px 0; }
+  h2 { font-size: 22px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.005em; }
+  h2 .count { color: var(--fg-dim); font-size: 14px; font-weight: 400; margin-left: 8px; }
+  .section-sub { color: var(--fg-muted); font-size: 14px; margin: 0 0 18px; }
+  /* Stat grid */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .stat { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; transition: border-color 0.15s ease, transform 0.15s ease; }
+  .stat:hover { border-color: var(--accent); }
+  .stat .value { font-size: 28px; font-weight: 700; color: var(--fg); line-height: 1.1; letter-spacing: -0.01em; }
+  .stat .label { color: var(--fg-muted); font-size: 13px; margin-top: 6px; line-height: 1.4; }
+  .stat .src { color: var(--fg-dim); font-size: 11px; margin-top: 10px; }
+  .stat .src a { color: var(--fg-dim); }
+  .stat.bad .value { color: var(--bad); }
+  .stat.warn .value { color: var(--warn); }
+  .stat.good .value { color: var(--good); }
+  .stat.accent .value { color: var(--accent); }
+  /* Reports list */
+  .reports { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+  .report-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+  .report-card:hover { border-color: var(--accent-2); }
+  .report-card .date { color: var(--fg-dim); font-size: 12px; }
+  .report-card .week { color: var(--accent); font-size: 12px; font-weight: 600; margin-left: 8px; }
+  .report-card h3 { margin: 6px 0 8px; font-size: 16px; font-weight: 600; }
+  .report-card h3 a { color: var(--fg); }
+  .report-card .one-liner { color: var(--fg-muted); font-size: 13px; margin: 0; }
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; }
+  th { background: var(--bg-3); font-weight: 600; color: var(--fg-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:last-child td { border-bottom: none; }
+  /* Coverage bars */
+  .coverage-row { display: grid; grid-template-columns: 200px 1fr 30px; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .coverage-row:last-child { border-bottom: none; }
+  .coverage-label { color: var(--fg-muted); font-size: 13px; }
+  .coverage-bar { height: 8px; background: var(--bg-3); border-radius: 4px; overflow: hidden; }
+  .coverage-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  .coverage-count { text-align: right; color: var(--fg); font-size: 13px; font-weight: 600; }
+  /* Gap list */
+  .gap-list { list-style: none; padding: 0; margin: 0; }
+  .gap-list li { padding: 12px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 100px 1fr; gap: 16px; }
+  .gap-list li:last-child { border-bottom: none; }
+  .gap-list .where { color: var(--fg-dim); font-size: 12px; padding-top: 2px; }
+  .gap-list .what { color: var(--fg); font-size: 14px; }
+  /* Wins list */
+  .wins { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .win { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; border-left: 3px solid var(--good); }
+  .win .name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .win .outcome { color: var(--fg-muted); font-size: 13px; }
+  .win .src { color: var(--fg-dim); font-size: 11px; margin-top: 6px; }
+  /* Footer */
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--fg-dim); font-size: 12px; }
+  footer a { color: var(--fg-muted); }
+  .tag { display: inline-block; background: var(--bg-3); color: var(--fg-muted); border-radius: 999px; padding: 2px 8px; font-size: 11px; margin-right: 4px; }
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    .container { padding: 20px 16px 60px; }
+    .stat .value { font-size: 24px; }
+    .coverage-row { grid-template-columns: 120px 1fr 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="eyebrow">WAI-Research · Weekly market research</div>
+  <h1>Women in AI — Live Dashboard</h1>
+  <p class="subtitle">A growing, citation-backed knowledge base on the participation, advancement, and lived experience of women in AI. One report every Monday. Every statistic traced to a named primary source.</p>
+  <div class="meta">
+    <span><b>Last updated:</b> 2026-06-09</span>
+    <span><b>Reports filed:</b> 5</span>
+    <span><b>Unique sources cited:</b> 60+</span>
+    <span><b>Tracked time series:</b> 13</span>
+    <span><b>Evidence gaps logged:</b> 17</span>
+  </div>
+</header>
+
+<section>
+  <h2>Headline numbers</h2>
+  <p class="section-sub">The state of women in AI today. Hover any tile for the full citation in its source report.</p>
+  <div class="stat-grid">
+
+    <div class="stat bad">
+      <div class="value">22%</div>
+      <div class="label">Women's share of the global AI workforce</div>
+      <div class="src">Stanford HAI AI Index 2024 · UNESCO 2024 · Interface EU 2024</div>
+    </div>
+
+    <div class="stat accent">
+      <div class="value">30.5%</div>
+      <div class="label">Women's share of AI-skill-listing professionals on LinkedIn — the "skill exists; role does not"</div>
+      <div class="src">LinkedIn Economic Graph / WEF GGGR 2024</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">&lt;14%</div>
+      <div class="label">Senior executive AI roles held by women</div>
+      <div class="src">Interface EU, AI's Missing Link, 2024</div>
+    </div>
+
+    <div class="stat warn">
+      <div class="value">22.6%</div>
+      <div class="label">Women's share of US CS bachelor's degrees</div>
+      <div class="src">NCES IPEDS Digest T.325.35, 2021–22</div>
+    </div>
+
+    <div class="stat">
+      <div class="value">37.1%</div>
+      <div class="label">Historical peak (1983–84) of women's share of US CS BAs — the trajectory is reversible</div>
+      <div class="src">NCES IPEDS Digest T.325.35</div>
+    </div>
+
+    <div class="stat warn">
+      <div class="value">33.8%</div>
+      <div class="label">Women in AP CS Principles (vs. AP CS A: 25%) — entry-course design matters</div>
+      <div class="src">College Board, 2023</div>
+    </div>
+
+    <div class="stat good">
+      <div class="value">25.9%</div>
+      <div class="label">Women's share of CS/CE/I PhDs (US/Can) — 8th straight annual rise</div>
+      <div class="src">CRA Taulbee Survey, 2023–24</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">&lt;19%</div>
+      <div class="label">Women's share of AI-specialty PhDs, 10-year average</div>
+      <div class="src">Stanford HAI AI Index 2024</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">16.1%</div>
+      <div class="label">Women on tenure-track AI faculty at top-18 universities</div>
+      <div class="src">Stanford HAI AI Index 2024</div>
+    </div>
+
+    <div class="stat warn">
+      <div class="value">81</div>
+      <div class="label">Women hired/promoted at entry-to-manager per 100 men — the "broken rung"</div>
+      <div class="src">McKinsey/LeanIn Women in the Workplace 2024</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">21% vs 33%</div>
+      <div class="label">Entry-level women vs. men told by manager to use AI tools (2025)</div>
+      <div class="src">McKinsey/LeanIn Women in the Workplace 2025</div>
+    </div>
+
+    <div class="stat">
+      <div class="value">27.2%</div>
+      <div class="label">Women in US technical roles at Google &amp; Microsoft</div>
+      <div class="src">Google Diversity Annual Report 2024 · Microsoft GDIR 2024</div>
+    </div>
+
+    <div class="stat warn">
+      <div class="value">19.5%</div>
+      <div class="label">Women among EU ICT specialists</div>
+      <div class="src">Eurostat 2024</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">$0.80</div>
+      <div class="label">Women's $ per men's $1, US Computer &amp; Mathematical occupations (uncontrolled)</div>
+      <div class="src">BLS Highlights of Women's Earnings 2024</div>
+    </div>
+
+    <div class="stat warn">
+      <div class="value">$0.97</div>
+      <div class="label">Same gap, controlled for role, level, experience, location</div>
+      <div class="src">Payscale 2024 Gender Pay Gap Report</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">35% / 20%</div>
+      <div class="label">Women: % of equity-holders / % of equity value — the equity gap is bigger than the cash gap</div>
+      <div class="src">Carta Gap Table</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">$0.63</div>
+      <div class="label">Black women's $ per white non-Hispanic men's $1 (all occupations)</div>
+      <div class="src">NWLC / IWPR 2024</div>
+    </div>
+
+    <div class="stat bad">
+      <div class="value">$0.54–$0.58</div>
+      <div class="label">Latina women's $ per white non-Hispanic men's $1</div>
+      <div class="src">NWLC / IWPR 2024</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Recent reports <span class="count">— 5 filed</span></h2>
+  <p class="section-sub">One report every Monday. Click through to the full citation-backed analysis.</p>
+  <div class="reports">
+
+    <div class="report-card">
+      <div><span class="date">2026-06-08</span><span class="week">Week 5</span></div>
+      <h3><a href="../reports/2026-06-08_pay-gap.md">The pay gap in AI and machine learning roles</a></h3>
+      <p class="one-liner">BLS $0.80 uncontrolled, Payscale $0.97 controlled — but the equity gap (5-to-1 underweight) is where lifetime AI compensation is decided.</p>
+    </div>
+
+    <div class="report-card">
+      <div><span class="date">2026-06-01</span><span class="week">Week 4</span></div>
+      <h3><a href="../reports/2026-06-01_entry-level-roles.md">Entry-level AI roles: first job in AI/ML</a></h3>
+      <p class="one-liner">The 2025 AI-tool encouragement gap (21% women vs. 33% men) plus the broken rung at entry — 81 women hired per 100 men.</p>
+    </div>
+
+    <div class="report-card">
+      <div><span class="date">2026-05-25</span><span class="week">Week 3</span></div>
+      <h3><a href="../reports/2026-05-25_phd-programs.md">Graduate school: women in AI/ML PhD programs</a></h3>
+      <p class="one-liner">25.9% women in CS PhDs — 8th straight annual rise. The advisor-gender effect is the most robust finding in the literature.</p>
+    </div>
+
+    <div class="report-card">
+      <div><span class="date">2026-05-18</span><span class="week">Week 2</span></div>
+      <h3><a href="../reports/2026-05-18_undergraduate-pipeline.md">The pipeline: women in undergraduate CS and AI programs</a></h3>
+      <p class="one-liner">22.6% today; 37.1% in 1983–84; trough 17.6% in 2010–11 — the trajectory is reversible. AP CSP is the lever that works.</p>
+    </div>
+
+    <div class="report-card">
+      <div><span class="date">2026-05-11</span><span class="week">Week 1</span></div>
+      <h3><a href="../reports/2026-05-11_workforce-representation.md">State of women in AI: representation across the workforce</a></h3>
+      <p class="one-liner">22% global — flat for a decade. The 8-point gap between skill supply (30.5%) and role share (22%) is the field's biggest unsolved problem.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Coverage map</h2>
+  <p class="section-sub">Where the knowledge base is dense — and where the gaps are.</p>
+
+  <h3 style="font-size:15px;color:var(--fg-muted);margin:18px 0 8px;font-weight:600;">By career phase</h3>
+  <div>
+    <div class="coverage-row"><div class="coverage-label">Pre-entry (K-12, UG)</div><div class="coverage-bar"><div class="coverage-fill" style="width:40%"></div></div><div class="coverage-count">2</div></div>
+    <div class="coverage-row"><div class="coverage-label">Entry</div><div class="coverage-bar"><div class="coverage-fill" style="width:40%"></div></div><div class="coverage-count">2</div></div>
+    <div class="coverage-row"><div class="coverage-label">Early career</div><div class="coverage-bar"><div class="coverage-fill" style="width:20%"></div></div><div class="coverage-count">1</div></div>
+    <div class="coverage-row"><div class="coverage-label">Mid-career</div><div class="coverage-bar"><div class="coverage-fill" style="width:0%"></div></div><div class="coverage-count">0</div></div>
+    <div class="coverage-row"><div class="coverage-label">Senior</div><div class="coverage-bar"><div class="coverage-fill" style="width:0%"></div></div><div class="coverage-count">0</div></div>
+    <div class="coverage-row"><div class="coverage-label">Executive / founder</div><div class="coverage-bar"><div class="coverage-fill" style="width:20%"></div></div><div class="coverage-count">1</div></div>
+    <div class="coverage-row"><div class="coverage-label">Re-entry</div><div class="coverage-bar"><div class="coverage-fill" style="width:0%"></div></div><div class="coverage-count">0</div></div>
+    <div class="coverage-row"><div class="coverage-label">All phases</div><div class="coverage-bar"><div class="coverage-fill" style="width:40%"></div></div><div class="coverage-count">2</div></div>
+  </div>
+
+  <h3 style="font-size:15px;color:var(--fg-muted);margin:22px 0 8px;font-weight:600;">By geography</h3>
+  <div>
+    <div class="coverage-row"><div class="coverage-label">Global / multi-region</div><div class="coverage-bar"><div class="coverage-fill" style="width:100%"></div></div><div class="coverage-count">5</div></div>
+    <div class="coverage-row"><div class="coverage-label">United States</div><div class="coverage-bar"><div class="coverage-fill" style="width:100%"></div></div><div class="coverage-count">5</div></div>
+    <div class="coverage-row"><div class="coverage-label">European Union</div><div class="coverage-bar"><div class="coverage-fill" style="width:80%"></div></div><div class="coverage-count">4</div></div>
+    <div class="coverage-row"><div class="coverage-label">United Kingdom</div><div class="coverage-bar"><div class="coverage-fill" style="width:60%"></div></div><div class="coverage-count">3</div></div>
+    <div class="coverage-row"><div class="coverage-label">India</div><div class="coverage-bar"><div class="coverage-fill" style="width:60%"></div></div><div class="coverage-count">3</div></div>
+    <div class="coverage-row"><div class="coverage-label">China</div><div class="coverage-bar"><div class="coverage-fill" style="width:20%"></div></div><div class="coverage-count">1</div></div>
+    <div class="coverage-row"><div class="coverage-label">Latin America / Africa</div><div class="coverage-bar"><div class="coverage-fill" style="width:20%"></div></div><div class="coverage-count">1</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>What works <span class="count">— interventions with measured outcomes</span></h2>
+  <p class="section-sub">Programs and policies that have moved the number — with comparison-group or longitudinal evidence behind them.</p>
+  <div class="wins">
+
+    <div class="win">
+      <div class="name">Girls Who Code — Summer Immersion</div>
+      <div class="outcome">Participants +13.2 pp more likely to major in CS than a propensity-weighted comparison group. Alumni at 15× national average for CS majors (16× for Black/Latina alumni).</div>
+      <div class="src">American Institutes for Research evaluation, March 2024 (ERIC ED647331)</div>
+    </div>
+
+    <div class="win">
+      <div class="name">BRAID Initiative — 15 CS departments</div>
+      <div class="outcome">108% rise in women's CS enrollment over the BRAID period; women's enrollment growth outpaced overall growth at every participating institution.</div>
+      <div class="src">UCLA / Linda Sax / NSF Award 1525737</div>
+    </div>
+
+    <div class="win">
+      <div class="name">CRA-W Grad Cohort for Women</div>
+      <div class="outcome">67% of attendees intend to pursue PhD vs. 29% non-participants; 71% first-author publishing rate vs. 23% (1–3 years post-workshop).</div>
+      <div class="src">PNAS / PMC5222789</div>
+    </div>
+
+    <div class="win">
+      <div class="name">Code2040 Fellows</div>
+      <div class="outcome">~90% return-offer rate (vs. ~45–50% industry baseline); 100% subsequently work in tech. Intersectional by design — Black and Latinx CS undergrads.</div>
+      <div class="src">Code2040 program data</div>
+    </div>
+
+    <div class="win">
+      <div class="name">Salesforce equal-pay audits</div>
+      <div class="outcome">~$10.3M in cumulative adjustments by 2019; $5.6M in 2022 alone. Now publishes adjusted pay ratios by gender and race.</div>
+      <div class="src">Salesforce equality updates, 2015–present</div>
+    </div>
+
+    <div class="win">
+      <div class="name">Colorado Equal Pay for Equal Work Act</div>
+      <div class="outcome">State pay gap 78¢ (2021) → 86¢ (Jul 2025) — a 7-point gain in 3.5 years that does not show up at comparable speed in BLS national data.</div>
+      <div class="src">Women's Foundation of Colorado / Tejara analysis · Cullen JEP 2024</div>
+    </div>
+
+    <div class="win">
+      <div class="name">AnitaB.org Top Companies benchmark</div>
+      <div class="outcome">7 consecutive years of rising women's tech-hire share at participating firms; attrition reached near-parity with men. <em>Program paused in 2024 — the only multi-year industry benchmark interrupted.</em></div>
+      <div class="src">AnitaB.org Top Companies for Women Technologists 2023</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>What's missing <span class="count">— 17 evidence gaps logged</span></h2>
+  <p class="section-sub">Where the data is silent, the policy is absent, or the program does not exist. These are the questions the literature has not answered yet.</p>
+  <ul class="gap-list">
+    <li><span class="where">Week 3</span><span class="what">No public dataset of <b>AI-PhD completion rates by gender</b> — the single largest gap in the evidence base. CRA tracks enrollment and degree production separately but does not publish cohort persistence.</span></li>
+    <li><span class="where">Week 1</span><span class="what">No primary-source figure for women's share of <b>Principal / Staff+ AI IC roles</b>. The most recent senior-IC benchmarks (Facebook 15%, Google 10%) are from 2019.</span></li>
+    <li><span class="where">Week 1</span><span class="what">No 2023+ figure for <b>Black women's share of AI-specific technical roles</b>. Most-cited statistic (3%) is from 2017 NCWIT and is not AI-specific.</span></li>
+    <li><span class="where">Week 5</span><span class="what">No primary source isolates the <b>AI engineer / ML scientist pay gap</b>. BLS has no separate SOC code; Payscale and Levels.fyi do not publish AI-only cuts.</span></li>
+    <li><span class="where">Week 5</span><span class="what">No <b>intersectional (race × gender) pay data inside AI/ML roles</b> — all available numbers are all-occupation.</span></li>
+    <li><span class="where">Week 5</span><span class="what">No <b>equity-equity audit</b> at any AI lab. Given AI offers are 60–80% equity, this is the largest under-measured component of women's AI pay.</span></li>
+    <li><span class="where">Week 4</span><span class="what">AI residency programs (<b>Google, Meta, OpenAI, Anthropic</b>) explicitly recruit underrepresented applicants but do not publicly disclose acceptance rates, gender composition, or conversion-to-FT rates.</span></li>
+    <li><span class="where">Week 4</span><span class="what">No public <b>AI hiring funnel</b> (applied → interviewed → offered → accepted) split by gender.</span></li>
+    <li><span class="where">Week 4</span><span class="what">No published <b>12-month retention rate specific to entry-level women in AI/ML</b>. The 50%-leave-by-age-35 stat is all of tech, not AI.</span></li>
+    <li><span class="where">Week 1, 4</span><span class="what"><b>AnitaB.org Top Companies benchmark paused in 2024</b> — the only multi-year industry benchmark of women technologists at named employers is interrupted.</span></li>
+    <li><span class="where">Week 2</span><span class="what">No <b>standardized national data on women in AI-specific UG concentrations</b>. IPEDS CIP exists but institutional reporting is too thin.</span></li>
+    <li><span class="where">Week 2</span><span class="what">No <b>national US attrition rate for women in CS undergrad</b>. Single-institution figures (13.6% vs. 2.5%, 21% vs. 15%) are old or non-representative.</span></li>
+    <li><span class="where">Week 2</span><span class="what"><b>China CS undergrad gender data</b> are not openly published at the national level.</span></li>
+    <li><span class="where">Week 3</span><span class="what">No <b>gender-disaggregated AI postdoc population</b>. NSF GSS reports postdoc gender for all S&amp;E but not AI as a subfield.</span></li>
+    <li><span class="where">Week 3</span><span class="what"><b>2024 CRA Taulbee AI-specialty × gender cross-tab</b> is not publicly summarized. Last published 2019 (women = 13.4% of AI/ML PhD recipients, 2012–2018 aggregate).</span></li>
+    <li><span class="where">Week 3</span><span class="what">No measured longitudinal <b>placement outcomes for WiML or Rising Stars in EECS</b>. Both widely used; neither has published comparison-group data.</span></li>
+    <li><span class="where">Week 5</span><span class="what">No <b>India-specific AI/ML gender pay</b> number from NASSCOM or Monster. NASSCOM 2024 covers AI/ML premiums but not by gender.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Most-cited primary sources</h2>
+  <p class="section-sub">The longitudinal series and reports that anchor this knowledge base. Tier 1 = primary statistical body or peer-reviewed academic; Tier 2 = credible specialist with audited methodology; Tier 3 = self-reported employer or consultancy data.</p>
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Times cited</th><th>Tier</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Stanford HAI — AI Index Report (2023/2024/2025)</td><td>5</td><td>1</td></tr>
+      <tr><td>CRA Taulbee Survey (2022/2023/2024)</td><td>4</td><td>1</td></tr>
+      <tr><td>World Economic Forum — Global Gender Gap Report 2024</td><td>4</td><td>1</td></tr>
+      <tr><td>UNESCO — Women for Ethical AI (2024)</td><td>3</td><td>1</td></tr>
+      <tr><td>McKinsey + LeanIn — Women in the Workplace (2024/2025)</td><td>3</td><td>1</td></tr>
+      <tr><td>LinkedIn Economic Graph — AI workforce / talent</td><td>3</td><td>1</td></tr>
+      <tr><td>NSF NCSES — Diversity and STEM / SED</td><td>3</td><td>1</td></tr>
+      <tr><td>Interface EU — AI's Missing Link</td><td>3</td><td>2</td></tr>
+      <tr><td>NCES IPEDS Digest — Table 325.35</td><td>2</td><td>1</td></tr>
+      <tr><td>Eurostat — ICT and gender pay gap data</td><td>2</td><td>1</td></tr>
+      <tr><td>BLS — Highlights of Women's Earnings 2024</td><td>1</td><td>1</td></tr>
+      <tr><td>Payscale — Gender Pay Gap Report 2024</td><td>1</td><td>2</td></tr>
+      <tr><td>Carta — Gap Table</td><td>1</td><td>2</td></tr>
+      <tr><td>AnitaB.org — Top Companies for Women Technologists</td><td>2</td><td>2</td></tr>
+      <tr><td>Girls Who Code / AIR independent evaluation</td><td>2</td><td>2</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <p>WAI-Research runs every Monday at 09:00 America/Chicago. The agent reads its <code>brain/</code> for context, picks the week's topic from a 52-week rotation, gathers evidence from primary sources, writes a 1,500–3,500-word report into <code>reports/</code>, updates this dashboard, and commits to <a href="https://github.com/aiforheratx/MarketResearch">aiforheratx/MarketResearch</a>.</p>
+  <p>Source: <a href="https://github.com/aiforheratx/MarketResearch">github.com/aiforheratx/MarketResearch</a> · <a href="../README.md">README</a> · <a href="../AGENT.md">Agent contract</a> · <a href="../brain/methodology.md">Methodology</a> · <a href="../brain/sources.md">Source list</a> · <a href="../brain/topic_rotation.md">52-week topic rotation</a></p>
+</footer>
+
+</div>
+</body>
+</html>

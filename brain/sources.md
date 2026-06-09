@@ -96,3 +96,71 @@ When a new credible source is discovered during a weekly run, append it here (no
 - `<topic> "diversity report" "machine learning"`
 - `<topic> site:oecd.ai OR site:weforum.org OR site:unesco.org`
 - `<topic> "Taulbee" OR "AI Index" OR "Global Gender Gap"`
+
+---
+
+## Sources discovered and confirmed across reports 1–5 (demo run, 2026-06-09)
+
+### Tier 1 — confirmed primary sources used
+- Stanford HAI — *AI Index Report 2024* (Chapter 6 Education; Chapter 8 Diversity). https://hai.stanford.edu/ai-index/2024-ai-index-report
+- Stanford HAI — *AI Index Report 2023* and *AI Index Report 2025*
+- World Economic Forum — *Global Gender Gap Report 2024*. https://www3.weforum.org/docs/WEF_GGGR_2024.pdf
+- World Economic Forum — *Gender Parity in the Intelligent Age* whitepaper (Mar 2025)
+- LinkedIn Economic Graph — *Generative AI and Gender* (2024). https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/generative-ai-and-gender.pdf
+- LinkedIn Economic Graph — *Women and Future Jobs / AI Talent Index*
+- OECD.AI — *2023 LinkedIn AI workforce analysis* and live AI talent indicators. https://oecd.ai
+- UNESCO — *Women for Ethical AI: Outlook Study* (Oct 2024). https://unesdoc.unesco.org/ark:/48223/pf0000391719
+- UNESCO — *Cracking the Code* (2017); *Status and Trends: Gender Gap in Science*
+- McKinsey + LeanIn — *Women in the Workplace 2024* and *2025*. https://wiw-report.s3.us-east-1.amazonaws.com/Women_in_the_Workplace_2025.pdf
+- CRA — *Taulbee Survey 2022, 2023, 2024*. https://cra.org
+- NSF NCSES — *Diversity and STEM 2023* (NSF 23-315); *Women, Minorities, and Persons with Disabilities in S&E 2021* (NSF 21-321); *Doctorate Recipients from US Universities 2023 (SED)*; *Postdoctoral Appointments Rise*; *Science & Engineering Indicators 2024*
+- NCES — *Digest of Education Statistics 2023, Table 325.35*. https://nces.ed.gov/programs/digest/d23/tables/dt23_325.35.asp
+- College Board — AP CS Female Diversity Award participation data
+- HESA — *UK Higher Education Student Statistics 2023/24 (SB271)*
+- OECD — *Education at a Glance 2023*
+- Eurostat — *ICT specialists 2024*; *ICT education statistics*; *Gender pay gap statistics*
+- BLS — *Highlights of Women's Earnings 2024*; *OEWS Computer/Information Research Scientists*; *Data Scientists OOH*
+- ONS UK — *Gender pay gap in the UK 2024 (ASHE)*
+- Destatis — *Gender Pay Gap 2024 (Germany)*
+- INSEE — *Gender pay gap 2024 (France)*
+- Indeed Hiring Lab — *AI at Work Report 2025*
+- PNAS / NIH PMC — *Grad Cohort Workshop evaluation* (PMC5222789)
+
+### Tier 2 — confirmed credible secondary sources used
+- Interface EU — *AI's Missing Link* (2024). https://www.interface-eu.org/publications/ai-gender-gap
+- AI Now Institute — *Discriminating Systems* (2019)
+- AnitaB.org — *Top Companies for Women Technologists 2023* (program paused 2024)
+- Pew Research — pay gap and negotiation reports (2024, 2023)
+- AAUW — *The Simple Truth 2024/2026*
+- IWPR — *National Wage Gap Fact Sheet 2024*
+- National Women's Law Center — *Window Into the Wage Gap*
+- National Partnership for Women & Families — *AI and Emerging Risks for Women Workers* (2024)
+- Payscale — *2024 Gender Pay Gap Report* and *2026* update
+- Levels.fyi — *Gender Pay Gap Report Q1 2024*
+- Carta — *Analyzing the Gender Equity Gap (Gap Table)*
+- Kapor Center — *Tech Leavers Study 2017*
+- American Institutes for Research — *Girls Who Code Program Evaluation* (March 2024, ERIC ED647331)
+- UCLA / Linda Sax — *BRAID Initiative* longitudinal study (NSF Award 1525737)
+- WiML Workshop, MIT Rising Stars in EECS, CRA-W Grad Cohort
+- Bostwick & Weinberg — *Nevertheless She Persisted* (NBER / JOLE) [paywalled]
+- Canaan & Mouganie — Advisor Gender Impact (JHR) [paywalled]
+- Gaule & Piacentini — Advisor like me (Research Policy) [paywalled]
+- Vanderbilt / Kennedy — negotiation research (2023)
+- SWE — *India Tertiary Education 2025*
+- Cullen Z. — *Is Pay Transparency Good?* (JEP 2024)
+- Arnold et al. — *Impact of Pay Transparency in Job Postings*
+
+### Tier 3 — used as analysis/context (anchor numbers always traced to Tier 1/2)
+- Google *Diversity Annual Report 2024*
+- Microsoft *Global D&I Report 2024*
+- Russell Reynolds Associates — *AI for All*
+- Deloitte — *Women in AI 2024*
+- Salesforce *Equality Updates 2023*
+- Alan Turing Institute — *Where are the Women*
+- NASSCOM — *India Tech Compensation Benchmarking 2024* [paywalled for full data]
+- Monster Salary Index / IIMA — India gender pay gap
+- IBEF — India AI/ML enrollment
+- Code2040 *Fellows program data*
+- AI4ALL *Results*
+- Rockman et al. *Black Girls CODE case study 2017*
+- CACM — *Toward Improving Female Retention in CS*
