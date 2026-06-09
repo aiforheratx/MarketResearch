@@ -4,12 +4,14 @@ A scheduled research agent that produces a deep-research report every **Monday a
 
 ## What this agent delivers (every Monday)
 
-1. **One focused report** on the week's rotating topic (see `brain/topic_rotation.md`).
+1. **One focused report on the week's rotating topic** (see `brain/topic_rotation.md`), delivered in two formats:
+   - **Markdown deep analysis** under `reports/` — full annotations, easy to read in GitHub.
+   - **Presentation white paper** under `whitepapers/` — HTML with inline SVG charts, scholarly typography, and a print-to-PDF stylesheet for sharing or slides.
 2. **Statistics with citations** — every percentage and number traces back to a named published source (report, paper, dataset, or institution).
 3. **Source list** — white papers, statistical reports, academic publications, industry studies.
 4. **Analysis** — what the data means, what's changing, what's stuck.
 5. **Action recommendations** — concrete next steps the reader can take based on the findings.
-6. **Dashboard update** — running metrics, topics covered, key numbers logged over time.
+6. **Dashboard update** — running metrics, topics covered, key numbers logged over time. Both the markdown dashboard (`dashboard/dashboard.md`) and the live HTML dashboard (`docs/index.html`) get refreshed each Monday.
 
 ## Directory layout
 
@@ -27,10 +29,17 @@ MarketResearch/
 │   └── history.md             ← Run log appended after each weekly run
 ├── reports/                   ← One markdown report per Monday
 │   ├── _template.md
-│   └── YYYY-MM-DD_topic.md
+│   └── YYYY-MM-DD_<slug>.md
+├── whitepapers/               ← Presentation-style HTML versions of every report
+│   ├── README.md              ← Index of all white papers
+│   ├── _template.html         ← Blueprint for future runs
+│   ├── _assets/style.css      ← Shared scholarly white-paper CSS (print-to-PDF ready)
+│   └── YYYY-MM-DD_<slug>.html ← One white paper per Monday
 ├── dashboard/                 ← Cross-report tracking
 │   ├── dashboard.md           ← Main running dashboard
 │   └── metrics.md             ← Time-series of tracked numbers
+├── docs/                      ← GitHub Pages root
+│   └── index.html             ← Live HTML dashboard
 ├── schedule/
 │   └── cron_config.md         ← Schedule details and timezone notes
 └── sources_archive/           ← Cached copies of referenced reports (PDFs, snapshots)

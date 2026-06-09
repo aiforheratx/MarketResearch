@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entry-level AI roles: first job in AI/ML — WAI-Research Week 4</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 4 · 2026-06-01</div>
+  <h1 class="title">Entry-level AI roles: first job in AI/ML</h1>
+  <p class="subtitle">A 12-point gap in who is told to use AI tools, at the very moment when AI fluency becomes a promotion lever.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-06-01</span>
+    <span><b>Length:</b> ~2,100 words</span>
+    <span><b>Sources cited:</b> 19</span>
+    <span><b>Tier 1:</b> 9 · <b>Tier 2:</b> 4 · <b>Tier 3:</b> 6</span>
+  </div>
+  <div class="hero">
+    <div class="stat">21% vs 33%</div>
+    <div class="stat-caption">Entry-level women report being encouraged by their manager to use AI tools at 21%; men at 33% (McKinsey/LeanIn <i>Women in the Workplace 2025</i>). The most consequential new data point of 2025.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  The most striking new finding in 2025 is from McKinsey/LeanIn's <i>Women in the Workplace 2025</i>: <b>entry-level women report 21% manager encouragement to use AI tools vs. 33% for men</b> — a 12-point gap at the very moment when AI fluency is becoming a promotion lever. The classic "broken rung" persists too: <b>for every 100 men hired or promoted into entry-level-or-manager roles, only 81 women are</b>. And the most-cited entry-level women-in-tech retention statistic — 50% of women in tech leave by age 35 (AnitaB.org) — has <i>no AI-specific equivalent</i> in any public dataset. The data we have about women's first AI jobs is dominated by what we do not measure.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell accent"><div class="v">30.5%</div><div class="l">Women's share of global AI engineering skills</div><div class="s">LinkedIn / OECD.AI 2024</div></div>
+  <div class="cell warn"><div class="v">27.2%</div><div class="l">Women in US technical roles at Google &amp; Microsoft</div><div class="s">Diversity reports 2024</div></div>
+  <div class="cell warn"><div class="v">19.5%</div><div class="l">Women in EU ICT specialists</div><div class="s">Eurostat 2024</div></div>
+  <div class="cell bad"><div class="v">81</div><div class="l">Women hired/promoted at entry-to-manager per 100 men</div><div class="s">McKinsey/LeanIn 2024</div></div>
+  <div class="cell bad"><div class="v">21% / 33%</div><div class="l">Entry AI-tool encouragement: women vs. men (2025)</div><div class="s">McKinsey/LeanIn WitW 2025</div></div>
+  <div class="cell bad"><div class="v">31% → 28%</div><div class="l">Women in AI skills, financial services (declined)</div><div class="s">OECD.AI / LinkedIn 2016–23</div></div>
+  <div class="cell good"><div class="v">~90%</div><div class="l">Code2040 Fellows return-offer rate (vs. ~50% baseline)</div><div class="s">Code2040 data</div></div>
+  <div class="cell good"><div class="v">~35%</div><div class="l">Singapore: women in AI engineering talent (global leader)</div><div class="s">LinkedIn / OECD.AI 2023</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">Representation at named AI employers (2024)</div>
+  <div class="sub">Three reference points and a regional anchor. Google and Microsoft converge at 27.2%; NVIDIA at 19%; EU average at 19.5%.</div>
+  <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart of women's share of technical roles at major AI employers and EU average">
+    <line x1="200" y1="20" x2="200" y2="200" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- gridlines: scale 12px per 1%, max 40% -->
+    <line x1="320" y1="20" x2="320" y2="200" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="440" y1="20" x2="440" y2="200" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="560" y1="20" x2="560" y2="200" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="680" y1="20" x2="680" y2="200" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="320" y="215" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">10%</text>
+    <text x="440" y="215" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">20%</text>
+    <text x="560" y="215" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">30%</text>
+    <text x="680" y="215" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">40%</text>
+    <!-- bars (height 28, gap 12) -->
+    <text x="190" y="50" text-anchor="end" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">Google (US tech)</text>
+    <rect x="200" y="38" width="326.4" height="22" fill="#6f3aa0"/>
+    <text x="536" y="55" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">27.2%</text>
+
+    <text x="190" y="86" text-anchor="end" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">Microsoft (tech)</text>
+    <rect x="200" y="74" width="326.4" height="22" fill="#6f3aa0"/>
+    <text x="536" y="91" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">27.2%</text>
+
+    <text x="190" y="122" text-anchor="end" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">NVIDIA (total)</text>
+    <rect x="200" y="110" width="228" height="22" fill="#b07b0c"/>
+    <text x="438" y="127" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">19%</text>
+
+    <text x="190" y="158" text-anchor="end" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">EU ICT specialists</text>
+    <rect x="200" y="146" width="234" height="22" fill="#b07b0c"/>
+    <text x="444" y="163" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">19.5%</text>
+
+    <text x="190" y="194" text-anchor="end" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">Singapore AI talent</text>
+    <rect x="200" y="182" width="420" height="22" fill="#2f7d4d"/>
+    <text x="630" y="199" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">~35%</text>
+  </svg>
+  <div class="footer">Sources: Google Diversity Annual Report 2024 (US technical roles); Microsoft Global D&amp;I Report 2024 (+0.5 pp YoY); NVIDIA disclosure via GlobalData (2022, total workforce — most recently published); Eurostat 2024 (EU-27 ICT specialists, range 13.0% Czechia to 27.6% Estonia); LinkedIn Economic Graph / OECD.AI 2023 (Singapore AI engineering talent, global leader).</div>
+</div>
+
+<h2>What's the number?</h2>
+<p><b>Women's share of global AI engineering talent: 30.5% in 2024</b>, up from 29.3% in 2016 (LinkedIn Economic Graph via OECD.AI). At named major AI employers (US technical roles, 2024): <b>Google 27.2%; Microsoft 27.2%; NVIDIA 19%</b> (total, 2022 most recent). <b>OpenAI, Anthropic, DeepMind, Meta AI do not break out AI-research-role gender publicly</b> in a comparable standardized form.</p>
+
+<p>EU ICT specialists: <b>19.5% women</b> (Eurostat 2024). Range 13.0% (Czechia) to 27.6% (Estonia). Singapore is the global leader on LinkedIn's measure at <b>~35%</b>.</p>
+
+<p>India: NASSCOM/Deloitte 2024 flag a <i>decline</i> in women's representation at the junior professional level, despite 96% of Indian women in tech reporting intent to build AI skills. No clean single-figure share is publicly disclosed.</p>
+
+<h2>What's the trend?</h2>
+
+<div class="chart">
+  <div class="title">The broken rung — and the new 2025 AI-encouragement gap</div>
+  <div class="sub">Two structural mechanisms women face at the start of their AI career. The first is six years old and has barely moved. The second is a year old and shaping who gets the next promotion.</div>
+  <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two side-by-side visualizations: broken rung 81 women per 100 men, and AI-encouragement gap 21% women vs 33% men">
+    <!-- Left: 100 dots -->
+    <text x="160" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Broken rung</text>
+    <text x="160" y="50" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">Per 100 men hired/promoted into entry/manager,</text>
+    <text x="160" y="64" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">how many women are hired/promoted? <b>81</b>.</text>
+    <!-- 100 dots: 10x10, 81 filled accent, 19 outlined -->
+    <g>
+      <!-- accent dots (81): rows of 10 -->
+      <!-- row 1-8 (80 dots) accent -->
+      <g fill="#6f3aa0">
+        <circle cx="60" cy="90" r="7"/><circle cx="80" cy="90" r="7"/><circle cx="100" cy="90" r="7"/><circle cx="120" cy="90" r="7"/><circle cx="140" cy="90" r="7"/><circle cx="160" cy="90" r="7"/><circle cx="180" cy="90" r="7"/><circle cx="200" cy="90" r="7"/><circle cx="220" cy="90" r="7"/><circle cx="240" cy="90" r="7"/>
+        <circle cx="60" cy="110" r="7"/><circle cx="80" cy="110" r="7"/><circle cx="100" cy="110" r="7"/><circle cx="120" cy="110" r="7"/><circle cx="140" cy="110" r="7"/><circle cx="160" cy="110" r="7"/><circle cx="180" cy="110" r="7"/><circle cx="200" cy="110" r="7"/><circle cx="220" cy="110" r="7"/><circle cx="240" cy="110" r="7"/>
+        <circle cx="60" cy="130" r="7"/><circle cx="80" cy="130" r="7"/><circle cx="100" cy="130" r="7"/><circle cx="120" cy="130" r="7"/><circle cx="140" cy="130" r="7"/><circle cx="160" cy="130" r="7"/><circle cx="180" cy="130" r="7"/><circle cx="200" cy="130" r="7"/><circle cx="220" cy="130" r="7"/><circle cx="240" cy="130" r="7"/>
+        <circle cx="60" cy="150" r="7"/><circle cx="80" cy="150" r="7"/><circle cx="100" cy="150" r="7"/><circle cx="120" cy="150" r="7"/><circle cx="140" cy="150" r="7"/><circle cx="160" cy="150" r="7"/><circle cx="180" cy="150" r="7"/><circle cx="200" cy="150" r="7"/><circle cx="220" cy="150" r="7"/><circle cx="240" cy="150" r="7"/>
+        <circle cx="60" cy="170" r="7"/><circle cx="80" cy="170" r="7"/><circle cx="100" cy="170" r="7"/><circle cx="120" cy="170" r="7"/><circle cx="140" cy="170" r="7"/><circle cx="160" cy="170" r="7"/><circle cx="180" cy="170" r="7"/><circle cx="200" cy="170" r="7"/><circle cx="220" cy="170" r="7"/><circle cx="240" cy="170" r="7"/>
+        <circle cx="60" cy="190" r="7"/><circle cx="80" cy="190" r="7"/><circle cx="100" cy="190" r="7"/><circle cx="120" cy="190" r="7"/><circle cx="140" cy="190" r="7"/><circle cx="160" cy="190" r="7"/><circle cx="180" cy="190" r="7"/><circle cx="200" cy="190" r="7"/><circle cx="220" cy="190" r="7"/><circle cx="240" cy="190" r="7"/>
+        <circle cx="60" cy="210" r="7"/><circle cx="80" cy="210" r="7"/><circle cx="100" cy="210" r="7"/><circle cx="120" cy="210" r="7"/><circle cx="140" cy="210" r="7"/><circle cx="160" cy="210" r="7"/><circle cx="180" cy="210" r="7"/><circle cx="200" cy="210" r="7"/><circle cx="220" cy="210" r="7"/><circle cx="240" cy="210" r="7"/>
+        <circle cx="60" cy="230" r="7"/><circle cx="80" cy="230" r="7"/><circle cx="100" cy="230" r="7"/><circle cx="120" cy="230" r="7"/><circle cx="140" cy="230" r="7"/><circle cx="160" cy="230" r="7"/><circle cx="180" cy="230" r="7"/><circle cx="200" cy="230" r="7"/><circle cx="220" cy="230" r="7"/><circle cx="240" cy="230" r="7"/>
+        <circle cx="60" cy="250" r="7"/>
+      </g>
+      <!-- outline dots (19, last row) -->
+      <g fill="none" stroke="#d8d3cb" stroke-width="1.5">
+        <circle cx="80" cy="250" r="7"/><circle cx="100" cy="250" r="7"/><circle cx="120" cy="250" r="7"/><circle cx="140" cy="250" r="7"/><circle cx="160" cy="250" r="7"/><circle cx="180" cy="250" r="7"/><circle cx="200" cy="250" r="7"/><circle cx="220" cy="250" r="7"/><circle cx="240" cy="250" r="7"/>
+      </g>
+    </g>
+
+    <!-- Right: side-by-side bars for AI encouragement -->
+    <text x="540" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">AI-tool encouragement, entry-level</text>
+    <text x="540" y="50" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">"My manager encouraged me to use AI tools"</text>
+    <text x="540" y="64" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">McKinsey/LeanIn <i>Women in the Workplace 2025</i></text>
+    <!-- women bar: 21% -->
+    <rect x="400" y="100" width="80" height="158" fill="#fdfdfb" stroke="#5a5a5a" stroke-width="1"/>
+    <rect x="400" y="225" width="80" height="33" fill="#b5392a"/>
+    <text x="440" y="92" text-anchor="middle" font-size="20" font-weight="700" font-family="Charter,Georgia,serif" fill="#b5392a">21%</text>
+    <text x="440" y="278" text-anchor="middle" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">Women</text>
+    <!-- men bar: 33% -->
+    <rect x="540" y="100" width="80" height="158" fill="#fdfdfb" stroke="#5a5a5a" stroke-width="1"/>
+    <rect x="540" y="206" width="80" height="52" fill="#6f3aa0"/>
+    <text x="580" y="92" text-anchor="middle" font-size="20" font-weight="700" font-family="Charter,Georgia,serif" fill="#6f3aa0">33%</text>
+    <text x="580" y="278" text-anchor="middle" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">Men</text>
+    <!-- gap label -->
+    <text x="660" y="232" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">12 pp</text>
+    <text x="660" y="248" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">gap</text>
+  </svg>
+  <div class="footer">Left: McKinsey/LeanIn Women in the Workplace 2024 — 281 companies, 10M+ employees. The number was 79 in 2018; 81 in 2024 — a 2-point gain over six years. Right: McKinsey/LeanIn Women in the Workplace 2025 — survey of ~9,000 employees across 120+ North American firms.</div>
+</div>
+
+<h2>What's missing?</h2>
+<ol>
+<li><b>No public AI/ML-specific hiring funnel by gender.</b> LinkedIn and Indeed publish stock figures; neither publishes a flow funnel (applied → interviewed → offered → accepted).</li>
+<li><b>AI residency programs do not disclose demographics.</b> Google AI Residency, Meta AI Residency, OpenAI Residency, Anthropic Research Programs — all explicitly recruit underrepresented applicants, none publicly disclose composition or conversion-to-FT rates.</li>
+<li><b>No primary entry-level AI hiring share by gender for China, Brazil, or any African country.</b></li>
+<li><b>No published 12-month retention rate specific to entry-level women in AI/ML.</b> The 50%-leave-by-age-35 AnitaB.org stat is all of tech, not AI.</li>
+<li><b>CS-degree → AI-role conversion rate by gender (1–2 year outlook)</b> not published by NSF NCSES or NCES.</li>
+<li><b>AnitaB.org Top Companies benchmark paused in 2024.</b> The only multi-year benchmarking series of entry-level technical women at named employers is interrupted.</li>
+</ol>
+
+<h2>What works?</h2>
+<ul>
+<li><b>Code2040 Fellows.</b> Black and Latinx CS undergrads → tech internships → full-time conversion. <b>~90% return-offer rate</b> (twice industry baseline ~45–50%); 100% subsequently work in tech.</li>
+<li><b>AI4ALL.</b> High-school → college pipeline. 88% of alumni pursuing CS/AI; 50% obtained an internship (2021 cohort). Self-reported.</li>
+<li><b>AnitaB.org Top Companies</b> (paused 2024): women's tech-hire share rose for 7 consecutive years through 2023; attrition reached near-parity with men. <i>The pause is itself a data event.</i></li>
+</ul>
+
+<div class="pull">The pattern across the strongest programs is identical to the pipeline finding: multi-year, structurally embedded, and benchmarked. Single events — even high-profile ones — do not show up in entry-level outcome data.</div>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+<li><b>Read</b> — McKinsey/LeanIn <i>Women in the Workplace 2025</i> (specifically the AI-encouragement section). The 21% vs. 33% figure is the single most important new data point in entry-level women-in-AI for 2025.</li>
+<li><b>Share</b> — The <b>AI-tool encouragement gap (21% vs. 33%)</b> with a question: "What is the gender split of who in our org has been told to use AI tools by their manager?"</li>
+<li><b>Ask</b> — Of any company doing AI hiring: "What is your published 12-month retention rate for entry-level technical women, vs. men?" If no such number exists, that is the lever to push on — measured retention is the prerequisite for fixing it.</li>
+<li><b>Track</b> — Code2040 annual fellows-outcomes release. Strongest measured intersectional intervention with public numbers.</li>
+<li><b>Act</b> — If you manage anyone, <b>make encouragement to use AI tools an explicit conversation in 1:1s with women you manage</b>. The 12-point gap is most likely driven by the absence of that conversation, not by a refusal to have it.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li><b>LinkedIn Economic Graph.</b> <i>Women and Future Jobs / AI Talent Index</i>. <a href="https://economicgraph.linkedin.com/research/ai-skills-resources">link</a> <span class="tag">Tier 1</span></li>
+<li><b>OECD.AI.</b> <i>LinkedIn 2023 AI workforce analysis</i>. <a href="https://oecd.ai/en/wonk/2023-linkedin-data">link</a> <span class="tag">Tier 1</span></li>
+<li><b>OECD.AI.</b> <i>AI Workforce: LinkedIn talent trends</i>. <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index 2024 — Education chapter</i>. <a href="https://hai.stanford.edu/ai-index/2024-ai-index-report/education">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index 2025, Chapter 4 (Economy)</i>. <span class="tag">Tier 1</span></li>
+<li><b>McKinsey/LeanIn.</b> <i>Women in the Workplace 2024</i>. <span class="tag">Tier 1</span></li>
+<li><b>McKinsey/LeanIn.</b> <i>Women in the Workplace 2025</i>. <a href="https://wiw-report.s3.us-east-1.amazonaws.com/Women_in_the_Workplace_2025.pdf">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Eurostat.</b> <i>ICT specialists 2024</i>. <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250708-2">link</a> <span class="tag">Tier 1</span></li>
+<li><b>WEF.</b> <i>Global Gender Gap Report 2024</i>. <span class="tag">Tier 1</span></li>
+<li><b>Google.</b> <i>Diversity Annual Report 2024</i>. <a href="https://belonging.google/diversity-annual-report/2024/">link</a> <span class="tag">Tier 3</span></li>
+<li><b>Microsoft.</b> <i>2024 Global Diversity &amp; Inclusion Report</i>. <span class="tag">Tier 3</span></li>
+<li><b>Kapor Center.</b> <i>Tech Leavers Study 2017</i>. <a href="https://www.kaporcenter.org/wp-content/uploads/2017/08/TechLeavers2017.pdf">link</a> <span class="tag">Tier 2</span> <span class="tag">dated</span></li>
+<li><b>Code2040.</b> <i>Fellows program data</i>. <a href="https://www.code2040.org/programs">link</a> <span class="tag">Tier 3</span></li>
+<li><b>AI4ALL.</b> <i>Results</i>. <a href="https://ai-4-all.org/about/results/">link</a> <span class="tag">Tier 3</span></li>
+<li><b>AnitaB.org.</b> <i>Top Companies for Women Technologists 2023</i>. <a href="https://legacy.anitab.org/research-and-impact/top-companies/2023-results/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>BLS.</b> <i>Computer &amp; Information Research Scientists OOH</i>. <span class="tag">Tier 1</span></li>
+<li><b>Indeed Hiring Lab.</b> <i>AI at Work 2025</i>. <a href="https://www.hiringlab.org/wp-content/uploads/2025/09/Indeed-Hiring-Lab-AI-at-Work-Report-2025.pdf">link</a> <span class="tag">Tier 2</span></li>
+<li><b>NASSCOM.</b> <i>India's workforce transformation in the AI era</i>. <span class="tag">Tier 3</span></li>
+<li><b>NSF NCSES.</b> <i>Science &amp; Engineering Indicators 2024</i>. <span class="tag">Tier 1</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-06-01 · Week 4 of the 52-week rotation. Next: <i>The pay gap in AI and machine learning roles</i> (Week 5).</p>
+  <p>Markdown source: <a href="../reports/2026-06-01_entry-level-roles.md"><code>reports/2026-06-01_entry-level-roles.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>

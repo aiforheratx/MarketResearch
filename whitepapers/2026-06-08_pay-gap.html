@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The pay gap in AI and machine learning roles — WAI-Research Week 5</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 5 · 2026-06-08</div>
+  <h1 class="title">The pay gap in AI and machine learning roles</h1>
+  <p class="subtitle">Cash gaps have narrowed. Equity gaps have not. In AI, where compensation concentrates in equity, the under-measured gap is the larger gap.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-06-08</span>
+    <span><b>Length:</b> ~2,200 words</span>
+    <span><b>Sources cited:</b> 22</span>
+    <span><b>Tier 1:</b> 7 · <b>Tier 2:</b> 12 · <b>Tier 3:</b> 3</span>
+  </div>
+  <div class="hero">
+    <div class="stat">35% / 20%</div>
+    <div class="stat-caption">Women are 35% of equity-holding tech employees but hold only 20% of equity value (Carta Gap Table). A 5-to-1 underweight that dwarfs the cash gap and is the most under-discussed statistic in the women-in-AI pay literature.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  Women in US computer-and-mathematical occupations earn <b>$0.80 per $1.00</b> of men's median weekly earnings (BLS 2024, uncontrolled). The more useful statistic is the controlled vs. uncontrolled split: for the Computer &amp; Mathematical group Payscale 2024 reports <b>$0.92 uncontrolled / $0.97 controlled</b>. The single most underreported finding is from Carta's Gap Table: <b>women are 35% of equity-holding tech employees but hold only 20% of equity value</b> — a 5-to-1 underweight. Cash gaps are smaller and have narrowed; <b>equity gaps remain unaddressed and are where lifetime AI compensation is actually decided</b>.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell bad"><div class="v">$0.80</div><div class="l">Women's $ per men's $1, US Computer &amp; Math (uncontrolled)</div><div class="s">BLS 2024</div></div>
+  <div class="cell warn"><div class="v">$0.92</div><div class="l">Same group, Payscale (uncontrolled)</div><div class="s">Payscale 2024</div></div>
+  <div class="cell good"><div class="v">$0.97</div><div class="l">Same group, Payscale (controlled)</div><div class="s">Payscale 2024</div></div>
+  <div class="cell bad"><div class="v">$0.69</div><div class="l">Executive level (Payscale, uncontrolled — gap widens at top)</div><div class="s">Payscale 2026</div></div>
+  <div class="cell bad"><div class="v">$0.63</div><div class="l">Black women's $ per white non-Hispanic men's $1</div><div class="s">NWLC / IWPR 2024</div></div>
+  <div class="cell bad"><div class="v">$0.54–$0.58</div><div class="l">Latina women's $ per white non-Hispanic men's $1</div><div class="s">NWLC / IWPR 2024</div></div>
+  <div class="cell warn"><div class="v">13.1%</div><div class="l">UK overall pay gap (uncontrolled)</div><div class="s">ONS ASHE 2024</div></div>
+  <div class="cell warn"><div class="v">11.1%</div><div class="l">EU-27 pay gap (gross hourly)</div><div class="s">Eurostat 2024</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">The cash gap, the equity gap, and the intersectional cliff</div>
+  <div class="sub">Three lenses on the same compensation question. The equity gap is the largest. The intersectional gap is the most under-measured inside AI.</div>
+  <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three visualizations: cash gap, equity gap, and intersectional gap">
+    <!-- Cash gap -->
+    <text x="120" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Cash gap</text>
+    <text x="120" y="50" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">US Computer &amp; Math, women's $ per men's $1</text>
+    <!-- bars: width 80, scale: $1 = 200 -->
+    <rect x="50" y="70" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="70" width="160" height="22" fill="#b5392a"/>
+    <text x="120" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="white" font-family="Inter, sans-serif">$0.80 BLS uncontrolled</text>
+
+    <rect x="50" y="100" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="100" width="184" height="22" fill="#b07b0c"/>
+    <text x="120" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="white" font-family="Inter, sans-serif">$0.92 Payscale uncontrolled</text>
+
+    <rect x="50" y="130" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="130" width="194" height="22" fill="#2f7d4d"/>
+    <text x="120" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="white" font-family="Inter, sans-serif">$0.97 Payscale controlled</text>
+
+    <!-- Equity gap (Carta) -->
+    <text x="380" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Equity gap (Carta Gap Table)</text>
+    <text x="380" y="50" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">Tech employees: women's % of holders vs. % of value</text>
+
+    <text x="310" y="84" text-anchor="end" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">Equity holders</text>
+    <rect x="320" y="70" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="320" y="70" width="70" height="22" fill="#a982cf"/>
+    <text x="525" y="86" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">35%</text>
+
+    <text x="310" y="114" text-anchor="end" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">Equity value</text>
+    <rect x="320" y="100" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="320" y="100" width="40" height="22" fill="#b5392a"/>
+    <text x="525" y="116" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">20%</text>
+
+    <text x="600" y="86" font-size="13" font-weight="700" fill="#b5392a" font-family="Charter,Georgia,serif">5-to-1</text>
+    <text x="600" y="100" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">underweight</text>
+
+    <!-- Intersectional gap -->
+    <text x="360" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Intersectional pay gap — women's $ per white non-Hispanic men's $1 (NWLC / IWPR 2024)</text>
+    <!-- baseline -->
+    <rect x="50" y="210" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="210" width="200" height="22" fill="#3a3a3a"/>
+    <text x="150" y="226" text-anchor="middle" font-size="12" font-weight="700" fill="white" font-family="Inter, sans-serif">$1.00 white non-Hispanic men</text>
+
+    <!-- White women (uncontrolled US median ~ 0.85 per Pew) -->
+    <text x="40" y="252" text-anchor="end" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">White women</text>
+    <rect x="50" y="240" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="240" width="170" height="22" fill="#b07b0c"/>
+    <text x="270" y="256" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">$0.85</text>
+
+    <!-- Black women -->
+    <text x="40" y="282" text-anchor="end" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">Black women</text>
+    <rect x="50" y="270" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="270" width="126" height="22" fill="#b5392a"/>
+    <text x="270" y="286" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">$0.63</text>
+
+    <!-- Latina women -->
+    <text x="40" y="312" text-anchor="end" font-size="12" fill="#1a1a1a" font-family="Inter, sans-serif">Latina women</text>
+    <rect x="50" y="300" width="200" height="22" fill="#fdfdfb" stroke="#5a5a5a"/>
+    <rect x="50" y="300" width="112" height="22" fill="#b5392a"/>
+    <text x="270" y="316" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">$0.54–$0.58</text>
+
+    <!-- annotation right side -->
+    <text x="400" y="252" font-size="12" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">No AI-specific intersectional</text>
+    <text x="400" y="270" font-size="12" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">pay data exists. The figures shown</text>
+    <text x="400" y="288" font-size="12" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">are all-occupation. The AI cut would</text>
+    <text x="400" y="306" font-size="12" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">be materially worse — flagged gap.</text>
+  </svg>
+  <div class="footer">Sources: BLS Highlights of Women's Earnings 2024; Payscale 2024/2026 Gender Pay Gap Report (Computer &amp; Math group); Carta <i>Analyzing the Gender Equity Gap (Gap Table)</i> — ~6,000 cap tables and ~$45B equity value; NWLC / IWPR National Wage Gap Fact Sheet 2024; Pew Research Center 2024.</div>
+</div>
+
+<h2>What's the number?</h2>
+<p>The headline that hits most readers is <b>$0.80 per $1.00</b> — women's median weekly earnings in US Computer &amp; Mathematical occupations, full-time wage and salary workers (BLS <i>Highlights of Women's Earnings 2024</i>). This is uncontrolled: it does not adjust for role, level, experience, location, or hours.</p>
+
+<table class="data">
+<thead><tr><th>Measure</th><th>Women's $ per men's $1</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>US Computer &amp; Math occupations, uncontrolled (median weekly)</td><td><b>$0.80</b></td><td>BLS 2024</td></tr>
+<tr><td>US Computer &amp; Math occupations, uncontrolled (Payscale sample)</td><td><b>$0.92</b></td><td>Payscale 2024</td></tr>
+<tr><td>US Computer &amp; Math occupations, controlled (same role, level, experience, location)</td><td><b>$0.97</b></td><td>Payscale 2024</td></tr>
+<tr><td>All US workers, median hourly (uncontrolled)</td><td><b>$0.85</b></td><td>Pew Research 2024</td></tr>
+</tbody>
+</table>
+
+<p>The discrepancy between BLS (0.80) and Payscale (0.92) on the same group is methodological: BLS uses CPS median weekly earnings with no controls; Payscale uses a different sample with hours and structure normalization. <b>Both numbers are correct for what they measure.</b> The controlled $0.97 is the residual gap after observable adjustments — the part the field still cannot explain.</p>
+
+<div class="pull">No primary source publishes a clean "AI engineer" or "data scientist" pay gap specifically. BLS does not yet have a separate SOC code for AI engineers; Payscale and Levels.fyi do not publish AI-only cuts. The headline figures here treat the broader Computer &amp; Mathematical SOC group as the working proxy.</div>
+
+<h2>What's the trend?</h2>
+<p><b>By level</b> (Payscale 2026, all industries): IC $0.83 uncontrolled / $1.00 controlled; Manager $0.83 / $0.95; Director $0.82 / $0.93; <b>Executive $0.69 / $0.92</b>. The controlled gap widens with seniority; the uncontrolled gap is roughly constant IC-through-Director, then drops sharply at the executive level. Levels.fyi Q1 2024 describes the same pattern qualitatively: the gap "gets more pronounced at higher levels in the US."</p>
+
+<p><b>Direction over time:</b> Pew Research finds the US overall gap has narrowed only slightly over 20 years. The Colorado pay-transparency law (effective Jan 2021) is the cleanest natural experiment — state gap narrowed from <b>78¢ (2021) to 86¢ (Jul 2025)</b>, a 7-point gain in three and a half years that does <i>not</i> show up at comparable speed in BLS national data.</p>
+
+<h2>What's missing?</h2>
+<ol>
+<li><b>No primary source isolates the AI/ML pay gap.</b> No SOC code, no Payscale/Levels.fyi cut.</li>
+<li><b>No intersectional pay data inside AI/ML roles.</b> All available figures are all-occupation.</li>
+<li><b>No equity-equity audit at any AI lab.</b> Given AI offers are 60–80% equity, this is the largest under-measured component of women's AI pay.</li>
+<li><b>Levels.fyi Q1 2024 shows charts but withholds exact %-gap numbers by level.</b></li>
+<li><b>No India-specific AI/ML gender pay number.</b> NASSCOM 2024 covers AI/ML premiums but not by gender.</li>
+<li><b>No lifetime earnings projection specific to AI careers.</b> NWLC 40-year cumulative figures ($430,480 avg; $877,480 Black women; $1,007,080 Latinas) are all-occupation.</li>
+</ol>
+
+<h2>What works?</h2>
+<ul>
+<li><b>Salesforce equal-pay audits</b> (annual, since 2015). Cumulative ~$10.3M in adjustments by 2019; $5.6M in 2022 alone. As of 2024, Salesforce publishes adjusted pay ratios by gender and race. <b>Continuous annualized auditing prevents new gaps from forming.</b></li>
+<li><b>Colorado Equal Pay for Equal Work Act.</b> State gap 78¢ (2021) → 86¢ (Jul 2025). Cullen (JEP 2024) finds posted salaries rose +3.6% on average; horizontal transparency can compress pay downward. Salary-info job postings rose ~30 pp post-law per Arnold et al.</li>
+<li><b>Negotiation gap — newly reframed.</b> Vanderbilt / Kennedy (2023) finds women now negotiate as often or more often than men. Pew (April 2023): most US workers — both sexes — do not negotiate starting pay. <b>Most of the gap is offered, not asked.</b></li>
+</ul>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+<li><b>Read</b> — Carta's <b>Gap Table</b> report. Single best evidence base for the cash-vs-equity decomposition.</li>
+<li><b>Share</b> — The <b>35% equity-holders / 20% equity value</b> statistic. Most economical way to puncture "tech pay is roughly fair now."</li>
+<li><b>Ask</b> — Of your employer or mentor: "What is our <i>equity-equity</i> audit, separately from our cash-pay audit?" If the answer is "we don't do one," that is the answer.</li>
+<li><b>Track</b> — The annual BLS Highlights of Women's Earnings release. Computer &amp; Mathematical occupational gap is the longest-running consistent series.</li>
+<li><b>Act</b> — If you are negotiating, <b>negotiate the equity component explicitly</b>, not just base salary. The equity gap is wider than the cash gap and the one most likely to be silently agreed to.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li><b>BLS.</b> <i>Highlights of Women's Earnings in 2024</i>. <a href="https://www.bls.gov/opub/reports/womens-earnings/2024/home.htm">link</a> <span class="tag">Tier 1</span></li>
+<li><b>BLS OEWS.</b> <i>Data Scientists / Computer &amp; Info Research Scientists, May 2024</i>. <span class="tag">Tier 1</span></li>
+<li><b>ONS UK.</b> <i>Gender pay gap in the UK 2024</i>. <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/genderpaygapintheuk/2024">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Eurostat.</b> <i>Gender pay gap statistics</i>. <span class="tag">Tier 1</span></li>
+<li><b>Destatis.</b> <i>Gender Pay Gap 2024 (Germany)</i>. <span class="tag">Tier 1</span></li>
+<li><b>INSEE.</b> <i>Gender pay gap 2024 (France)</i>. <span class="tag">Tier 1</span></li>
+<li><b>Payscale.</b> <i>2024 Gender Pay Gap Report</i>. <a href="https://www.payscale.com/content/report/2024-gender-pay-gap-report.pdf">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Payscale.</b> <i>2026 Gender Pay Gap Report update</i>. <span class="tag">Tier 2</span></li>
+<li><b>Levels.fyi.</b> <i>Gender Pay Gap Report Q1 2024</i>. 17,116 US software-engineering submissions. <a href="https://www.levels.fyi/2024/gender-pay-gap/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Carta.</b> <i>Analyzing the Gender Equity Gap (Gap Table)</i>. ~6,000 cap tables; ~$45B equity value. <a href="https://carta.com/data/gap-table/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>WEF.</b> <i>Global Gender Gap Report 2024</i>. <span class="tag">Tier 2</span></li>
+<li><b>Pew Research.</b> <i>Gender pay gap 2024</i>. <a href="https://www.pewresearch.org/short-reads/2025/03/04/gender-pay-gap-in-us-has-narrowed-slightly-over-2-decades/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Pew Research.</b> <i>Negotiation 2023</i>. <span class="tag">Tier 2</span></li>
+<li><b>AAUW.</b> <i>The Simple Truth 2024/2026</i>. <span class="tag">Tier 2</span></li>
+<li><b>IWPR.</b> <i>National Wage Gap Fact Sheet 2024</i>. <a href="https://iwpr.org/wp-content/uploads/2024/09/IWPR-National-Wage-Gap-Fact-Sheet-2024.pdf">link</a> <span class="tag">Tier 2</span></li>
+<li><b>NWLC.</b> <i>Window Into the Wage Gap</i>. <span class="tag">Tier 2</span></li>
+<li><b>Salesforce.</b> <i>Equal Pay Strategy and 2023 Equality Update</i>. <a href="https://www.salesforce.com/news/stories/our-pay-philosophy/">link</a> <span class="tag">Tier 3</span></li>
+<li><b>Cullen Z.</b> <i>Is Pay Transparency Good?</i> JEP 2024. <span class="tag">Tier 2</span> <span class="tag">paywalled</span></li>
+<li><b>Arnold et al.</b> <i>Impact of Pay Transparency in Job Postings</i>. <a href="https://darnold199.github.io/pay_transparency_draft.pdf">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Alan Turing Institute.</b> <i>Where are the women? Mapping the gender job gap in AI</i>. <a href="https://www.turing.ac.uk/news/where-are-women-mapping-gender-job-gap-ai">link</a> <span class="tag">Tier 3</span></li>
+<li><b>Monster Salary Index / IIMA.</b> <i>Gender pay gap India 27%</i>. <span class="tag">Tier 2</span></li>
+<li><b>NASSCOM.</b> <i>India Tech Compensation Benchmarking 2024</i>. <span class="tag">Tier 3</span> <span class="tag">paywalled</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-06-08 · Week 5 of the 52-week rotation. Next: <i>The broken rung — promotion from IC to first management</i> (Week 6).</p>
+  <p>Markdown source: <a href="../reports/2026-06-08_pay-gap.md"><code>reports/2026-06-08_pay-gap.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>

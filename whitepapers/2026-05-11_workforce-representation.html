@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State of women in AI: representation across the workforce — WAI-Research Week 1</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 1 · 2026-05-11</div>
+  <h1 class="title">State of women in AI: representation across the workforce</h1>
+  <p class="subtitle">A field with a 30% skill supply and a 22% role share — the gap is the story.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-05-11</span>
+    <span><b>Length:</b> ~2,000 words</span>
+    <span><b>Sources cited:</b> 16</span>
+    <span><b>Tier 1:</b> 10 · <b>Tier 2:</b> 4 · <b>Tier 3:</b> 2</span>
+  </div>
+  <div class="hero">
+    <div class="stat">22%</div>
+    <div class="stat-caption">Women's share of the global AI workforce, role-based (Stanford HAI 2024; corroborated by UNESCO 2024 and Interface EU 2024). Flat for a decade.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  Women make up roughly <b>22% of the global AI workforce</b> — a number that has barely moved in a decade despite ten years of public commitments. But the story is not flat: women's share of AI-skill-listing professionals on LinkedIn rose from ~22% (2016) to <b>30.5% (2024)</b>, even as their share of actual AI roles stayed near 22%. <b>The field has more qualified women than it employs.</b> The single number worth carrying into every conversation about women in AI is the leadership gap: <b>under 14% of senior executive AI roles are held by women</b> — and that is where action will pay the largest dividend.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell bad"><div class="v">22%</div><div class="l">Women's share of global AI workforce</div><div class="s">Stanford HAI AI Index 2024</div></div>
+  <div class="cell accent"><div class="v">30.5%</div><div class="l">Women's share of LinkedIn AI-skill-listers</div><div class="s">LinkedIn / WEF GGGR 2024</div></div>
+  <div class="cell bad"><div class="v">&lt;14%</div><div class="l">Women in senior executive AI roles</div><div class="s">Interface EU 2024</div></div>
+  <div class="cell warn"><div class="v">12%</div><div class="l">Women among AI researchers specifically</div><div class="s">UNESCO 2024</div></div>
+  <div class="cell warn"><div class="v">18%</div><div class="l">Women among AI startup execs</div><div class="s">UNESCO 2024</div></div>
+  <div class="cell"><div class="v">~352k</div><div class="l">Women globally in identified AI roles (inferred)</div><div class="s">Interface EU sample · 22% applied</div></div>
+  <div class="cell good"><div class="v">21.3%</div><div class="l">Women among 2021 AI PhD grads (N. America)</div><div class="s">Stanford HAI AI Index 2023</div></div>
+  <div class="cell bad"><div class="v">31%</div><div class="l">Women of color in 15 most AI-vulnerable US jobs</div><div class="s">National Partnership 2024</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">The skill-vs-role gap is the field's signature problem</div>
+  <div class="sub">Women's share of LinkedIn AI-skill-listers exceeds women's share of held AI roles by 8 percentage points.</div>
+  <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing women's share of AI skill supply and AI roles">
+    <!-- axes -->
+    <line x1="60" y1="180" x2="700" y2="180" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="20" x2="60" y2="180" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- gridlines -->
+    <line x1="60" y1="140" x2="700" y2="140" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="100" x2="700" y2="100" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="60" x2="700" y2="60" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- y labels (0, 10, 20, 30, 40) -->
+    <text x="50" y="184" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">0%</text>
+    <text x="50" y="144" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">10%</text>
+    <text x="50" y="104" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">20%</text>
+    <text x="50" y="64" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">30%</text>
+    <text x="50" y="24" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">40%</text>
+    <!-- bars: scale 4px per % -->
+    <!-- skill 30.5% -->
+    <rect x="120" y="58" width="100" height="122" fill="#6f3aa0"/>
+    <text x="170" y="50" text-anchor="middle" font-size="20" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">30.5%</text>
+    <text x="170" y="200" text-anchor="middle" font-size="12" fill="#5a5a5a" font-family="Inter, sans-serif">AI-skill-listers</text>
+    <!-- role 22% -->
+    <rect x="280" y="92" width="100" height="88" fill="#b5392a"/>
+    <text x="330" y="84" text-anchor="middle" font-size="20" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">22%</text>
+    <text x="330" y="200" text-anchor="middle" font-size="12" fill="#5a5a5a" font-family="Inter, sans-serif">AI roles</text>
+    <!-- researchers 12% -->
+    <rect x="440" y="132" width="100" height="48" fill="#b07b0c"/>
+    <text x="490" y="124" text-anchor="middle" font-size="20" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">12%</text>
+    <text x="490" y="200" text-anchor="middle" font-size="12" fill="#5a5a5a" font-family="Inter, sans-serif">AI researchers</text>
+    <!-- executives <14% -->
+    <rect x="600" y="124" width="100" height="56" fill="#b5392a"/>
+    <text x="650" y="116" text-anchor="middle" font-size="20" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">&lt;14%</text>
+    <text x="650" y="200" text-anchor="middle" font-size="12" fill="#5a5a5a" font-family="Inter, sans-serif">Senior execs</text>
+  </svg>
+  <div class="footer">Sources: LinkedIn Economic Graph (skill supply, 2024); Stanford HAI AI Index 2024 + UNESCO 2024 (AI roles); UNESCO Women for Ethical AI 2024 (AI researchers); Interface EU AI's Missing Link 2024 (senior execs). All measures global, 2024.</div>
+</div>
+
+<h2>What's the number?</h2>
+<p>The headline that most reports converge on is <b>22%</b>: roughly one in five people working in AI globally is a woman. Three independent sources triangulate to this figure for 2024:</p>
+<ul>
+  <li><b>Stanford HAI AI Index 2024</b> (Chapter 8: Diversity) — 22% women across global AI roles, aggregating industry and academic data.</li>
+  <li><b>Interface EU's <i>AI's Missing Link</i> (2024)</b> — same 22% figure across approximately 1.6 million identifiable AI professionals worldwide. Gender inferred from first names matched to census data.</li>
+  <li><b>UNESCO's <i>Women for Ethical AI</i> Outlook Study (October 2024)</b> — decomposes the picture: 20% of technical roles at major ML companies, <b>12% of AI researchers</b>, 18% of AI startup executives.</li>
+</ul>
+
+<p>These are <b>role-based</b> measures. They count people holding AI jobs.</p>
+
+<div class="pull">The supply of women with AI skills (~30%) exceeds the share of women holding AI roles (~22%) by 8–10 percentage points. The gap between skill and role is itself the most actionable finding in the data: the field has more qualified women than it employs.</div>
+
+<p>A different number circulates in headlines: <b>30.5%</b>. This is the <b>LinkedIn Economic Graph</b> figure for women's share of members who list AI engineering skills on their profile (2024, via WEF Global Gender Gap Report 2024; 75-country sample). It is a skill-supply measure, not a role measure. The two are not in conflict — they measure different things.</p>
+
+<p>Applying the 22% role figure to Interface EU's 1.6M sample implies roughly <b>352,000 women globally</b> in identified AI roles. No primary statistical body publishes a definitive absolute total.</p>
+
+<h2>What's the trend?</h2>
+
+<div class="chart">
+  <div class="title">Two trend lines, one widening gap</div>
+  <div class="sub">Women's share of AI <i>skills</i> has risen ~8 pp since 2016. Women's share of AI <i>roles</i> has barely moved.</div>
+  <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of women's share of AI skill supply vs AI roles, 2011 to 2025">
+    <!-- background grid -->
+    <line x1="60" y1="200" x2="700" y2="200" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="40" x2="60" y2="200" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="160" x2="700" y2="160" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="120" x2="700" y2="120" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="80" x2="700" y2="80" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="50" y="204" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">0%</text>
+    <text x="50" y="164" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">10%</text>
+    <text x="50" y="124" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">20%</text>
+    <text x="50" y="84" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">30%</text>
+    <text x="50" y="44" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">40%</text>
+
+    <!-- x labels (2011, 2016, 2021, 2024, 2025) -->
+    <text x="100" y="220" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2011</text>
+    <text x="260" y="220" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2016</text>
+    <text x="450" y="220" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2021</text>
+    <text x="600" y="220" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2024</text>
+    <text x="680" y="220" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2025</text>
+
+    <!-- skill line: 22% (2016) -> 23.5% (2018) -> 30.5% (2024) -> 29.4% (2025). Y = 200 - val*4 -->
+    <polyline points="260,112 320,106 600,78 680,82.4" fill="none" stroke="#6f3aa0" stroke-width="2.5"/>
+    <circle cx="260" cy="112" r="4" fill="#6f3aa0"/>
+    <circle cx="320" cy="106" r="4" fill="#6f3aa0"/>
+    <circle cx="600" cy="78" r="4" fill="#6f3aa0"/>
+    <circle cx="680" cy="82.4" r="4" fill="#6f3aa0"/>
+    <text x="600" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#6f3aa0" font-family="Inter, sans-serif">30.5%</text>
+
+    <!-- role line: ~20% (2011 inferred) ~21% (2016) ~22% (2021) ~22% (2024). Y = 200 - val*4 -->
+    <polyline points="100,120 260,116 450,112 600,112" fill="none" stroke="#b5392a" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <circle cx="100" cy="120" r="4" fill="#b5392a"/>
+    <circle cx="260" cy="116" r="4" fill="#b5392a"/>
+    <circle cx="450" cy="112" r="4" fill="#b5392a"/>
+    <circle cx="600" cy="112" r="4" fill="#b5392a"/>
+    <text x="600" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#b5392a" font-family="Inter, sans-serif">22%</text>
+
+    <!-- legend -->
+    <rect x="510" y="32" width="14" height="3" fill="#6f3aa0"/>
+    <text x="528" y="36" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">AI skill supply (LinkedIn)</text>
+    <rect x="510" y="46" width="14" height="3" fill="#b5392a"/>
+    <text x="528" y="50" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">AI roles held (Stanford HAI)</text>
+  </svg>
+  <div class="footer">Sources: LinkedIn Economic Graph / WEF GGGR 2024 (skill supply); Stanford HAI AI Index 2023 + 2024 (roles). The skill-supply line measures women's % of LinkedIn members listing AI engineering skills; the role line measures women's share of held AI roles.</div>
+</div>
+
+<p><b>Women's share of new AI PhDs (North America):</b> 18.1% in 2011 → 21.3% in 2021 (Stanford HAI AI Index). Direction: improving at roughly 0.5–1 pp per year. At this rate, parity in AI PhDs arrives around 2050.</p>
+
+<p><b>Women's share of AI engineering skill-listers (LinkedIn):</b> ~22% (2016) → 30.5% (2024) → 29.4% (2025). Rising for nearly a decade, plateaued in 2025. Nesta has flagged Europe's share specifically declined (Germany's gap widened 4 pp).</p>
+
+<p><b>Women in AI roles (the role-based measure):</b> essentially flat at ~22% over the same window. The supply rose; the role share did not.</p>
+
+<h2>What's missing?</h2>
+<p>Six evidence gaps the data does not answer today:</p>
+<ol>
+<li><b>No primary source publishes women's share of Principal / Staff / Distinguished AI engineer roles industry-wide.</b> The closest proxy is Russell Reynolds' "22% across product/engineering/science leadership" cut across 39 AI organizations.</li>
+<li><b>No 2023+ figure for Black women's share of AI technical roles.</b> The most-cited 3% statistic is from 2017 NCWIT and is not AI-specific. Women of color are 31% of workers in the 15 most AI-vulnerable US jobs (National Partnership 2024) — the absence of measurement at the top is conspicuous.</li>
+<li><b>No global absolute headcount of women in AI</b> from any primary statistical body.</li>
+<li><b>AI startup founder/funding data are fragmented.</b> UNESCO cites 0.7% of AI VC capital to female-led; WEF cites a 31.7% EU-wide gap — different definitions, no consistent global series.</li>
+<li><b>Mid-career attrition from AI roles by gender is not tracked</b> by NSF NCSES, BLS, or Eurostat.</li>
+<li><b>No cross-cut by AI sub-discipline.</b> Women's share of generative AI vs. classical ML vs. AI safety is absent from every major source.</li>
+</ol>
+
+<h2>What works?</h2>
+<p>Programs with <b>measured outcomes</b> (not just stated intentions):</p>
+<ul>
+<li><b>Girls Who Code Summer Immersion Program.</b> Independent AIR evaluation: participants <b>+13.2 pp more likely to major in a CS-related field</b> than propensity-weighted comparison group. Alumni at 15× national CS-major rate; 16× for Black/Latina alumni. The strongest measured-outcome intervention in the literature.</li>
+<li><b>Salesforce equal-pay audits.</b> Cumulative ~$10.3M in adjustments by 2019; $5.6M in 2022 alone. Continuous annualized auditing moves the number; one-time audits do not.</li>
+<li><b>AnitaB.org Top Companies for Women Technologists.</b> Seven consecutive years of rising tech-women hire share at participating firms. <b>Paused in 2024</b>, interrupting the only multi-year industry benchmark.</li>
+</ul>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+<li><b>Read</b> — UNESCO's <i>Women for Ethical AI Outlook Study</i> (Oct 2024). Single most carefully grounded global view in the literature; disaggregates technical / research / executive clearly.</li>
+<li><b>Share</b> — The <b>30.5% AI skills vs. 22% AI roles</b> gap. Most economical way to puncture the "we can't find women" hiring argument.</li>
+<li><b>Ask</b> — In your org: "What is our director-and-above gender ratio in AI specifically, and what was it last year?" If the answer is "we don't track AI separately," that <i>is</i> the answer.</li>
+<li><b>Track</b> — The annual CRA Taulbee Survey release (typically May). Only Tier 1 longitudinal source for the AI-PhD pipeline.</li>
+<li><b>Act</b> — Commit in your next hiring loop to proactively source from at least one named pipeline org (WiML, Black in AI, LatinX in AI, AnitaB.org Top Companies alumni). The 22% number does not move by accident.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li><b>Stanford HAI.</b> <i>AI Index Report 2024</i>, Chapter 8: Diversity (2024). Aggregated industry + academic data, global. <a href="https://hai.stanford.edu/assets/files/hai_ai-index-report-2024_chapter8.pdf">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index Report 2023</i>, Diversity chapter. <a href="https://hai.stanford.edu/ai-index/2023-ai-index-report/diversity">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index Report 2025</i>. <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report">link</a> <span class="tag">Tier 1</span></li>
+<li><b>World Economic Forum.</b> <i>Global Gender Gap Report 2024</i>. <a href="https://www3.weforum.org/docs/WEF_GGGR_2024.pdf">link</a> <span class="tag">Tier 1</span></li>
+<li><b>WEF.</b> <i>Gender Parity in the Intelligent Age</i>, white paper (March 2025). <span class="tag">Tier 1</span></li>
+<li><b>LinkedIn Economic Graph.</b> <i>Generative AI and Gender</i> (2024). <a href="https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/generative-ai-and-gender.pdf">link</a> <span class="tag">Tier 1</span></li>
+<li><b>UNESCO.</b> <i>Women for Ethical AI: Outlook Study on AI and Gender</i> (October 2024). <a href="https://unesdoc.unesco.org/ark:/48223/pf0000391719">link</a> <span class="tag">Tier 1</span></li>
+<li><b>McKinsey &amp; LeanIn.</b> <i>Women in the Workplace 2024</i>. <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>2023 Taulbee Survey Report</i> (May 2024). <a href="https://cra.org/wp-content/uploads/2024/05/2023-CRA-Taulbee-Survey-Report.pdf">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Interface EU.</b> <i>AI's Missing Link: The Gender Gap in the Talent Pool</i> (2024). Sample ~1.6M; gender from first-name match. <a href="https://www.interface-eu.org/publications/ai-gender-gap">link</a> <span class="tag">Tier 1</span></li>
+<li><b>AI Now Institute.</b> <i>Discriminating Systems: Gender, Race and Power in AI</i> (2019). <a href="https://ainowinstitute.org/wp-content/uploads/2023/04/discriminatingsystems.pdf">link</a> <span class="tag">Tier 2</span></li>
+<li><b>AnitaB.org.</b> <i>Top Companies for Women Technologists 2023 Results</i>. <a href="https://legacy.anitab.org/research-and-impact/top-companies/2023-results/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>National Partnership for Women &amp; Families.</b> <i>AI and Emerging Risks for Women Workers</i> (2024). <a href="https://nationalpartnership.org/report/ai-emerging-risks-for-women-workers/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Girls Who Code.</b> <i>2024 Annual Report</i> + AIR independent impact evaluation. <a href="https://girlswhocode.com/2024report/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Deloitte.</b> <i>Women in AI</i> (2024). <span class="tag">Tier 3</span></li>
+<li><b>Russell Reynolds Associates.</b> <i>AI for All: The Case for More Women Leaders in AI</i> (2024). <a href="https://www.russellreynolds.com/en/insights/articles/the-case-for-more-women-leaders-in-ai">link</a> <span class="tag">Tier 3</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-05-11 · Week 1 of the 52-week rotation. Next: <i>The pipeline — women in undergraduate CS and AI programs</i> (Week 2).</p>
+  <p>This is a presentation-format white paper. The markdown source with full annotations lives at <a href="../reports/2026-05-11_workforce-representation.md"><code>reports/2026-05-11_workforce-representation.md</code></a>. The running dashboard is at <a href="../docs/index.html"><code>docs/index.html</code></a>.</p>
+</footer>
+
+</article>
+</body>
+</html>

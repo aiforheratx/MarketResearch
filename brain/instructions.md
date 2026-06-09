@@ -50,7 +50,9 @@ If a source is paywalled, capture the abstract and any quoted figures from secon
 
 For any headline statistic, find a second source. If they conflict by more than a few points, surface both in the report.
 
-## Step 5 — Write the report
+## Step 5 — Write the report (TWO formats: markdown + white paper HTML)
+
+### 5a — Markdown report
 
 Use `reports/_template.md`. Filename: `reports/YYYY-MM-DD_<topic-slug>.md`.
 
@@ -59,9 +61,28 @@ The report must contain:
 - A "Numbers in this report" box near the top: 5–10 headline statistics with sources.
 - Body sections covering: state of the data, what it means, what's missing, what works.
 - A "Sources" section at the end with full citations (publisher, title, year, link, methodology note).
-- A "Recommended actions" section: 3–5 concrete moves the reader can make (read this paper, share this dataset, attend this event, advocate for this policy, ask this question in their org).
+- A "Recommended actions" section: 3–5 concrete moves the reader can make.
 
 Word count: 1,500–3,500.
+
+### 5b — Presentation white paper (HTML)
+
+Use `whitepapers/_template.html` (same `_assets/style.css`). Filename: `whitepapers/YYYY-MM-DD_<topic-slug>.html` — same slug as the markdown file.
+
+The white paper must contain:
+- **Cover** with series banner, title, one-line subtitle thesis, meta line (filed date, length, source count by tier), and a hero statistic box with the single most important number.
+- **Executive summary** box (same 3-sentence summary as the markdown).
+- **"At a glance"** grid: 6–10 stat cells with class `bad`/`warn`/`good`/`accent` colorings.
+- **1–3 inline SVG charts.** Hand-coded SVG, no external libraries. Use the standard palette: purple `#6f3aa0` (primary), amber `#b07b0c` (warn), red `#b5392a` (bad), green `#2f7d4d` (good); gridlines `#e5e0d8` dashed; numbers in `Charter, Georgia, serif` bold; axis labels in `Inter, sans-serif`. Always include a footer with source and methodology.
+- **Pull quote** block for the single sharpest line in the report.
+- **Same 4-W structure** as the markdown: "What's the number?", "What's the trend?", "What's missing?", "What works?"
+- **Numbered actions list** styled with `ol.actions` (5 items).
+- **Sources** as `ol.sources` with Tier tags.
+- **Colophon footer** with next-week-topic preview and link back to the markdown source.
+
+Append the new white paper to `whitepapers/README.md`'s index table.
+
+Open the file in a browser and **Print → Save as PDF** to test before publishing.
 
 ## Step 6 — Update the brain
 
@@ -79,8 +100,13 @@ Confirm all of:
 - [ ] Every statistic in the report has a citation.
 - [ ] At least one statistic is dated within the last 12 months.
 - [ ] At least one new source was added to `brain/sources.md`, OR a justification is logged in `history.md` for why no new source was needed.
-- [ ] The report filename matches `YYYY-MM-DD_<slug>.md` exactly.
+- [ ] The markdown report filename matches `reports/YYYY-MM-DD_<slug>.md` exactly.
+- [ ] The white paper filename matches `whitepapers/YYYY-MM-DD_<slug>.html` (same slug).
+- [ ] White paper passes `<head>` validation (links `_assets/style.css`, title set, viewport meta present).
+- [ ] White paper contains at least 1 inline SVG chart with a footer citing source and methodology.
 - [ ] `history.md` entry written.
 - [ ] `dashboard.md` shows this week's report in its "Recent reports" list.
+- [ ] `whitepapers/README.md` index table includes the new white paper row.
+- [ ] `docs/index.html` "Recent reports" section updated.
 
 If any check fails, fix it before exiting.

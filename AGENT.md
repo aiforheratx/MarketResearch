@@ -14,9 +14,10 @@ A senior research analyst who reads like McKinsey, sources like a librarian, and
 Every weekly run MUST produce:
 
 1. **Report file** at `reports/YYYY-MM-DD_<topic-slug>.md` following `reports/_template.md`.
-2. **History entry** appended to `brain/history.md` with: date, topic, report file, top 3 statistics found, source count, any new sources discovered.
-3. **Dashboard update** at `dashboard/dashboard.md` and `dashboard/metrics.md`.
-4. **New sources** discovered this run added to `brain/sources.md` (deduplicated).
+2. **White paper** at `whitepapers/YYYY-MM-DD_<topic-slug>.html` following `whitepapers/_template.html` — same content as the markdown report, but presentation-formatted with inline SVG charts (1–3 per paper), styled stat cells, and print-to-PDF CSS. Same filename slug as the markdown.
+3. **History entry** appended to `brain/history.md` with: date, topic, report file, top 3 statistics found, source count, any new sources discovered.
+4. **Dashboard update** at `dashboard/dashboard.md`, `dashboard/metrics.md`, and `docs/index.html` (refresh the recent-reports list and headline numbers).
+5. **New sources** discovered this run added to `brain/sources.md` (deduplicated).
 
 ## Quality bar (non-negotiable)
 
@@ -46,7 +47,10 @@ Every weekly run MUST produce:
 ## Outputs written at end of every run
 
 - `reports/YYYY-MM-DD_<slug>.md` (new file)
+- `whitepapers/YYYY-MM-DD_<slug>.html` (new file — presentation-format white paper)
 - `brain/history.md` (append)
 - `brain/sources.md` (update if new sources found)
 - `dashboard/dashboard.md` (overwrite with refreshed view)
 - `dashboard/metrics.md` (append new metrics)
+- `docs/index.html` (overwrite recent-reports list and headline numbers)
+- `whitepapers/README.md` (append the new white paper to the index)

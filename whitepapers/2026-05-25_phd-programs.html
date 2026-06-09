@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graduate school: women in AI/ML PhD programs — WAI-Research Week 3</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 3 · 2026-05-25</div>
+  <h1 class="title">Graduate school: women in AI/ML PhD programs</h1>
+  <p class="subtitle">Eight consecutive years of progress at the doctoral level. Faculty hiring is the noisiest line. The advisor effect is the most robust finding in the literature.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-05-25</span>
+    <span><b>Length:</b> ~2,200 words</span>
+    <span><b>Sources cited:</b> 19</span>
+    <span><b>Tier 1:</b> 12 · <b>Tier 2:</b> 6 · <b>Tier 3:</b> 1</span>
+  </div>
+  <div class="hero">
+    <div class="stat">25.9%</div>
+    <div class="stat-caption">Women's share of CS/CE/I PhD recipients in North America, 2023–24 — the eighth consecutive annual rise, the strongest sustained positive trend in any women-in-AI dataset.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  Women are <b>25.9% of 2023–24 CS/CE/I PhD recipients</b> in North America (CRA Taulbee 2024) — the eighth consecutive annual rise. But the AI-specialty subset tells a sharper story: women have been <b>under 19% of AI PhD graduates across the past decade</b>, and the most-replicated finding in the academic literature — the <b>advisor-gender effect</b> — shows that female PhD students with female advisors persist longer, publish more, and place better. The single most consequential gap: <b>no public dataset isolates AI-PhD completion rates by gender</b>, so we know who enrolls and graduates but cannot count who silently leaves.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell good"><div class="v">25.9%</div><div class="l">Women's share of CS/CE/I PhD recipients</div><div class="s">CRA Taulbee 2024</div></div>
+  <div class="cell warn"><div class="v">22.7%</div><div class="l">Women enrolled in CS PhDs</div><div class="s">CRA Taulbee 2023</div></div>
+  <div class="cell bad"><div class="v">&lt;19%</div><div class="l">Women among AI-specialty PhD grads, 10-year avg</div><div class="s">Stanford HAI AI Index 2024</div></div>
+  <div class="cell bad"><div class="v">16.1%</div><div class="l">Women on tenure-track AI faculty (top-18 unis)</div><div class="s">Stanford HAI 2024</div></div>
+  <div class="cell warn"><div class="v">20.0%</div><div class="l">Women as % of new tenure-track CS faculty hires (fell from 25.9%)</div><div class="s">CRA Taulbee 2022–23</div></div>
+  <div class="cell good"><div class="v">+10pp</div><div class="l">Drop-out reduction when women have female cohort peers</div><div class="s">Bostwick &amp; Weinberg, JOLE</div></div>
+  <div class="cell accent"><div class="v">71% vs 23%</div><div class="l">CRA-W Grad Cohort: first-author publication rate (vs. non-participants)</div><div class="s">PNAS / PMC5222789</div></div>
+  <div class="cell"><div class="v">15%</div><div class="l">India: women in Generative AI doctoral programs</div><div class="s">IBEF 2025</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">Eight straight years up: women's share of CS PhD recipients (N. America)</div>
+  <div class="sub">From 20.3% (2018–19) to 25.9% (2023–24), CRA Taulbee aggregate — the steepest stretch in the recorded series.</div>
+  <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of women's share of CS PhD recipients in North America from 2018-19 to 2023-24">
+    <line x1="60" y1="200" x2="700" y2="200" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="20" x2="60" y2="200" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- gridlines: scale 6px per 1% -->
+    <line x1="60" y1="170" x2="700" y2="170" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="140" x2="700" y2="140" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="110" x2="700" y2="110" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="80" x2="700" y2="80" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="50" x2="700" y2="50" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="50" y="204" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">0%</text>
+    <text x="50" y="174" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">5%</text>
+    <text x="50" y="144" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">10%</text>
+    <text x="50" y="114" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">15%</text>
+    <text x="50" y="84" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">20%</text>
+    <text x="50" y="54" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">25%</text>
+    <!-- bars (4 years): 2018-19 20.3%, 2021-22 22.9%, 2022-23 24.1%, 2023-24 25.9% -->
+    <!-- bar width 100, spacing 50, starting at 100 -->
+    <rect x="120" y="78.2" width="100" height="121.8" fill="#cbb0e8"/>
+    <text x="170" y="70" text-anchor="middle" font-size="18" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">20.3%</text>
+    <text x="170" y="222" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2018–19</text>
+
+    <rect x="270" y="62.6" width="100" height="137.4" fill="#a982cf"/>
+    <text x="320" y="54" text-anchor="middle" font-size="18" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">22.9%</text>
+    <text x="320" y="222" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2021–22</text>
+
+    <rect x="420" y="55.4" width="100" height="144.6" fill="#8a55c0"/>
+    <text x="470" y="46" text-anchor="middle" font-size="18" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">24.1%</text>
+    <text x="470" y="222" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2022–23</text>
+
+    <rect x="570" y="44.6" width="100" height="155.4" fill="#6f3aa0"/>
+    <text x="620" y="36" text-anchor="middle" font-size="18" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">25.9%</text>
+    <text x="620" y="222" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2023–24</text>
+  </svg>
+  <div class="footer">Source: CRA Taulbee Survey 2019, 2022, 2023, 2024 (US/Canada PhD-granting CS/CE/I departments). The 2023–24 release covers 157 of 314 departments (50% response rate). Women's share of <i>enrolled</i> doctoral students has also risen for eight straight years (21.6% in 2015–16 → 27.1% in 2023–24).</div>
+</div>
+
+<h2>What's the number?</h2>
+<p><b>Enrolled CS PhD students who are female: 22.7%</b> (CRA Taulbee 2023 Survey — 182 PhD-conferring departments). <b>CS/CE/I PhD recipients who are female: 25.9% in 2023–24</b>, up from 24.1% (2022–23) and 22.9% (2021–22). Eighth consecutive annual rise.</p>
+
+<p>For the AI-specialty subset specifically: <b>AI/ML is the single most popular PhD specialty</b> in CS (>25% of doctorates where specialty is known), and <b>women have been under 19% of AI PhD graduates</b> across the 2013–2022 decade. Stanford HAI's annualized cut: 2021 AI PhD graduates were 21.3% female, up from 18.1% in 2011.</p>
+
+<div class="pull">Broader CS PhDs are at 25.9% women and rising; AI-specialty PhDs are at ~21% and rising slower. The AI sub-field is less female than CS as a whole, not more.</div>
+
+<h2>What's the trend?</h2>
+<p>The faculty pipeline trend is <b>bifurcated</b>:</p>
+<ul>
+<li>Women's share of new CS/CE/I faculty hires: <b>24.9% (2017) → 30.2% (2021)</b> — improving.</li>
+<li>But CRA Taulbee 2022–23 reported new tenure-track faculty hires fell from 25.9% to 20.0% women in one year — <b>below the 22.9% female share of new PhDs</b>. One bad year, but it broke the pattern.</li>
+<li>Female faculty at top-18 universities whose primary research focus is AI: <b>16.1%</b> (Stanford HAI 2024).</li>
+</ul>
+
+<h2>What's missing?</h2>
+<ol>
+<li><b>No public dataset of AI-PhD completion rates by gender.</b> CRA Taulbee tracks enrollment and degree production separately but does not publish cohort persistence. <i>The single largest gap in the women-in-AI evidence base.</i></li>
+<li><b>No gender-disaggregated AI postdoc population.</b> NSF GSS reports postdoc gender for all S&amp;E but not AI as a subfield.</li>
+<li><b>No intersectional race × gender breakdown for CS/AI PhDs.</b> CRA Taulbee 2023 reports CS PhDs awarded: Black 1.2% (18 recipients), Hispanic 2.1% (32 recipients) — gender cuts require NSF SED restricted-access microdata.</li>
+<li><b>No measured longitudinal placement outcomes for WiML or Rising Stars in EECS.</b></li>
+<li><b>Stanford, MIT, CMU, Berkeley do not publish program-specific AI PhD gender breakdowns</b> in standardized form.</li>
+<li><b>2024 Taulbee AI-specialty × gender cross-tab is not publicly summarized.</b> Last published in 2019 ("Expanding the Pipeline," women = 13.4% of AI/ML PhD recipients, 2012–2018 aggregate).</li>
+</ol>
+
+<h2>What works?</h2>
+<p><b>Strongest measured-outcome intervention in the women-in-AI literature:</b></p>
+<ul>
+<li><b>CRA-W Grad Cohort for Women.</b> Master's-and-PhD-stage workshop. PNAS (PMC5222789): <b>67% of master's-stage attendees intended to pursue a PhD vs. 29% of matched non-participants</b>; <b>71% first-author publication rate vs. 23%</b> in 1–3 years post-workshop. Matched-cohort survey evidence — cleanest available.</li>
+</ul>
+
+<p><b>Widely used, no rigorous published outcomes:</b> Rising Stars in EECS (MIT, since 2012), WiML Workshop (NeurIPS-colocated, since 2006).</p>
+
+<div class="chart">
+  <div class="title">The advisor-effect bundle: three independent studies, one finding</div>
+  <div class="sub">Female PhD students with female peers and female advisors complete at higher rates, publish more, and place better. The literature treats this as robust.</div>
+  <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visual summary of three converging studies on advisor and peer effects">
+    <!-- Three boxes -->
+    <rect x="40" y="40" width="200" height="150" fill="#fdfdfb" stroke="#6f3aa0" stroke-width="2"/>
+    <text x="140" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#6f3aa0" font-family="Inter, sans-serif">CANAAN &amp; MOUGANIE</text>
+    <text x="140" y="84" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">Journal of Human Resources</text>
+    <text x="140" y="120" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">Female advisors</text>
+    <text x="140" y="138" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">→ persistence</text>
+    <text x="140" y="156" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">→ time-to-degree ↓</text>
+    <text x="140" y="180" text-anchor="middle" font-size="11" fill="#8a8a8a" font-family="Inter, sans-serif">quasi-experimental</text>
+
+    <rect x="260" y="40" width="200" height="150" fill="#fdfdfb" stroke="#6f3aa0" stroke-width="2"/>
+    <text x="360" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#6f3aa0" font-family="Inter, sans-serif">GAULE &amp; PIACENTINI</text>
+    <text x="360" y="84" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">Research Policy</text>
+    <text x="360" y="120" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">Female advisors</text>
+    <text x="360" y="138" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">→ higher publication</text>
+    <text x="360" y="156" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">rate for female PhDs</text>
+    <text x="360" y="180" text-anchor="middle" font-size="11" fill="#8a8a8a" font-family="Inter, sans-serif">large-N panel</text>
+
+    <rect x="480" y="40" width="200" height="150" fill="#fdfdfb" stroke="#6f3aa0" stroke-width="2"/>
+    <text x="580" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#6f3aa0" font-family="Inter, sans-serif">BOSTWICK &amp; WEINBERG</text>
+    <text x="580" y="84" text-anchor="middle" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">JOLE / NBER</text>
+    <text x="580" y="120" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">No female peers</text>
+    <text x="580" y="138" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">→ +10 pp dropout</text>
+    <text x="580" y="156" text-anchor="middle" font-size="14" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">before year 2</text>
+    <text x="580" y="180" text-anchor="middle" font-size="11" fill="#8a8a8a" font-family="Inter, sans-serif">longitudinal cohort</text>
+
+    <text x="360" y="215" text-anchor="middle" font-size="12" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">Three independent designs. Same finding. Structural exposure to other women moves persistence.</text>
+  </svg>
+  <div class="footer">Sources: Canaan &amp; Mouganie (JHR); Gaule &amp; Piacentini (Research Policy); Bostwick &amp; Weinberg (JOLE / NBER). All three are peer-reviewed; first two are paywalled (preprint available); third is open-access.</div>
+</div>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+<li><b>Read</b> — The CRA-W Grad Cohort evaluation (PMC5222789). Cleanest comparison-group evidence for a graduate-stage women-in-CS intervention.</li>
+<li><b>Share</b> — The advisor-effect bundle (Canaan &amp; Mouganie; Gaule &amp; Piacentini; Bostwick &amp; Weinberg). Three independent designs converging. Cleanest argument for increasing female faculty representation in AI programs as a <i>persistence</i> intervention.</li>
+<li><b>Ask</b> — Of any AI PhD program: "What is your female-graduate enrollment %, and what % of your AI-specialty faculty are women?" The ratio tells you whether the program is set up to retain the women it admits.</li>
+<li><b>Track</b> — The annual CRA Taulbee release. Watch the AI-specialty × gender cross-tab specifically — last published in 2019 and an update is overdue.</li>
+<li><b>Act</b> — If you mentor a woman in an AI PhD, introduce her to at least one woman one career stage ahead of her before the academic year ends. The peer-effect literature says cohort-shaping is measurably consequential; the smallest unit of cohort-shaping is one introduction.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li><b>CRA.</b> <i>2023 Taulbee Survey Report</i>. <a href="https://cra.org/wp-content/uploads/2024/05/2023-CRA-Taulbee-Survey-Report.pdf">link</a> <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>2022 Taulbee Survey</i>. <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>2024 Taulbee Survey update</i>. <a href="https://cra.org/crn/2025/06/cra-update-new-cra-taulbee-survey-findings-show-record-doctoral-production-rising-enrollment-and-shifting-undergraduate-trends/">link</a> <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>Expanding the Pipeline: Gender and Ethnic Differences in PhD Specialty Areas</i> (2019). <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index Report 2024, Chapter 6 (Education)</i>. <a href="https://hai.stanford.edu/ai-index/2024-ai-index-report/education">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index Report 2021</i>. <span class="tag">Tier 1</span></li>
+<li><b>NSF NCSES.</b> <i>Doctorate Recipients from US Universities 2023 (SED)</i>. <a href="https://ncses.nsf.gov/pubs/nsf25300/report/field-of-doctorate">link</a> <span class="tag">Tier 1</span></li>
+<li><b>NSF NCSES.</b> <i>Postdoctoral Appointments Rise</i>. <a href="https://ncses.nsf.gov/pubs/nsf26308">link</a> <span class="tag">Tier 1</span></li>
+<li><b>PNAS / NIH PMC.</b> <i>The Grad Cohort Workshop: Evaluating an Intervention to Retain Women Graduate Students in Computing</i>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5222789/">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Bostwick &amp; Weinberg.</b> <i>Nevertheless She Persisted? Gender Peer Effects in Doctoral STEM Programs</i>. JOLE. <a href="https://www.journals.uchicago.edu/doi/10.1086/714921">link</a> <span class="tag">Tier 2</span> <span class="tag">paywalled</span></li>
+<li><b>Canaan &amp; Mouganie.</b> <i>Advisor Gender Impact on Female STEM Persistence</i>. JHR. <a href="https://jhr.uwpress.org/content/58/2/593">link</a> <span class="tag">Tier 2</span> <span class="tag">paywalled</span></li>
+<li><b>Gaule &amp; Piacentini.</b> <i>An advisor like me?</i> Research Policy. <a href="https://www.sciencedirect.com/science/article/abs/pii/S004873331830043X">link</a> <span class="tag">Tier 2</span> <span class="tag">paywalled</span></li>
+<li><b>AI Now Institute.</b> <i>Discriminating Systems: Gender, Race, and Power in AI</i>. <a href="https://ainowinstitute.org/wp-content/uploads/2023/04/discriminatingsystems.pdf">link</a> <span class="tag">Tier 2</span></li>
+<li><b>WiML.</b> <a href="https://www.wiml.org/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>MIT EECS.</b> <i>Rising Stars in EECS</i>. <a href="https://risingstars-eecs.mit.edu/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>UNESCO.</b> <i>Status and Trends: The Gender Gap in Science</i>. <span class="tag">Tier 1</span></li>
+<li><b>Interface EU.</b> <i>AI's Missing Link</i>. <span class="tag">Tier 2</span></li>
+<li><b>IBEF.</b> <i>India women AI/ML enrollment</i>. <span class="tag">Tier 3</span></li>
+<li><b>CRA.</b> <i>Canadian Slice of 2023 Taulbee</i>. <span class="tag">Tier 1</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-05-25 · Week 3 of the 52-week rotation. Next: <i>Entry-level AI roles — first job in AI/ML</i> (Week 4).</p>
+  <p>Markdown source: <a href="../reports/2026-05-25_phd-programs.md"><code>reports/2026-05-25_phd-programs.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TOPIC_TITLE}} — WAI-Research Week {{WEEK_NUMBER}}</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week {{WEEK_NUMBER}} · {{DATE}}</div>
+  <h1 class="title">{{TOPIC_TITLE}}</h1>
+  <p class="subtitle">{{ONE_LINE_THESIS}}</p>
+  <div class="meta">
+    <span><b>Filed:</b> {{DATE}}</span>
+    <span><b>Length:</b> ~{{WORD_COUNT}} words</span>
+    <span><b>Sources cited:</b> {{SOURCE_COUNT}}</span>
+    <span><b>Tier 1:</b> {{T1}} · <b>Tier 2:</b> {{T2}} · <b>Tier 3:</b> {{T3}}</span>
+  </div>
+  <div class="hero">
+    <div class="stat">{{HERO_STAT}}</div>
+    <div class="stat-caption">{{HERO_CAPTION_WITH_SOURCE}}</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  {{THREE_SENTENCE_EXEC_SUMMARY_WITH_BOLDED_NUMBERS}}
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <!-- 6-10 stat cells: <div class="cell [bad|warn|good|accent]"><div class="v">VALUE</div><div class="l">LABEL</div><div class="s">SOURCE</div></div> -->
+</div>
+
+<div class="chart">
+  <div class="title">{{CHART_1_TITLE}}</div>
+  <div class="sub">{{CHART_1_SUBTITLE}}</div>
+  <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA}}">
+    <!-- Hand-coded SVG chart. Standard palette:
+         - axis/labels: stroke="#1a1a1a", fill="#5a5a5a" font-family="Inter, sans-serif"
+         - bars: fill="#6f3aa0" (purple), "#b07b0c" (warn), "#b5392a" (bad), "#2f7d4d" (good)
+         - gridlines: stroke="#e5e0d8" stroke-dasharray="3 3"
+         - numbers on bars: font-family="Charter,Georgia,serif" font-weight="700"
+    -->
+  </svg>
+  <div class="footer">{{CHART_1_SOURCE_AND_METHODOLOGY}}</div>
+</div>
+
+<h2>What's the number?</h2>
+<p>{{CURRENT_STATE_WITH_CITATIONS_AND_DENOMINATOR_GEOGRAPHY_YEAR_SAMPLE_DEFINITION}}</p>
+
+<div class="pull">{{KEY_QUOTE_OR_TAKEAWAY}}</div>
+
+<h2>What's the trend?</h2>
+<!-- Optional second chart for the trend, same structure -->
+<p>{{TREND_WITH_3_5_YEAR_DIRECTION}}</p>
+
+<h2>What's missing?</h2>
+<ol>
+  <li>{{GAP_1_WITH_WHY_IT_MATTERS}}</li>
+  <li>{{GAP_2}}</li>
+  <!-- 4-6 gaps -->
+</ol>
+
+<h2>What works?</h2>
+<ul>
+  <li><b>{{INTERVENTION_NAME}}</b> {{WHAT_THEY_DID_AND_MEASURED_OUTCOME_WITH_CITATION}}</li>
+  <!-- 2-4 interventions with measured outcomes -->
+</ul>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+  <li><b>Read</b> — {{ONE_PAPER_OR_REPORT_FROM_THIS_WEEKS_SOURCES}}.</li>
+  <li><b>Share</b> — {{ONE_STATISTIC_WORTH_CIRCULATING}}.</li>
+  <li><b>Ask</b> — {{ONE_QUESTION_FOR_ORG_OR_MENTOR_GROUNDED_IN_THE_GAP_ANALYSIS}}.</li>
+  <li><b>Track</b> — {{ONE_NUMBER_TO_WATCH_OVER_NEXT_12_MONTHS}}.</li>
+  <li><b>Act</b> — {{ONE_CONCRETE_CHANGE_IN_OWN_PRACTICE}}.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li><b>{{PUBLISHER}}.</b> <i>{{TITLE}}</i> ({{YEAR}}). <a href="{{URL}}">link</a> <span class="tag">Tier {{N}}</span></li>
+  <!-- All cited sources, in order of first reference -->
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed {{DATE}} · Week {{WEEK_NUMBER}} of the 52-week rotation. Next: <i>{{NEXT_TOPIC_TITLE}}</i> (Week {{NEXT_WEEK}}).</p>
+  <p>Markdown source: <a href="../reports/{{DATE}}_{{SLUG}}.md"><code>reports/{{DATE}}_{{SLUG}}.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>

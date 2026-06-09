@@ -83,13 +83,13 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 ## Recent reports
 
-| Date | Week | Topic | Report |
-|---|---|---|---|
-| 2026-06-08 | 5 | The pay gap in AI and machine learning roles | [pay-gap](../reports/2026-06-08_pay-gap.md) |
-| 2026-06-01 | 4 | Entry-level AI roles: first job in AI/ML | [entry-level-roles](../reports/2026-06-01_entry-level-roles.md) |
-| 2026-05-25 | 3 | Graduate school: women in AI/ML PhD programs | [phd-programs](../reports/2026-05-25_phd-programs.md) |
-| 2026-05-18 | 2 | The pipeline: women in undergraduate CS and AI programs | [undergraduate-pipeline](../reports/2026-05-18_undergraduate-pipeline.md) |
-| 2026-05-11 | 1 | State of women in AI: representation across the workforce | [workforce-representation](../reports/2026-05-11_workforce-representation.md) |
+| Date | Week | Topic | Markdown | White paper |
+|---|---|---|---|---|
+| 2026-06-08 | 5 | The pay gap in AI and machine learning roles | [md](../reports/2026-06-08_pay-gap.md) | [white paper](../whitepapers/2026-06-08_pay-gap.html) |
+| 2026-06-01 | 4 | Entry-level AI roles: first job in AI/ML | [md](../reports/2026-06-01_entry-level-roles.md) | [white paper](../whitepapers/2026-06-01_entry-level-roles.html) |
+| 2026-05-25 | 3 | Graduate school: women in AI/ML PhD programs | [md](../reports/2026-05-25_phd-programs.md) | [white paper](../whitepapers/2026-05-25_phd-programs.html) |
+| 2026-05-18 | 2 | The pipeline: women in undergraduate CS and AI programs | [md](../reports/2026-05-18_undergraduate-pipeline.md) | [white paper](../whitepapers/2026-05-18_undergraduate-pipeline.html) |
+| 2026-05-11 | 1 | State of women in AI: representation across the workforce | [md](../reports/2026-05-11_workforce-representation.md) | [white paper](../whitepapers/2026-05-11_workforce-representation.html) |
 
 ## Most-cited sources to date
 

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The pipeline: women in undergraduate CS and AI programs — WAI-Research Week 2</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 2 · 2026-05-18</div>
+  <h1 class="title">The pipeline: women in undergraduate CS and AI programs</h1>
+  <p class="subtitle">22.6% today. 37.1% in 1984. The trajectory is reversible — the data shows it once was.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-05-18</span>
+    <span><b>Length:</b> ~2,000 words</span>
+    <span><b>Sources cited:</b> 17</span>
+    <span><b>Tier 1:</b> 11 · <b>Tier 2:</b> 4 · <b>Tier 3:</b> 2</span>
+  </div>
+  <div class="hero">
+    <div class="stat">37.1% → 22.6%</div>
+    <div class="stat-caption">Women's share of US CS bachelor's degrees: the 1984 peak (37.1%) to 2010 trough (17.6%) to today (22.6%). A 30-point swing that falsifies any "natural equilibrium" framing of women in computing.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  Women earned <b>22.6% of US computer science bachelor's degrees in 2021–22</b> (NCES IPEDS) — less than the historical peak of <b>37.1% in 1983–84</b>. The deepest finding in the trend data is that CS is one of the only STEM fields where women's share went <i>down</i> for nearly thirty years before recovering (trough of 17.6% in 2010–11). The single most actionable lever today is <b>AP Computer Science Principles</b>, which carries 34% female participation vs. AP CS A's 26% — the introductory course is where the pipeline widens or narrows, and the data is unambiguous about which version works.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell warn"><div class="v">22.6%</div><div class="l">US CS bachelor's degrees to women, 2021–22</div><div class="s">NCES IPEDS T.325.35</div></div>
+  <div class="cell"><div class="v">37.1%</div><div class="l">Historical peak (1983–84)</div><div class="s">NCES IPEDS</div></div>
+  <div class="cell bad"><div class="v">17.6%</div><div class="l">Trough (2010–11)</div><div class="s">NCES IPEDS</div></div>
+  <div class="cell accent"><div class="v">33.8%</div><div class="l">Women in AP CS Principles, 2023</div><div class="s">College Board</div></div>
+  <div class="cell warn"><div class="v">25.0%</div><div class="l">Women in AP CS A, 2023</div><div class="s">College Board</div></div>
+  <div class="cell good"><div class="v">34.2%</div><div class="l">India CS Engineering UG enrollment (women)</div><div class="s">AICTE/AISHE 2021–22</div></div>
+  <div class="cell"><div class="v">26%</div><div class="l">UK computing entrants (women)</div><div class="s">HESA SB271, 2023–24</div></div>
+  <div class="cell accent"><div class="v">+13.2pp</div><div class="l">Girls Who Code participants more likely to major in CS</div><div class="s">AIR evaluation, 2024</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">The forty-year arc: women's share of US CS bachelor's degrees, 1971–2022</div>
+  <div class="sub">CS is the only major STEM field where women's share <i>fell</i> for almost 30 years. The post-2010 recovery is real but still 14 points below the 1984 peak.</div>
+  <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of women's share of US CS bachelor's degrees from 1971 to 2022">
+    <line x1="60" y1="240" x2="700" y2="240" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="40" x2="60" y2="240" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- gridlines for 10%, 20%, 30%, 40% (scale: 5px per 1%) -->
+    <line x1="60" y1="190" x2="700" y2="190" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="140" x2="700" y2="140" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="90" x2="700" y2="90" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="40" x2="700" y2="40" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="50" y="244" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">0%</text>
+    <text x="50" y="194" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">10%</text>
+    <text x="50" y="144" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">20%</text>
+    <text x="50" y="94" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">30%</text>
+    <text x="50" y="44" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">40%</text>
+    <!-- x axis labels: 1971, 1981, 1984 peak, 1991, 2001, 2011 trough, 2022 -->
+    <text x="80" y="262" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">1971</text>
+    <text x="195" y="262" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">1981</text>
+    <text x="320" y="262" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">1991</text>
+    <text x="445" y="262" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2001</text>
+    <text x="570" y="262" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2011</text>
+    <text x="685" y="262" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">2022</text>
+    <!-- data: x = 60 + (year-1971)*12.55, y = 240 - val*5 -->
+    <!-- 1971: 13.6%; 1981: 32.5%; 1984: 37.1% (peak); 1991: 29.4%; 2001: 27.7%; 2011: 17.6% (trough); 2016: 18.7%; 2019: 20.7%; 2021: 21.9%; 2022: 22.6% -->
+    <polyline points="80,172 185,77.5 222,54.5 311,93 437,101.5 562,152 626,146.5 663,136.5 689,130.5 700,127" fill="none" stroke="#6f3aa0" stroke-width="2.8"/>
+    <!-- dots -->
+    <circle cx="80" cy="172" r="4" fill="#6f3aa0"/>
+    <circle cx="185" cy="77.5" r="4" fill="#6f3aa0"/>
+    <circle cx="222" cy="54.5" r="5" fill="#b5392a"/>
+    <circle cx="311" cy="93" r="4" fill="#6f3aa0"/>
+    <circle cx="437" cy="101.5" r="4" fill="#6f3aa0"/>
+    <circle cx="562" cy="152" r="5" fill="#b5392a"/>
+    <circle cx="626" cy="146.5" r="4" fill="#6f3aa0"/>
+    <circle cx="700" cy="127" r="4" fill="#6f3aa0"/>
+    <!-- annotations -->
+    <text x="222" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#b5392a" font-family="Charter, Georgia, serif">37.1% PEAK</text>
+    <text x="562" y="168" text-anchor="middle" font-size="12" font-weight="700" fill="#b5392a" font-family="Charter, Georgia, serif">17.6% TROUGH</text>
+    <text x="700" y="115" text-anchor="end" font-size="12" font-weight="700" fill="#6f3aa0" font-family="Charter, Georgia, serif">22.6%</text>
+  </svg>
+  <div class="footer">Source: NCES Digest of Education Statistics 2023, Table 325.35 — "Degrees in computer and information sciences conferred by postsecondary institutions, by level of degree and sex of student, 1964–65 through 2021–22." IPEDS data covers all US Title IV institutions.</div>
+</div>
+
+<h2>What's the number?</h2>
+<p>In the United States, <b>22.6% of computer and information sciences bachelor's degrees were awarded to women in 2021–22</b> (NCES Digest of Education Statistics, Table 325.35). This is the canonical figure cited by virtually every downstream report. At PhD-granting CS departments specifically, CRA Taulbee 2024 reports <b>23.7%</b>. The two figures bracket the true national rate within about one point.</p>
+
+<p>There is <b>no Tier 1 national statistic for women's share of AI-specific undergraduate concentrations</b>. IPEDS CIP code 11.0102 ("Artificial Intelligence") was added recently; institutional reporting is sparse. Stanford HAI's AI Index uses CRA Taulbee AI-specialty PhD data as a proxy.</p>
+
+<div class="pull">CS is the only major STEM field where women's share fell for almost 30 years. Whatever combination of forces caused the collapse, the data shows it is not a natural equilibrium — it once was higher.</div>
+
+<table class="data">
+<thead><tr><th>Country</th><th>% women</th><th>Year</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>US (CS BAs)</td><td><b>22.6%</b></td><td>2021–22</td><td>NCES IPEDS T.325.35</td></tr>
+<tr><td>UK (computing entrants)</td><td><b>26%</b></td><td>2023–24</td><td>HESA SB271</td></tr>
+<tr><td>EU-27 (ICT tertiary grads)</td><td><b>~23%</b></td><td>2023</td><td>OECD EaG 2023 / Eurostat</td></tr>
+<tr><td>India (CS Engineering UG)</td><td><b>34.2%</b></td><td>2021–22</td><td>AICTE/AISHE via SWE</td></tr>
+<tr><td>China (national CS UG)</td><td colspan="3"><i>Not openly published; institutional figures only. Methodology gap.</i></td></tr>
+</tbody>
+</table>
+
+<h2>What's the trend?</h2>
+<p>The US trend is the story. Women's share of CS bachelor's degrees did not march upward over 50 years like most STEM fields. It <b>rose</b>, <b>collapsed</b>, and is <b>slowly recovering</b>.</p>
+
+<p>The AP pipeline shows where momentum is now:</p>
+
+<div class="chart">
+  <div class="title">AP CS Principles vs. AP CS A — the introductory course is the bottleneck</div>
+  <div class="sub">CSP has held a ~9-point higher female-participation share than CS A every year since CSP launched in 2016–17.</div>
+  <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing AP CSP and AP CS A female participation rates">
+    <line x1="60" y1="160" x2="700" y2="160" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="20" x2="60" y2="160" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="60" y1="120" x2="700" y2="120" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="80" x2="700" y2="80" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="60" y1="40" x2="700" y2="40" stroke="#e5e0d8" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="50" y="164" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">0%</text>
+    <text x="50" y="124" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">10%</text>
+    <text x="50" y="84" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">20%</text>
+    <text x="50" y="44" text-anchor="end" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">30%</text>
+    <!-- CSP 33.8% -->
+    <rect x="170" y="25" width="160" height="135" fill="#6f3aa0"/>
+    <text x="250" y="18" text-anchor="middle" font-size="22" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">33.8%</text>
+    <text x="250" y="180" text-anchor="middle" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">AP CS Principles</text>
+    <text x="250" y="194" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">"survey course" introduction</text>
+    <!-- CSA 25.0% -->
+    <rect x="430" y="60" width="160" height="100" fill="#b07b0c"/>
+    <text x="510" y="53" text-anchor="middle" font-size="22" font-weight="700" font-family="Charter,Georgia,serif" fill="#1a1a1a">25.0%</text>
+    <text x="510" y="180" text-anchor="middle" font-size="13" fill="#1a1a1a" font-family="Inter, sans-serif">AP CS A</text>
+    <text x="510" y="194" text-anchor="middle" font-size="11" fill="#6b6b6b" font-family="Inter, sans-serif">"learn Java" course, assumes prior coding</text>
+  </svg>
+  <div class="footer">Source: College Board newsroom releases, 2024. AP Computer Science Principles (CSP) 2023: 164,505 total exam-takers, 55,572 women. AP Computer Science A (CSA) 2023: 96,588 total, 24,147 women. CSA grew +7% YoY and +81% since 2017 in female participation.</div>
+</div>
+
+<h2>What's missing?</h2>
+<ol>
+<li><b>No standardized national data on women in AI-specific undergrad majors.</b> IPEDS CIP code 11.0102 exists; institutional reporting too sparse for Tier 1 statistics.</li>
+<li><b>No national US attrition rate for women in CS undergrad.</b> Single-institution figures circulate (Penn 13.6% vs. 2.5%; CACM 21% vs. 15%) but CRA Taulbee explicitly does not measure persistence.</li>
+<li><b>China CS undergrad gender data not openly published at national level.</b></li>
+<li><b>Race-by-gender CS bachelor's counts derivable but not published as a Tier 1 number.</b> Most "Black women in CS" or "Latina in CS" figures circulate via Tier 2 compilations.</li>
+<li><b>AI4ALL and Kode With Klossy lack independent third-party evaluations</b> comparable to AIR's Girls Who Code study.</li>
+</ol>
+
+<h2>What works?</h2>
+<p><b>Programs with rigorous independent evaluation:</b></p>
+<ul>
+<li><b>Girls Who Code Summer Immersion.</b> AIR quasi-experimental evaluation (March 2024, ERIC ED647331): participants <b>+13.2 pp more likely to major in CS</b> than propensity-weighted comparison group. Self-Paced Program: +11.5 pp. Self-reported alumni: <b>15× national CS-major rate</b>; 16× for Black/Latina alumni.</li>
+<li><b>BRAID Initiative.</b> UCLA / Linda Sax (NSF Award 1525737): across 15 participating CS departments, <b>108% rise in women's computing enrollment</b> over the BRAID period; women's growth outpaced overall growth at every institution.</li>
+</ul>
+<p><b>Strong self-report, no independent evaluation:</b> Black Girls CODE (Rockman 2017 case study), AI4ALL (88% alumni continuing CS/AI, 2021 cohort), Kode With Klossy.</p>
+
+<div class="pull">The interventions that move the number are multi-year, departmental or curricular, and measured. Single-day events, sponsorship logos, and "Day for Girls" promotions show up in zero published evaluations as moving the major-completion rate.</div>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+<li><b>Read</b> — The AIR Girls Who Code evaluation (ERIC ED647331). Cleanest comparison-group evidence in the female-pipeline literature.</li>
+<li><b>Share</b> — The <b>1984 → 2010 trough chart</b> (37.1% → 17.6%). Most economical visual rebuttal to "girls just don't like CS."</li>
+<li><b>Ask</b> — Of any high school in your network: "Does this school offer AP CS Principles, and what is the female enrollment ratio?" The answer doubles as a school-quality signal.</li>
+<li><b>Track</b> — The annual NCES IPEDS Digest Table 325.35 release. Canonical longitudinal series for US CS-bachelor's gender share.</li>
+<li><b>Act</b> — If you fund or sponsor any pipeline program, <b>prioritize the ones with independent third-party evaluations</b> (Girls Who Code, BRAID-affiliated departments). The opportunity cost of funding an unmeasured program is funding a measured one.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li><b>NCES.</b> <i>Digest of Education Statistics 2023, Table 325.35</i>. <a href="https://nces.ed.gov/programs/digest/d23/tables/dt23_325.35.asp">link</a> <span class="tag">Tier 1</span></li>
+<li><b>NSF NCSES.</b> <i>Diversity and STEM 2023</i> (NSF 23-315). <a href="https://ncses.nsf.gov/pubs/nsf23315/">link</a> <span class="tag">Tier 1</span></li>
+<li><b>NSF NCSES.</b> <i>Women, Minorities, and Persons with Disabilities in S&amp;E 2021</i> (NSF 21-321). <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>2024 Taulbee Survey</i>. <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>2023 Taulbee Survey Report</i>. <span class="tag">Tier 1</span></li>
+<li><b>CRA.</b> <i>Generation CS</i> (2017). <span class="tag">Tier 2</span></li>
+<li><b>College Board.</b> <i>AP CS Female Diversity Award announcement, 2024 release with 2023 participation data</i>. <a href="https://newsroom.collegeboard.org/1153-schools-earn-college-boards-7th-annual-ap-computer-science-female-diversity-award">link</a> <span class="tag">Tier 1</span></li>
+<li><b>HESA.</b> <i>UK Higher Education Student Statistics 2023/24 (SB271)</i>. <a href="https://www.hesa.ac.uk/news/20-03-2025/sb271-higher-education-student-statistics/subjects">link</a> <span class="tag">Tier 1</span></li>
+<li><b>OECD.</b> <i>Education at a Glance 2023</i>. <span class="tag">Tier 1</span></li>
+<li><b>Eurostat.</b> <i>ICT education — a statistical overview</i>. <span class="tag">Tier 1</span></li>
+<li><b>UNESCO.</b> <i>Cracking the Code</i> (2017). <a href="https://unesdoc.unesco.org/ark:/48223/pf0000253479">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index 2024 — Diversity</i>. <span class="tag">Tier 3</span></li>
+<li><b>SWE.</b> <i>India Tertiary Education 2025</i>. <a href="https://swe.org/research/2025/india-tertiary-education/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>American Institutes for Research.</b> <i>Girls Who Code Program Evaluation: Final Report</i> (March 2024, ERIC ED647331). <a href="https://eric.ed.gov/?id=ED647331">link</a> <span class="tag">Tier 2</span></li>
+<li><b>UCLA / Linda Sax.</b> <i>BRAID Initiative</i>, NSF Award 1525737. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1525737">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Rockman et al.</b> <i>Black Girls CODE case study</i> (2017). <a href="https://rockman.com/docs/downloads/BGC_REA_FINAL_2017-1.pdf">link</a> <span class="tag">Tier 3</span></li>
+<li><b>CACM.</b> <i>Toward Improving Female Retention in the Computer Science Major</i>. <span class="tag">Tier 3</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-05-18 · Week 2 of the 52-week rotation. Next: <i>Graduate school — women in AI/ML PhD programs</i> (Week 3).</p>
+  <p>Markdown source: <a href="../reports/2026-05-18_undergraduate-pipeline.md"><code>reports/2026-05-18_undergraduate-pipeline.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>
