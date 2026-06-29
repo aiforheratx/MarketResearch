@@ -19,7 +19,7 @@ Topic: Women & AI in healthcare R&D: the state of representation  ·  2397 words
 | ✓ | F3 | All required sections present | format | PASS | 9/9 sections |
 | ✓ | F4 | Matching white paper exists | format | PASS | 2026-06-29_healthcare-rnd.html |
 | ✓ | F5 | White paper <head> valid (css, title, viewport) | format | PASS | ok |
-| ✓ | F6 | White paper has ≥1 inline SVG chart | format | PASS | 2 svg element(s) |
+| ✓ | F6 | White paper has ≥1 inline SVG chart | format | PASS | 3 svg element(s) |
 | ✓ | C1 | Body word count 1,500–3,500 | content | PASS | 2397 words |
 | ✓ | C2 | Executive summary is 2–4 sentences | content | PASS | 3 sentences |
 | ✓ | C3 | Numbers table has ≥5 statistic rows | content | PASS | 12 rows |

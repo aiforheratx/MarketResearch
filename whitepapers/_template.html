@@ -4,93 +4,99 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{TOPIC_TITLE}} — WAI-Research Week {{WEEK_NUMBER}}</title>
-<link rel="stylesheet" href="_assets/style.css">
+<link rel="stylesheet" href="_assets/report.css">
 </head>
-<body>
-<article class="paper">
+<!--
+  FORMAL REPORT TEMPLATE (Harvard Business Review / McKinsey aesthetic).
+  RULES:
+   - Narrative prose. NO data tables or grids — numbers live in prose, figures, and callouts.
+   - 2–3 inline SVG figures (charts/graphs) with "Figure N." captions citing source + methodology.
+   - Statistical callouts (.callout) for standout numbers; one .pull quote for the sharpest line.
+   - References at the END as a numbered list with Tier tags and full URLs.
+   - Single editorial accent (#0a4fd6). Serif body. Drop-cap on the lead paragraph.
+   - Renders to a clean A4 PDF via headless Chrome --print-to-pdf (this PDF is what gets emailed).
+-->
+<body class="report">
 
-<header class="cover">
-  <div class="series">WAI-Research · Week {{WEEK_NUMBER}} · {{DATE}}</div>
-  <h1 class="title">{{TOPIC_TITLE}}</h1>
-  <p class="subtitle">{{ONE_LINE_THESIS}}</p>
-  <div class="meta">
-    <span><b>Filed:</b> {{DATE}}</span>
-    <span><b>Length:</b> ~{{WORD_COUNT}} words</span>
-    <span><b>Sources cited:</b> {{SOURCE_COUNT}}</span>
-    <span><b>Tier 1:</b> {{T1}} · <b>Tier 2:</b> {{T2}} · <b>Tier 3:</b> {{T3}}</span>
-  </div>
-  <div class="hero">
-    <div class="stat">{{HERO_STAT}}</div>
-    <div class="stat-caption">{{HERO_CAPTION_WITH_SOURCE}}</div>
-  </div>
-</header>
-
-<div class="exec">
-  <div class="label">Executive summary</div>
-  {{THREE_SENTENCE_EXEC_SUMMARY_WITH_BOLDED_NUMBERS}}
+<div class="kicker">Women &amp; AI<span class="sep">·</span>Market Research<span class="sep">·</span>{{SECTOR_OR_THEME}}</div>
+<h1 class="title">{{HEADLINE — a sharp editorial thesis, not just the topic name}}</h1>
+<p class="deck">{{ONE_OR_TWO_SENTENCE_DECK_SUBTITLE}}</p>
+<div class="byline">
+  <span>By <b>WAI-Research</b>, on behalf of <b>Mugdha Tasgaonkar</b></span>
+  <span>Filed <b>{{DATE_LONG}}</b> · Week {{WEEK_NUMBER}}</span>
+  <span>Reviewed by <b>WAI-Test</b> · verdict {{VERDICT}}</span>
 </div>
 
-<div class="section-label">At a glance</div>
-<div class="glance">
-  <!-- 6-10 stat cells: <div class="cell [bad|warn|good|accent]"><div class="v">VALUE</div><div class="l">LABEL</div><div class="s">SOURCE</div></div> -->
+<div class="hero-fig">
+  <div class="n">{{HERO_STAT}}</div>
+  <div class="t">{{HERO_CAPTION}} <span class="tag">{{HERO_SOURCE}}</span></div>
 </div>
 
-<div class="chart">
-  <div class="title">{{CHART_1_TITLE}}</div>
-  <div class="sub">{{CHART_1_SUBTITLE}}</div>
-  <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA}}">
-    <!-- Hand-coded SVG chart. Standard palette:
-         - axis/labels: stroke="#1a1a1a", fill="#5a5a5a" font-family="Inter, sans-serif"
-         - bars: fill="#6f3aa0" (purple), "#b07b0c" (warn), "#b5392a" (bad), "#2f7d4d" (good)
-         - gridlines: stroke="#e5e0d8" stroke-dasharray="3 3"
-         - numbers on bars: font-family="Charter,Georgia,serif" font-weight="700"
-    -->
-  </svg>
-  <div class="footer">{{CHART_1_SOURCE_AND_METHODOLOGY}}</div>
+<div class="summary">
+  <span class="lbl">Executive summary</span>
+  {{THREE_SENTENCE_SUMMARY_WITH_BOLD_NUMBERS}}
 </div>
 
-<h2>What's the number?</h2>
-<p>{{CURRENT_STATE_WITH_CITATIONS_AND_DENOMINATOR_GEOGRAPHY_YEAR_SAMPLE_DEFINITION}}</p>
+<p class="lead">{{LEAD_PARAGRAPH — sets up the question; first letter becomes a drop cap automatically}}</p>
 
-<div class="pull">{{KEY_QUOTE_OR_TAKEAWAY}}</div>
+<h2><span class="no">01</span>{{SECTION_LABEL}}</h2>
+<div class="h2sub">{{SECTION_SUBHEAD}}</div>
+<p>{{NARRATIVE_WITH_INLINE_CITATIONS — define denominator, geography, year, sample}}</p>
 
-<h2>What's the trend?</h2>
-<!-- Optional second chart for the trend, same structure -->
-<p>{{TREND_WITH_3_5_YEAR_DIRECTION}}</p>
+<div class="figure">
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA}}">
+  <!-- Hand-coded SVG. Accent #0a4fd6 (deeper #103a8e to emphasize one bar);
+       hairlines #d9e1ee; axis #15233b; labels Helvetica/Arial, fill #15233b / #71809b. -->
+</svg>
+<div class="cap"><b>Figure 1. {{FIGURE_TITLE}}.</b> {{SOURCE_AND_METHODOLOGY}}</div>
+</div>
 
-<h2>What's missing?</h2>
-<ol>
-  <li>{{GAP_1_WITH_WHY_IT_MATTERS}}</li>
-  <li>{{GAP_2}}</li>
-  <!-- 4-6 gaps -->
-</ol>
+<div class="callout">
+  <div class="n">{{STANDOUT_NUMBER}}</div>
+  <div class="t">{{WHAT_IT_MEANS}}</div>
+  <div class="src">{{SOURCE}}</div>
+</div>
 
-<h2>What works?</h2>
+<h2><span class="no">02</span>{{SECTION_LABEL}}</h2>
+<div class="h2sub">{{SECTION_SUBHEAD}}</div>
+<p>{{NARRATIVE}}</p>
+
+<div class="pull">{{SHARPEST_LINE_IN_THE_REPORT}}</div>
+
+<!-- Add Figure 2 / Figure 3 as needed (trend line, second comparison). -->
+
+<h2><span class="no">03</span>What the evidence does not yet measure</h2>
+<div class="h2sub">The gaps are themselves a finding</div>
+<p>{{GAP_ANALYSIS_IN_PROSE — bold the missing measures}}</p>
+
+<h2><span class="no">04</span>What works</h2>
+<div class="h2sub">Evidence with measured outcomes</div>
 <ul>
-  <li><b>{{INTERVENTION_NAME}}</b> {{WHAT_THEY_DID_AND_MEASURED_OUTCOME_WITH_CITATION}}</li>
-  <!-- 2-4 interventions with measured outcomes -->
+  <li><b>{{INTERVENTION}}</b> — {{WHAT_THEY_DID_AND_MEASURED_OUTCOME}}.</li>
 </ul>
 
 <div class="section-label">Recommended actions</div>
 <ol class="actions">
-  <li><b>Read</b> — {{ONE_PAPER_OR_REPORT_FROM_THIS_WEEKS_SOURCES}}.</li>
-  <li><b>Share</b> — {{ONE_STATISTIC_WORTH_CIRCULATING}}.</li>
-  <li><b>Ask</b> — {{ONE_QUESTION_FOR_ORG_OR_MENTOR_GROUNDED_IN_THE_GAP_ANALYSIS}}.</li>
-  <li><b>Track</b> — {{ONE_NUMBER_TO_WATCH_OVER_NEXT_12_MONTHS}}.</li>
-  <li><b>Act</b> — {{ONE_CONCRETE_CHANGE_IN_OWN_PRACTICE}}.</li>
+  <li><b>Read</b> — {{ONE_PAPER}}.</li>
+  <li><b>Share</b> — {{ONE_STATISTIC}}.</li>
+  <li><b>Ask</b> — {{ONE_QUESTION}}.</li>
+  <li><b>Track</b> — {{ONE_NUMBER_TO_WATCH}}.</li>
+  <li><b>Act</b> — {{ONE_CONCRETE_CHANGE}}.</li>
 </ol>
 
-<h2>Sources</h2>
-<ol class="sources">
-  <li><b>{{PUBLISHER}}.</b> <i>{{TITLE}}</i> ({{YEAR}}). <a href="{{URL}}">link</a> <span class="tag">Tier {{N}}</span></li>
-  <!-- All cited sources, in order of first reference -->
+<div class="references section-label" style="border-top:2px solid #15233b">References</div>
+<div class="references">
+<ol>
+  <li><b>{{PUBLISHER}}.</b> <i>{{TITLE}}</i> ({{YEAR}}). <a href="{{URL}}">{{URL_SHORT}}</a> <span class="tag">Tier {{N}}</span></li>
+  <!-- all cited sources, in order of first reference -->
 </ol>
+</div>
 
-<footer class="colophon">
-  <p><b>WAI-Research</b> · Filed {{DATE}} · Week {{WEEK_NUMBER}} of the 52-week rotation. Next: <i>{{NEXT_TOPIC_TITLE}}</i> (Week {{NEXT_WEEK}}).</p>
-  <p>Markdown source: <a href="../reports/{{DATE}}_{{SLUG}}.md"><code>reports/{{DATE}}_{{SLUG}}.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
-</footer>
+<div class="colophon">
+  WAI-Research · Week {{WEEK_NUMBER}} · {{TRACK_OR_ROTATION}}. Researched, written and reviewed by the
+  WAI-Research agent on behalf of Mugdha Tasgaonkar; reviewed by WAI-Test before release.
+  Next: <i>{{NEXT_TOPIC}}</i>. Source data: <code>reports/{{DATE}}_{{SLUG}}.md</code>.
+</div>
 
-</article>
 </body>
 </html>

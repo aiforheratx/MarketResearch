@@ -144,7 +144,7 @@ def review(md_path: Path):
     checks.append(check(
         "F4", "Matching white paper exists", "format", "FAIL",
         wp_path.exists(), wp_path.name if wp_path.exists() else "not found"))
-    head_ok = all(s in wp for s in ["_assets/style.css", "<title", "viewport"]) if wp else False
+    head_ok = all(s in wp for s in ["_assets/", ".css", "<title", "viewport"]) if wp else False
     checks.append(check(
         "F5", "White paper <head> valid (css, title, viewport)", "format", "WARN",
         head_ok, "ok" if head_ok else "missing head element"))

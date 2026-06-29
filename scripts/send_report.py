@@ -126,6 +126,14 @@ def png_to_pdf(png_path: Path, pdf_path: Path):
         return None
 
 
+def report_to_pdf(html_path: Path, pdf_path: Path):
+    """Render the formal report HTML (HBR-style — prose, charts, references) to a clean PDF."""
+    if html_path.exists() and _chrome("--no-pdf-header-footer",
+                                      f"--print-to-pdf={pdf_path}", html_path.as_uri()):
+        return pdf_path if pdf_path.exists() else None
+    return None
+
+
 def ensure_docx(md_path: Path):
     """The report as a clean Word document; build it from the markdown if missing."""
     docx_path = md_path.with_suffix(".docx")
@@ -162,7 +170,7 @@ was drafted.{qa_line}
 Summary: {meta['summary']}
 
 Attached:
-  1. The report (Word) — statistics, references, clean formatting.
+  1. The report (PDF) — a formal report with charts, statistics and references.
   2. The agent operations dashboard (PDF) — the agent's pipeline, quality review and schedule.
 The dashboard is also shown in the body of this email for reference.
 
@@ -200,7 +208,7 @@ WAI-Research (on behalf of {SIGNATORY})
 
     <div style="font-size:13px;font-weight:800;color:{navy};margin:8px 2px 6px;">Attached</div>
     <ol style="font-size:13.5px;line-height:1.6;margin:0 2px 16px;padding-left:18px;">
-      <li>The report (Word) — statistics, references, clean formatting.</li>
+      <li>The report (PDF) — a formal report with charts, statistics and references.</li>
       <li>The agent operations dashboard (PDF).</li>
     </ol>
 
@@ -244,11 +252,12 @@ def main():
         webbrowser.open(PREVIEW.as_uri())
         return
 
-    docx_path = ensure_docx(md_path)
+    wp_html = ROOT / "whitepapers" / f"{md_path.stem}.html"
+    report_pdf = report_to_pdf(wp_html, REPORTS / f"{md_path.stem}.pdf")
     attachments = []
-    if docx_path:
-        attachments.append((docx_path, "application", "vnd.openxmlformats-officedocument.wordprocessingml.document",
-                            f"WAI Market Research Report - {meta['date']}.docx"))
+    if report_pdf:
+        attachments.append((report_pdf, "application", "pdf",
+                            f"WAI Market Research Report - {meta['date']}.pdf"))
     if dash_pdf:
         attachments.append((dash_pdf, "application", "pdf",
                             f"WAI Agent Dashboard - {meta['date']}.pdf"))
@@ -266,8 +275,8 @@ def main():
     if not app_password:
         sys.exit("ERROR: set GMAIL_APP_PASSWORD (a Gmail App Password) in the environment.")
     if len(attachments) < 2:
-        sys.exit("ERROR: expected 2 attachments (report .docx + dashboard .pdf); one failed to generate. "
-                 "Check that scripts/md_to_doc.py, Google Chrome, and Pillow are available.")
+        sys.exit("ERROR: expected 2 attachments (report .pdf + dashboard .pdf); one failed to generate. "
+                 "Check that Google Chrome and Pillow are available.")
 
     msg = EmailMessage()
     msg["From"] = f"{SIGNATORY} via WAI-Research <{sender}>"
