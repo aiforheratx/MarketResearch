@@ -42,6 +42,7 @@ DEFAULT_RECIPIENTS = [
     "mugdha.v.tasgaonkar@medtronic.com",
     "sue.delfidio@medtronic.com",
     "tyler.w.stigen@medtronic.com",
+    "marilise.kassouf1@medtronic.com",
 ]
 SIGNATORY = "Mugdha Tasgaonkar"
 

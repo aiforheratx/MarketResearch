@@ -242,6 +242,7 @@ with right:
       <span class="chip"><span class="av">M</span>mugdha.v.tasgaonkar@medtronic.com</span>
       <span class="chip"><span class="av">S</span>sue.delfidio@medtronic.com</span>
       <span class="chip"><span class="av">T</span>tyler.w.stigen@medtronic.com</span>
+      <span class="chip"><span class="av">K</span>marilise.kassouf1@medtronic.com</span>
       <div style="margin-top:14px;background:#f4f8ff;border:1px solid #dce7fb;border-radius:12px;padding:11px 13px;font-size:12px;color:{MUTED}">
         <b style="color:{NAVY}">Gate:</b> if WAI-Test returns <span class="pill hold">HOLD</span>, the email is withheld until the flagged checks are fixed.
       </div>

@@ -34,6 +34,9 @@ Every Monday at 09:00 America/Chicago, after the report passes the test agent, `
 | Mugdha Tasgaonkar | `mugdha.v.tasgaonkar@medtronic.com` |
 | Sue Delfidio | `sue.delfidio@medtronic.com` |
 | Tyler Stigen | `tyler.w.stigen@medtronic.com` |
+| Marilise Kassouf | `marilise.kassouf1@medtronic.com` |
+
+The first-run review override has been lifted — the weekly send now goes to all four recipients above.
 
 The send step requires `GMAIL_USER` and `GMAIL_APP_PASSWORD` in the environment (or `scripts/email_credentials.env`). Recipients can be overridden for a single run with `EMAIL_TO="a@x.com,b@y.com"`. Verify without sending using:
 
@@ -61,7 +64,7 @@ A **cloud routine** is registered (Claude Code `schedule` skill / routines):
 | Local time | Mondays 09:00 **CDT** (summer) |
 | First run | 2026-07-06 09:00 CDT |
 | Repo | github.com/aiforheratx/MarketResearch |
-| Email | via **Gmail connector**, first-run scope = mugdha.v.tasgaonkar@medtronic.com only |
+| Email | via **Gmail connector**, full distribution = all 4 Medtronic recipients |
 | Manage | https://claude.ai/code/routines/trig_01EzKTGxN4bMctLR9CM33ShB |
 
 ### Things to know about the cloud routine
