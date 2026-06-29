@@ -4,6 +4,22 @@ The agent looks up this week's topic by ISO week number. If the topic was covere
 
 Each topic is paired with a **lens** that forces the report to find a fresh angle even if the broad theme recurs.
 
+## ⭐ Featured priority track — Women & AI in healthcare R&D
+
+This track is **always eligible to override the rotation** and is the agent's standing focus, reflecting the reader's sector (medical technology / life sciences R&D). When a recent (last 30 days) report, paper, or dataset drops on any row below, cover it that week; otherwise the agent rotates through the track roughly once a month.
+
+| Track row | Topic | Lens | Career phase focus |
+|---|---|---|---|
+| H1 | Women & AI in healthcare R&D: the state of representation | Workforce + authorship + leadership in health-AI | All |
+| H2 | Gender bias *inside* medical AI | Male-skewed training data, clinical-trial gaps, algorithmic harm | All |
+| H3 | Women in medical-device & diagnostics AI R&D | Engineering and research roles in medtech (Medtronic-relevant) | Mid / Senior |
+| H4 | Women in AI drug discovery & computational biology | Biotech/pharma AI representation and leadership | Mid / Senior |
+| H5 | Women founders in health-AI & femtech | VC deal counts and dollar share | Senior / Founder |
+| H6 | Women leading clinical AI deployment in hospitals | Who decides which AI reaches the bedside | Senior / Executive |
+| H7 | What works: programs moving women into health-AI / medtech R&D | Interventions with measured outcomes | All |
+
+Topic-selection note: if a healthcare-R&D row has not been covered in the prior 4 weeks **and** fresh evidence exists, prefer it over the standard ISO-week row. Log the override reason in `history.md`.
+
 | Week | Topic | Lens | Career phase focus |
 |---|---|---|---|
 | 1 | State of women in AI: representation across the workforce | Global headcount and % share | All |
@@ -61,7 +77,8 @@ Each topic is paired with a **lens** that forces the report to find a fresh angl
 
 ## Topic selection rules
 
-- Default: use the topic for the current ISO week.
+- **Featured track first:** if a Women & AI in healthcare R&D row (H1–H7) has not run in the last 4 weeks and fresh evidence exists, prefer it over the ISO-week row. This is the reader's home sector and the agent's standing priority.
+- Default: otherwise use the topic for the current ISO week.
 - If covered in last 8 weeks: skip to the next row not covered in last 8 weeks.
-- If a major new report (Stanford AI Index annual release, WEF Global Gender Gap annual release, McKinsey Women in the Workplace annual release) dropped in the last 7 days: override the rotation and cover the new report.
+- If a major new report (Stanford AI Index annual release, WEF Global Gender Gap annual release, McKinsey Women in the Workplace annual release, or a Nature/Lancet/JAMA study on gender in medical AI) dropped in the last 7 days: override the rotation and cover the new report.
 - Always log the reason for the chosen topic in `history.md`.

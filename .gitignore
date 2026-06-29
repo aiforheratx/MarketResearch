@@ -7,3 +7,9 @@ __pycache__/
 .env
 .env.local
 node_modules/
+
+# Email credentials (never commit)
+scripts/email_credentials.env
+
+# Local email preview (generated)
+scripts/last_email_preview.html

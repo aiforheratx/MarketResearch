@@ -13,6 +13,8 @@ These complement (do not replace) the markdown reports in `../reports/`. Same ev
 | 3 | 2026-05-25 | Graduate school: women in AI/ML PhD programs | [md](../reports/2026-05-25_phd-programs.md) | [white paper](./2026-05-25_phd-programs.html) |
 | 4 | 2026-06-01 | Entry-level AI roles: first job in AI/ML | [md](../reports/2026-06-01_entry-level-roles.md) | [white paper](./2026-06-01_entry-level-roles.html) |
 | 5 | 2026-06-08 | The pay gap in AI and machine learning roles | [md](../reports/2026-06-08_pay-gap.md) | [white paper](./2026-06-08_pay-gap.html) |
+| 6 | 2026-06-15 | The broken rung: promotion from IC to first management | [md](../reports/2026-06-15_broken-rung.md) | [white paper](./2026-06-15_broken-rung.html) |
+| 8 ⭐ | 2026-06-29 | Women & AI in healthcare R&D: the state of representation | [md](../reports/2026-06-29_healthcare-rnd.md) | [white paper](./2026-06-29_healthcare-rnd.html) |
 
 ## Style
 

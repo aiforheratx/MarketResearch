@@ -26,6 +26,37 @@ Append a new entry at the **top** of this file after every weekly run. Use the f
 
 ## Entries (newest first)
 
+### 2026-06-29 — Week 8 — Women & AI in healthcare R&D: the state of representation
+
+- Report: reports/2026-06-29_healthcare-rnd.md (+ whitepaper, + .docx)
+- Topic source: **override — featured Healthcare R&D track (H1)**. Skipped standard rotation rows 7–8; this is the reader's home sector (Medtronic medtech R&D) and the new standing priority track. Week 7 not filed (single-report-per-Monday cadence resumed on the featured track).
+- Top 3 statistics found:
+  1. 12% of AI researchers and 16% of AI faculty are women; AI research-position gender gap (38%) ~2× the general-science R&D gap (UNESCO, Women for Ethical AI, 2024)
+  2. Female authorship of medical-AI papers stays <40% — 22.3% first authors in AI radiology (CARJ 2023), 35.7% in AI breast-imaging (Eur J Radiology 2024)
+  3. Medical AI underdiagnoses women (chest-X-ray classifiers; Nature Medicine 2021), trained on trials only 34–38% female (JACC 2018; Circulation 2020)
+- Sources cited: 17 (Tier 1: 9, Tier 2: 4, Tier 3: 4)
+- New sources added to sources.md: UNESCO Women for Ethical AI; ILO generative-AI exposure 2025; Yan et al. CARJ female authorship; Eur J Radiology AI breast-imaging authorship; Seyyed-Kalantari Nature Medicine underdiagnosis; JACC women in CV drug-approval trials; Circulation women in CV trials; Rock Health Women in Focus; PitchBook All In Female Founders; Pharma's Almanac biopharma leadership; Medical Design & Outsourcing medtech diversity; NSF NCSES 23-328 women in business R&D; Female Global Scholars Program eval; CRA-W Grad Cohort eval
+- New artifacts this run: brain/test_agent.md (WAI-Test spec); scripts/test_agent.py (runnable QA reviewer); docs/agent-dashboard.html (operations dashboard); featured Healthcare R&D track added to topic_rotation.md
+- WAI-Test review: **SHIP — 100%** (format 6/6, content 6/6, data 6/6); test/results/healthcare-rnd.json
+- Email distribution updated: now mugdha.v.tasgaonkar@medtronic.com, sue.delfidio@medtronic.com, tyler.w.stigen@medtronic.com (Mon 09:00 CST, after WAI-Test passes)
+- Tracked metrics updated in dashboard/metrics.md: women in AI research/faculty; medical-AI female authorship; CV-trial female participation; biopharma/medtech leadership; health-AI founder funding
+- Notable gaps in evidence this week: no audited statistic for women's share of the health-AI workforce specifically; no gender data for AI drug discovery; founder gender within health-AI funding unmeasured; no medtech-specific AI/R&D engineering gender data; no intervention study measuring representation gains in health-AI/medtech
+- Run health: OK
+
+### 2026-06-15 — Week 6 — The broken rung: promotion from IC to first management
+
+- Report: reports/2026-06-15_broken-rung.md
+- Topic source: rotation row 6 (sequential continuation of the weeks 1–5 backfill cadence)
+- Top 3 statistics found:
+  1. 52 women promoted to manager per 100 men in **technical roles** vs. 86 across all roles (McKinsey/LeanIn *Women in the Workplace 2021* — most recent technical-specific cut; [dated])
+  2. All-industry rung rose to **93 per 100 men in 2025** (from 81 in 2024) — but **women of color stayed at 74 and Black women at 60, unchanged** (McKinsey/LeanIn *WitW 2025*)
+  3. Representation pyramid: women 48% entry → 39% manager → 29% C-suite (all-industry, 2025); STEM steeper at 29% → 24.4% → 12.2% (2024)
+- Sources cited: 10 (Tier 1: 5, Tier 2: 3, Tier 3: 2)
+- New sources added to sources.md: McKinsey/LeanIn *Repairing the broken rung on the career ladder for women in technical roles* (2021 technical cut); McKinsey *Diversity Matters Even More* (2023); WEF *How AI is worsening workplace gender gaps* (2025); Women in Tech Network *Women in Tech Stats 2025/2026* (STEM pipeline); HR Brew WitW 2025 coverage
+- Tracked metrics updated in dashboard/metrics.md: broken rung (all-industry, promotions-to-manager metric); broken rung by race (2025); broken rung technical roles (2021); representation pyramid by level
+- Notable gaps in evidence this week: No AI-specific broken-rung number exists; the technical-roles cut (52) has not been refreshed since 2021; no intersectional race×gender promotion data inside AI/technical roles; "manager" vs. staff/principal-IC rung not disaggregated by gender
+- Run health: OK
+
 ### 2026-06-08 — Week 5 — The pay gap in AI and machine learning roles
 
 - Report: reports/2026-06-08_pay-gap.md

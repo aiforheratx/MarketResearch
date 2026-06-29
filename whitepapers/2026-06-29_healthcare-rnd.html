@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Women &amp; AI in healthcare R&amp;D — WAI-Research Week 8</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 8 · 2026-06-29 · Featured track — Healthcare R&amp;D</div>
+  <h1 class="title">Women &amp; AI in healthcare R&amp;D: the state of representation</h1>
+  <p class="subtitle">Women are a minority at every layer of medical AI — and the gap is being encoded into the algorithms.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-06-29</span>
+    <span><b>Length:</b> ~2,400 words</span>
+    <span><b>Sources cited:</b> 17</span>
+    <span><b>Tier 1:</b> 9 · <b>Tier 2:</b> 4 · <b>Tier 3:</b> 4</span>
+  </div>
+  <div class="hero">
+    <div class="stat">12%</div>
+    <div class="stat-caption">of AI researchers are women, and just 16% of AI faculty (UNESCO, <i>Women for Ethical AI</i>, 2024). The research-position gender gap in AI — 38% — is nearly double the 21% gap in general scientific R&amp;D.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  Women are a structural minority at every layer of AI in healthcare R&amp;D: roughly <b>12% of AI researchers and 16% of AI academic faculty</b> (UNESCO, 2024), and <b>under 40% of authors on medical-AI papers</b> — a share that, in radiology, <i>falls</i> the more central AI becomes to the work. This is not only an equity problem; it is encoded into the product, with state-of-the-art chest-X-ray AI shown to <b>systematically underdiagnose female patients</b> (Nature Medicine, 2021), built on trial data where women were only <b>~34–38% of participants</b> (JACC, 2018; Circulation, 2020). The most useful move a medtech R&amp;D leader can make this week is to audit one model's training data for sex balance — because the representation gap in the room is reproducing itself in the algorithm.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell bad"><div class="v">12%</div><div class="l">of AI researchers are women</div><div class="s">UNESCO 2024</div></div>
+  <div class="cell bad"><div class="v">16%</div><div class="l">of AI academic faculty are women</div><div class="s">UNESCO 2024</div></div>
+  <div class="cell warn"><div class="v">22.3%</div><div class="l">female first authors on AI radiology papers</div><div class="s">CARJ 2023</div></div>
+  <div class="cell warn"><div class="v">35.7%</div><div class="l">female first authors on AI breast-imaging papers</div><div class="s">Eur J Radiology 2024</div></div>
+  <div class="cell bad"><div class="v">34%</div><div class="l">of CV drug-approval trial participants were women</div><div class="s">JACC 2018 [dated]</div></div>
+  <div class="cell bad"><div class="v">6.6%</div><div class="l">of 2024 US digital-health funding to "women+ health"</div><div class="s">Rock Health 2024</div></div>
+  <div class="cell bad"><div class="v">14%</div><div class="l">of biopharma CTOs are women (CSO: 20%)</div><div class="s">Pharma's Almanac 2025</div></div>
+  <div class="cell warn"><div class="v">21%</div><div class="l">of medtech executives are women (~40% of workforce)</div><div class="s">Med Design &amp; Outsourcing 2022</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">A minority at every layer — and the bench is the thinnest</div>
+  <div class="sub">Women's share by layer of health-AI R&amp;D. Dashed line = gender parity (50%). Every bar falls short; the engineering and research layers fall furthest.</div>
+  <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Women's share across layers of health-AI R and D, all below 50 percent parity">
+    <text x="20" y="26" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Women's share (%), by layer of health-AI R&amp;D</text>
+    <text x="20" y="42" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">Longer bar = closer to parity. None reach it.</text>
+
+    <!-- scale: x = 214 + pct*4.6 ; parity 50% -> 444 -->
+    <line x1="444" y1="56" x2="444" y2="276" stroke="#e5e0d8" stroke-dasharray="3 3"/>
+    <text x="444" y="292" text-anchor="middle" font-size="10" fill="#5a5a5a" font-family="Inter, sans-serif">parity (50%)</text>
+
+    <!-- AI researchers 12 -->
+    <text x="206" y="74" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">AI researchers</text>
+    <rect x="214" y="62" width="55" height="20" fill="#b5392a"/>
+    <text x="277" y="78" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">12%</text>
+
+    <!-- Eng/tech R&D 12 -->
+    <text x="206" y="104" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Engineering/tech R&amp;D</text>
+    <rect x="214" y="92" width="55" height="20" fill="#b5392a"/>
+    <text x="277" y="108" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">12%</text>
+
+    <!-- Biotech CTO 14 -->
+    <text x="206" y="134" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Biopharma CTOs</text>
+    <rect x="214" y="122" width="64" height="20" fill="#b5392a"/>
+    <text x="286" y="138" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">14%</text>
+
+    <!-- AI faculty 16 -->
+    <text x="206" y="164" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">AI academic faculty</text>
+    <rect x="214" y="152" width="74" height="20" fill="#b5392a"/>
+    <text x="296" y="168" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">16%</text>
+
+    <!-- Medtech execs 21 -->
+    <text x="206" y="194" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Medtech executives</text>
+    <rect x="214" y="182" width="97" height="20" fill="#b07b0c"/>
+    <text x="319" y="198" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">21%</text>
+
+    <!-- AI radiology 1st authors 22.3 -->
+    <text x="206" y="224" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">AI radiology 1st authors</text>
+    <rect x="214" y="212" width="103" height="20" fill="#b07b0c"/>
+    <text x="325" y="228" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">22.3%</text>
+
+    <!-- AI breast-imaging 1st authors 35.7 -->
+    <text x="206" y="254" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">AI breast-imaging 1st authors</text>
+    <rect x="214" y="242" width="164" height="20" fill="#6f3aa0"/>
+    <text x="386" y="258" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">35.7%</text>
+  </svg>
+  <div class="footer">Source: UNESCO <i>Women for Ethical AI</i> (2024); NSF NCSES 23-328 (2020 data); Pharma's Almanac (2025); Yan et al., CARJ (2023); Eur J Radiology (2024). Each bar is a distinct population (research, engineering, leadership, authorship); shown together to compare layers, not to sum.</div>
+</div>
+
+<h2>What's the number?</h2>
+<p>There is no single audited figure for "women's share of the health-AI workforce" — it is the intersection of two fields that each measure gender separately and neither measures cleanly. So the picture has to be assembled from four adjacent measurements, each with a named source. <b>The research layer:</b> UNESCO's 2024 <i>Women for Ethical AI</i> study puts women at 12% of AI researchers, 16% of AI faculty, and 18% of AI-startup executives, framing the research-position gap (38%) as nearly double the 21% gap in general science R&amp;D. Stanford HAI corroborates the pipeline — women are ~22.1% of CS PhD graduates and 16% of tenure-track CS faculty (2024 report, data to 2022, <span class="tag">dated</span>) — and the 2026 AI Index calls the diversity needle still "unmoving." <b>The authorship layer</b> is measurable directly: in AI radiology research (453 articles, 24 countries) women were 22.3% of first and 27.3% of senior authors (Yan et al., CARJ 2023); in AI breast-imaging, 35.7% first and 37.4% senior (Eur J Radiology 2024). <b>The capital layer:</b> PitchBook's 2024 <i>All In</i> report finds all-female founding teams captured ~1–2% of US VC, with female-founder deal value slipping from 20.8% to 19.9%; Rock Health shows $671M (6.6%) of 2024 digital-health funding went to "women+ health." <b>The leadership and engineering layer:</b> in biopharma, ~20% of CSOs and ~14% of CTOs are women (Pharma's Almanac 2025); in medtech, women are ~40% of the workforce but 21% of executives (Med Design &amp; Outsourcing 2022); at the bench, women are 27% of US business-R&amp;D employees but just 12% in engineering/technology R&amp;D (NSF 23-328, 2020 data).</p>
+
+<div class="pull">Women are 34% of the cardiovascular trial participants whose data trains the model — and the AI is then deployed to both sexes. Under-representation in the room becomes under-representation in the data becomes under-diagnosis in the clinic.</div>
+
+<h2>What's the trend?</h2>
+<p>Where time series exist, movement is slow and uneven: AI-talent share crept from ~25% (2016) to ~27% (2024) (WEF GGGR, LinkedIn data); biotech executive teams climbed from ~25% (2018) to 35% (2021) and then plateaued (PharmaVoice); female senior-authorship in AI breast-imaging is rising but still below 40%. The pattern is <b>slow gains at the entry/skill layer, a plateau at leadership, and stagnation in the underlying data</b>. The ILO added a sharper warning in 2025: women face higher workplace exposure to generative-AI automation than men — so the population most underrepresented in <i>building</i> health AI is most exposed to displacement by AI generally. The chart below shows the layer this report treats as the root cause: the data women's models are trained on.</p>
+
+<div class="chart">
+  <div class="title">The data layer: women are a minority of the patients in the trials that train medical AI</div>
+  <div class="sub">Women's share of participants in cardiovascular trials. Dashed line ≈ women's share of the adult population (51%).</div>
+  <svg viewBox="0 0 720 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Women's share of cardiovascular trial participants, 34 to 38 percent, below population share">
+    <text x="20" y="26" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Women's share of cardiovascular trial participants (%)</text>
+
+    <!-- scale: x = 320 + pct*5.0 ; 51% -> 575 -->
+    <line x1="575" y1="44" x2="575" y2="170" stroke="#e5e0d8" stroke-dasharray="3 3"/>
+    <text x="575" y="186" text-anchor="middle" font-size="10" fill="#5a5a5a" font-family="Inter, sans-serif">population ≈51%</text>
+
+    <!-- JACC 34 -->
+    <text x="312" y="74" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">FDA CV drug-approval trials (n=224,417)</text>
+    <rect x="320" y="60" width="170" height="24" fill="#b5392a"/>
+    <text x="498" y="78" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">34%</text>
+
+    <!-- Circulation 38.2 -->
+    <text x="312" y="118" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">740 CV trials, 2010–17 (n=862,652)</text>
+    <rect x="320" y="104" width="191" height="24" fill="#b07b0c"/>
+    <text x="519" y="122" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">38.2%</text>
+
+    <text x="20" y="160" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">In 62% of those 740 trials, women were underrepresented relative to disease prevalence — with no improvement over time.</text>
+  </svg>
+  <div class="footer">Source: JACC, <i>Participation of Women in Clinical Trials Supporting FDA Approval of Cardiovascular Drugs</i> (2018); Circulation, <i>Women's Participation in Cardiovascular Clinical Trials 2010–2017</i> (2020). Both <span class="tag">dated</span> but seminal and widely cited.</div>
+</div>
+
+<h2>What's missing?</h2>
+<ol>
+  <li><b>No audited statistic for women's share of the health-AI workforce specifically.</b> Every workforce figure here is a proxy from a broader AI or health-tech population; UNESCO itself flags the data as "sparse, outdated, too broad, and often omits gender dimensions."</li>
+  <li><b>No gender data for AI drug discovery or computational biology</b> — the fastest-growing R&amp;D application of AI has no audited representation figure.</li>
+  <li><b>Founder gender within health-AI funding is unmeasured.</b> Rock Health tracks the women's-health <i>topic</i>; PitchBook tracks founder <i>gender</i> across all sectors; neither isolates women-founded health-AI.</li>
+  <li><b>Medtech-specific AI/R&amp;D engineering gender data does not exist</b> — only broad medtech (21% exec) and broad business-R&amp;D (12% engineering) figures, both pre-2023.</li>
+  <li><b>No intervention study measures representation gains in health-AI or medtech R&amp;D.</b> Every "what works" example below is from general women-in-STEM or global-health programs.</li>
+</ol>
+
+<h2>What works?</h2>
+<ul>
+  <li><b>Female Global Scholars Program (global health research)</b> — a mixed-methods evaluation reports the cohort produced 35 first-author papers, 12 oral presentations, 8 grants and 5 promotions: research-productivity gains, not just satisfaction scores (PMC, 2024). Tier 2.</li>
+  <li><b>HIGHER Women consortium mentoring</b> — measured increases in peer-reviewed publications and conference presentations among participants (PMC, 2023). Tier 2.</li>
+  <li><b>CRA-W Grad Cohort Workshop (computing)</b> — a formally evaluated intervention for retaining women in computing graduate programs; the model most transferable to AI R&amp;D pipelines (PMC, 2017). Tier 2.</li>
+  <li><b>AI4ALL</b> — 91% of participants report increased interest in AI careers and 78% plan to continue STEM education (program-reported, Tier 3).</li>
+  <li><i>Untested but frequently cited:</i> female-only digital-literacy cohorts, femtech accelerators, and "women in medtech" ERGs — widely promoted, none with published comparison-group representation outcomes in this sector.</li>
+</ul>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+  <li><b>Read</b> — Seyyed-Kalantari et al., <i>Underdiagnosis bias of AI algorithms applied to chest radiographs in under-served patient populations</i> (Nature Medicine, 2021): the clearest demonstration that under-representation in the data becomes under-diagnosis in the clinic.</li>
+  <li><b>Share</b> — the pairing: women are 34% of cardiovascular trial participants (JACC), yet the AI trained on that data is deployed to both sexes. It reframes diversity from an HR metric to a model-validity metric.</li>
+  <li><b>Ask</b> — put one question to your R&amp;D or AI-governance team: "For our highest-stakes model, what is the sex balance of the training data, and have we measured performance separately for women?"</li>
+  <li><b>Track</b> — the female senior-author share in medical-AI literature (currently 27–37% by subfield): the leading, publicly measurable indicator of who will lead the next decade of clinical-AI R&amp;D.</li>
+  <li><b>Act</b> — add a sex-disaggregated performance check to your next model-validation review and require at least one woman R&amp;D scientist on the review. The decision layer (~14% of CTOs are women) is where the gap concentrates.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li><b>UNESCO.</b> <i>Women for Ethical AI: Outlook Study on Artificial Intelligence and Gender</i> (2024). <a href="https://unesdoc.unesco.org/ark:/48223/pf0000391719">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>Stanford HAI.</b> <i>2024 AI Index Report — Diversity (Ch. 8)</i> (2024). <a href="https://hai.stanford.edu/ai-index/2024-ai-index-report/diversity">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>Stanford HAI.</b> <i>2026 AI Index Report</i> (2026). <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>World Economic Forum.</b> <i>Global Gender Gap Report 2024</i> (2024). <a href="https://www3.weforum.org/docs/WEF_GGGR_2024.pdf">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>International Labour Organization.</b> <i>New ILO data confirm women face higher workplace risks from generative AI</i> (2025). <a href="https://www.ilo.org/resource/news/new-ilo-data-confirm-women-face-higher-workplace-risks-generative-ai-men">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>Yan et al.</b> <i>Female Authorship in AI Research in North American Radiology Journals</i>, CARJ (2023). <a href="https://pubmed.ncbi.nlm.nih.gov/36062579/">link</a> <span class="tag">Tier 2</span></li>
+  <li><b>European Journal of Radiology.</b> <i>Authorship gender trends in AI breast-imaging research</i> (2024). <a href="https://pubmed.ncbi.nlm.nih.gov/38492508/">link</a> <span class="tag">Tier 2</span></li>
+  <li><b>Seyyed-Kalantari et al.</b> <i>Underdiagnosis bias of AI applied to chest radiographs in under-served populations</i>, Nature Medicine (2021). <a href="https://www.nature.com/articles/s41591-021-01595-0">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>JACC.</b> <i>Participation of Women in Clinical Trials Supporting FDA Approval of Cardiovascular Drugs</i> (2018). <a href="https://www.jacc.org/doi/10.1016/j.jacc.2018.02.070">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>Circulation.</b> <i>Women's Participation in Cardiovascular Clinical Trials 2010–2017</i> (2020). <a href="https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.119.043594">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>Rock Health.</b> <i>Women in Focus: understanding women as digital-health consumers</i> (2024). <a href="https://rockhealth.com/insights/women-in-focus-understanding-women-as-digital-health-consumers/">link</a> <span class="tag">Tier 3</span></li>
+  <li><b>PitchBook.</b> <i>2024 US All In: Female Founders in the VC Ecosystem</i> (2024). <a href="https://pitchbook.com/news/reports/2024-us-all-in-female-founders-in-the-vc-ecosystem">link</a> <span class="tag">Tier 3</span></li>
+  <li><b>Pharma's Almanac.</b> <i>Breaking the Biopharma Glass Ceiling</i> (2025). <a href="https://www.pharmasalmanac.com/articles/breaking-the-biopharma-glass-ceiling-why-female-leadership-still-lags">link</a> <span class="tag">Tier 3</span></li>
+  <li><b>Medical Design &amp; Outsourcing.</b> <i>Diversity in medtech: just 21% of executive roles are held by women</i> (2022). <a href="https://www.medicaldesignandoutsourcing.com/diversity-in-medtech-just-21-of-executives-roles-are-held-by-women/">link</a> <span class="tag">Tier 3</span></li>
+  <li><b>NSF NCSES.</b> <i>Women in Business R&amp;D (NSF 23-328)</i> (2020 data). <a href="https://ncses.nsf.gov/pubs/nsf23328">link</a> <span class="tag">Tier 1</span></li>
+  <li><b>PMC.</b> <i>Female Global Scholars Program — mixed-methods evaluation</i> (2024). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11132512/">link</a> <span class="tag">Tier 2</span></li>
+  <li><b>PMC.</b> <i>CRA-W Grad Cohort Workshop evaluation</i> (2017). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5222789/">link</a> <span class="tag">Tier 2</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-06-29 · Week 8 · Featured Healthcare R&amp;D track (H1). Next: <i>Gender bias inside medical AI</i> (track H2). Reviewed by WAI-Test before release.</p>
+  <p>Markdown source: <a href="../reports/2026-06-29_healthcare-rnd.md"><code>reports/2026-06-29_healthcare-rnd.md</code></a> · Operations dashboard: <a href="../docs/agent-dashboard.html"><code>docs/agent-dashboard.html</code></a> · Data dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>

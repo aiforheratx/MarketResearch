@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The broken rung — promotion from IC to first management — WAI-Research Week 6</title>
+<link rel="stylesheet" href="_assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="cover">
+  <div class="series">WAI-Research · Week 6 · 2026-06-15</div>
+  <h1 class="title">The broken rung — promotion from IC to first management</h1>
+  <p class="subtitle">In technical roles the first promotion is twice as broken as the corporate average. The 2025 "repair" was real — but only for some women.</p>
+  <div class="meta">
+    <span><b>Filed:</b> 2026-06-15</span>
+    <span><b>Length:</b> ~2,400 words</span>
+    <span><b>Sources cited:</b> 10</span>
+    <span><b>Tier 1:</b> 5 · <b>Tier 2:</b> 3 · <b>Tier 3:</b> 2</span>
+  </div>
+  <div class="hero">
+    <div class="stat">52 / 100</div>
+    <div class="stat-caption">Women promoted to manager per 100 men in <b>technical roles</b> — against 86 across all roles (McKinsey/LeanIn <i>Women in the Workplace 2021</i>). The rung is roughly twice as broken in technical functions, and this 2021 figure is the most recent technical-specific cut anyone has published.</div>
+  </div>
+</header>
+
+<div class="exec">
+  <div class="label">Executive summary</div>
+  In technical roles, only <b>52 women are promoted to manager for every 100 men</b> — barely half the all-industry rate of 86 (McKinsey/LeanIn 2021, still the most recent technical cut). The all-industry rung finally moved in 2025 — <b>93 women per 100 men, up from 81 in 2024</b> — but the gain was selective: <b>women of color stayed at 74, and Black women at 60, unchanged</b>. The broken rung is the mechanism behind every senior-level gap this knowledge base has logged — and <b>no source has measured it inside AI specifically at all</b>.
+</div>
+
+<div class="section-label">At a glance</div>
+<div class="glance">
+  <div class="cell bad"><div class="v">52 / 100</div><div class="l">Women promoted to manager per 100 men, technical roles</div><div class="s">WitW 2021 [dated]</div></div>
+  <div class="cell warn"><div class="v">86 / 100</div><div class="l">Same, all roles &amp; industries (2021 baseline)</div><div class="s">WitW 2021</div></div>
+  <div class="cell good"><div class="v">93 / 100</div><div class="l">All-industry rung, 2025 — up from 81 in 2024</div><div class="s">WitW 2025</div></div>
+  <div class="cell bad"><div class="v">74 / 100</div><div class="l">Women of color, 2025 — essentially unchanged</div><div class="s">WitW 2025</div></div>
+  <div class="cell bad"><div class="v">60 / 100</div><div class="l">Black women, 2025 — flat from 2024</div><div class="s">WitW 2025</div></div>
+  <div class="cell warn"><div class="v">48% → 29%</div><div class="l">Women: entry-level → C-suite representation</div><div class="s">WitW 2025</div></div>
+  <div class="cell bad"><div class="v">29% → 12.2%</div><div class="l">STEM: entry-level → C-suite (steeper leak)</div><div class="s">WiT Network / WitW 2024</div></div>
+  <div class="cell warn"><div class="v">31% vs 45%</div><div class="l">Entry-level women vs. men with a sponsor</div><div class="s">WitW 2025</div></div>
+</div>
+
+<div class="chart">
+  <div class="title">The rung is twice as broken in technical roles — and "repairing" selectively</div>
+  <div class="sub">Left: promotions to manager per 100 men, by cut. Right: the same number rose on average in 2025 but not for women of color.</div>
+  <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Broken rung promotion rates by role type and by race">
+    <!-- LEFT PANEL: by role/cut -->
+    <text x="40" y="28" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">Per 100 men promoted to manager</text>
+    <text x="40" y="44" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">Parity = 100 (dashed line). Longer bar = closer to parity.</text>
+
+    <!-- parity reference line at x = 40 + 100*1.9 = 230 -->
+    <line x1="230" y1="56" x2="230" y2="210" stroke="#e5e0d8" stroke-dasharray="3 3"/>
+    <text x="230" y="226" text-anchor="middle" font-size="10" fill="#5a5a5a" font-family="Inter, sans-serif">parity (100)</text>
+
+    <!-- Technical 52 -->
+    <text x="36" y="74" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Technical (2021)</text>
+    <rect x="40" y="62" width="99" height="22" fill="#b5392a"/>
+    <text x="147" y="78" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">52</text>
+
+    <!-- All roles 2021 86 -->
+    <text x="36" y="104" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">All roles (2021)</text>
+    <rect x="40" y="92" width="163" height="22" fill="#b07b0c"/>
+    <text x="211" y="108" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">86</text>
+
+    <!-- All roles 2024 81 -->
+    <text x="36" y="134" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">All roles (2024)</text>
+    <rect x="40" y="122" width="154" height="22" fill="#b07b0c"/>
+    <text x="202" y="138" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">81</text>
+
+    <!-- All roles 2025 93 -->
+    <text x="36" y="164" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">All roles (2025)</text>
+    <rect x="40" y="152" width="177" height="22" fill="#2f7d4d"/>
+    <text x="225" y="168" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">93</text>
+
+    <!-- divider -->
+    <line x1="380" y1="20" x2="380" y2="280" stroke="#e5e0d8"/>
+
+    <!-- RIGHT PANEL: 2025 by race -->
+    <text x="400" y="28" font-size="13" font-weight="700" fill="#1a1a1a" font-family="Inter, sans-serif">2025 rung, disaggregated</text>
+    <text x="400" y="44" font-size="11" fill="#5a5a5a" font-family="Inter, sans-serif">The average hides who it left behind</text>
+
+    <line x1="590" y1="56" x2="590" y2="230" stroke="#e5e0d8" stroke-dasharray="3 3"/>
+    <text x="590" y="246" text-anchor="middle" font-size="10" fill="#5a5a5a" font-family="Inter, sans-serif">parity (100)</text>
+
+    <!-- scale: x = 400 + value*1.9 ; 100 -> 590 -->
+    <!-- All women 93 -->
+    <text x="396" y="74" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">All women</text>
+    <rect x="400" y="62" width="177" height="20" fill="#2f7d4d"/>
+    <text x="585" y="77" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">93</text>
+
+    <!-- Women of color 74 -->
+    <text x="396" y="100" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Women of color</text>
+    <rect x="400" y="88" width="141" height="20" fill="#b07b0c"/>
+    <text x="549" y="103" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">74</text>
+
+    <!-- Asian 82 -->
+    <text x="396" y="126" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Asian women</text>
+    <rect x="400" y="114" width="156" height="20" fill="#b07b0c"/>
+    <text x="564" y="129" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">82</text>
+
+    <!-- Latina 82 -->
+    <text x="396" y="152" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Latinas</text>
+    <rect x="400" y="140" width="156" height="20" fill="#b07b0c"/>
+    <text x="564" y="155" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">82</text>
+
+    <!-- Black 60 -->
+    <text x="396" y="178" text-anchor="end" font-size="11" fill="#1a1a1a" font-family="Inter, sans-serif">Black women</text>
+    <rect x="400" y="166" width="114" height="20" fill="#b5392a"/>
+    <text x="522" y="181" font-size="12" font-weight="700" fill="#1a1a1a" font-family="Charter,Georgia,serif">60</text>
+
+    <text x="400" y="214" font-size="11" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">The 81→93 gain was driven by white women.</text>
+    <text x="400" y="230" font-size="11" font-style="italic" fill="#5a5a5a" font-family="Charter,Georgia,serif">Women of color (74) and Black women (60) barely moved.</text>
+  </svg>
+  <div class="footer">Source: McKinsey/LeanIn <i>Women in the Workplace</i> 2021 (technical-roles cut), 2024, and 2025. Metric: promotions to first-level manager per 100 men promoted at the same step. The technical-roles figure (52) has not been refreshed since 2021.</div>
+</div>
+
+<h2>What's the number?</h2>
+<p>The broken rung is the first promotion from individual contributor to manager — the step where the pipeline first leaks and the one that sets a ceiling on everything above it. The defining number for this topic is not the all-industry figure but the <b>technical-roles</b> cut: <b>52 women promoted to manager for every 100 men</b>, against 86 across all roles (McKinsey/LeanIn <i>Women in the Workplace 2021</i>). In technical functions the rung is roughly <b>twice as broken</b> as the corporate average — and 2021 is the most recent technical-specific number McKinsey has published.</p>
+
+<p>The all-industry rung, by contrast, is freshly measured and — for the first time in this knowledge base — moved the right way: <b>93 women per 100 men in 2025, up from 81 in 2024</b>. The representation pyramid shows the compounding cost: women are <b>48% of entry-level workers, 39% of managers, and just 29% of the C-suite</b> (2025). In STEM functions the leak is steeper still — <b>29% entry → 24.4% managerial → 12.2% C-suite</b> (2024). A field that starts near parity ends near one-in-eight, and it does most of its leaking at the very first rung.</p>
+
+<div class="pull">The 81→93 jump looks like progress — until you disaggregate. Women of color sat at 74 per 100 in 2025, and Black women at 60, both essentially unchanged. The rung is not repairing. It is repairing selectively.</div>
+
+<h2>What's the trend?</h2>
+<p><b>All-industry rung, recent series (per 100 men):</b> 86 all-roles / 52 technical (2021) → 87 (2023) → 81 (2024) → <b>93 (2025)</b>. McKinsey has reported the rung two ways across years — promotions-only and hired-plus-promoted — so absolute levels shift with the metric; the 2024→2025 comparison above is like-for-like. The read: <b>improving on average, stalled for women of color, and roughly twice as bad in technical roles where it has not been measured in four years.</b></p>
+
+<p><b>Why the rung is the binding constraint.</b> Because men outnumber women at the first manager level, there are structurally fewer women eligible for every promotion above it. Fix entry-level hiring parity and nothing else, and the pipeline still never reaches parity — the rung re-introduces the deficit every year. This is the mechanism behind the <b>&lt;14% women in senior executive AI roles</b> (Interface EU 2024), the <b>16.1% on tenure-track AI faculty</b> (Stanford HAI 2024), and the executive <b>$0.69-per-$1.00 pay cliff</b> from Week 5. The pay cliff at the top is, in large part, a promotion cliff at the bottom.</p>
+
+<p><b>The AI accelerant.</b> Entry-level women are told to use AI tools by managers far less than men (<b>21% vs. 33%</b>, 2025), and men use AI daily about <b>22% more</b> (LeanIn/WEF 2025). If AI fluency becomes a promotion criterion — and in AI-building orgs it will — an unequal head start at the IC level converts directly into an unequal promotion rate at the rung.</p>
+
+<h2>What's missing?</h2>
+<ol>
+<li><b>No AI-specific broken-rung number exists.</b> The closest proxy — the 2021 technical-roles figure (52 per 100) — bundles all engineering and product, is four years old, and predates the generative-AI hiring boom. No manager-promotion rate by gender has been published for AI engineers, ML scientists, or research staff. This is the central gap.</li>
+<li><b>The technical-roles cut has not been refreshed since 2021.</b> The all-industry rung is annual; the technical breakout is not. We cannot say whether it tracked the 81→93 improvement or stayed stuck.</li>
+<li><b>No intersectional (race × gender) promotion data inside AI or technical roles.</b> We have women-of-color rung numbers economy-wide (74; Black women 60) and technical numbers for all women (52) — never the two crossed.</li>
+<li><b>No named AI lab publishes first-line-manager representation or promotion rates by gender.</b> Diversity reports give headcount, not promotion velocity.</li>
+<li><b>"Manager" is defined inconsistently.</b> In IC-heavy AI orgs the first rung is often a staff/principal IC promotion, not a people-management move — and no dataset distinguishes the two by gender. The AI-relevant rung may not be the one McKinsey measures.</li>
+<li><b>Sponsorship is measured as access, not outcome.</b> We know 31% of entry-level women have a sponsor vs. 45% of men — but no public dataset ties a named program to a measured change in women's promotion rate at the rung.</li>
+</ol>
+
+<h2>What works?</h2>
+<ul>
+<li><b>Structured, debiased promotion processes — the strongest signal.</b> Of 40 leaders McKinsey interviewed, only <b>2 reported organizations without a broken-rung problem — both Fortune 100 tech firms with heavily structured, committee-based promotion systems</b> (defined criteria, calibration, bias checks, panel decisions). Discretion at the rung is where bias enters; removing it is what closes the gap.</li>
+<li><b>The three enablers (McKinsey/LeanIn technical framework):</b> equitable access to skill-building and high-visibility projects; structured promotion processes; and a sponsorship (not mentorship) culture — advocacy in the room where promotions are decided.</li>
+<li><b>Sponsorship parity erases the ambition gap — measured.</b> Women want promotions nearly as much as men (<b>80% vs. 86%</b>, 2025) yet are 13% less likely to get one. LeanIn 2025: when women receive equal career support, the promotion-ambition gap disappears entirely. The deficit is sponsorship, not ambition — and it is the most directly fixable enabler.</li>
+<li><b>The business case is quantified.</b> The most gender-diverse leadership teams are <b>48% more likely to financially outperform</b> the least diverse (McKinsey <i>Diversity Matters Even More</i>, 2023). The rung is a measured performance cost, not only an equity one.</li>
+</ul>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+<li><b>Read</b> — McKinsey/LeanIn's <i>Repairing the broken rung … for women in technical roles</i>. The only source that isolates the technical rung (52 per 100) and names the three enablers with a clear mechanism.</li>
+<li><b>Share</b> — The split: <b>the rung rose to 93 per 100 overall in 2025, but women of color stayed at 74 and Black women at 60.</b> The cleanest way to puncture "the broken rung is fixing itself."</li>
+<li><b>Ask</b> — Of your org or board: "What is our promotion rate to first-level manager, by gender and race, for technical roles — and is the decision made by a calibrated committee or by individual managers?" If it isn't tracked or the call is discretionary, that is the answer.</li>
+<li><b>Track</b> — The annual <i>Women in the Workplace</i> release for the all-industry rung, and watch for any refresh of the <b>technical-roles cut</b> — the single number this knowledge base most needs updated.</li>
+<li><b>Act</b> — If you sit in a promotion calibration, <b>sponsor, don't mentor</b>: name a specific woman IC and advocate for her readiness in the room where it's decided. Sponsorship parity is the one enabler shown to erase the ambition gap outright.</li>
+</ol>
+
+<h2>Sources</h2>
+<ol class="sources">
+<li><b>McKinsey &amp; Company / LeanIn.org.</b> <i>Women in the Workplace 2025</i> (2025). 120+ companies, ~9,000 employees surveyed. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/women-in-the-workplace">link</a> <span class="tag">Tier 1</span></li>
+<li><b>McKinsey &amp; Company / LeanIn.org.</b> <i>Women in the Workplace 2024 (10th Anniversary)</i> (2024). 281 orgs, 10M+ employees, 15,000+ surveyed. <a href="https://leanin.org/women-in-the-workplace">link</a> <span class="tag">Tier 1</span></li>
+<li><b>McKinsey &amp; Company / LeanIn.org.</b> <i>Repairing the broken rung on the career ladder for women in technical roles</i> (technical cut, 2021). <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/repairing-the-broken-rung-on-the-career-ladder-for-women-in-technical-roles">link</a> <span class="tag">Tier 1</span> <span class="tag">dated</span></li>
+<li><b>LeanIn.org.</b> <i>Women in the Workplace 2025 — Glass ceiling and the broken rung (key findings)</i> (2025). <a href="https://leanin.org/women-in-the-workplace">link</a> <span class="tag">Tier 1</span></li>
+<li><b>McKinsey &amp; Company.</b> <i>Diversity Matters Even More</i> (2023). 1,265 companies, 23 countries. <a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/diversity-matters-even-more">link</a> <span class="tag">Tier 1</span></li>
+<li><b>Women in Tech Network.</b> <i>Women in Tech Stats 2025/2026</i> (STEM pipeline: 29% / 24.4% / 12.2%). <a href="https://www.womentech.net/en-us/women-in-tech-stats">link</a> <span class="tag">Tier 2</span> <span class="tag">secondary</span></li>
+<li><b>World Economic Forum.</b> <i>How AI is worsening workplace gender gaps</i> / <i>Gender Parity in the Intelligent Age</i> (2025). <a href="https://www.weforum.org/stories/2025/05/how-ai-is-worsening-workplace-gender-gaps-and-how-we-can-course-correct-7828b8eae9/">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Interface EU.</b> <i>AI's Missing Link: The Gender Gap in the Talent Pool</i> (2024). <a href="https://www.interface-eu.org/publications/ai-gender-gap">link</a> <span class="tag">Tier 2</span></li>
+<li><b>Stanford HAI.</b> <i>AI Index Report 2024</i> (16.1% women on tenure-track AI faculty). <a href="https://hai.stanford.edu/ai-index/2024-ai-index-report">link</a> <span class="tag">Tier 1</span></li>
+<li><b>HR Brew.</b> <i>Women have made strides, but a broken rung persists</i> (Dec 2025; sponsorship and senior-women burnout figures). <a href="https://www.hr-brew.com/stories/2025/12/09/women-have-made-strides-in-the-workplace-in-recent-years-but-a-broken-rung-persists-report-finds">link</a> <span class="tag">Tier 3</span> <span class="tag">secondary</span></li>
+</ol>
+
+<footer class="colophon">
+  <p><b>WAI-Research</b> · Filed 2026-06-15 · Week 6 of the 52-week rotation. Next: <i>Women in AI research: authorship of top-tier papers</i> (Week 7).</p>
+  <p>Markdown source: <a href="../reports/2026-06-15_broken-rung.md"><code>reports/2026-06-15_broken-rung.md</code></a> · Dashboard: <a href="../docs/index.html"><code>docs/index.html</code></a></p>
+</footer>
+
+</article>
+</body>
+</html>

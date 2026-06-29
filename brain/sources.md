@@ -33,6 +33,20 @@ When a new credible source is discovered during a weekly run, append it here (no
 - **NeurIPS / ICML / ICLR / ACL Diversity & Inclusion reports** — often per-conference, author and attendee demographics. Check each conference's D&I committee page.
 - **Computing Research Association — Taulbee Survey** — annual, North American CS PhD demographics including AI specialization where available. cra.org
 
+### Healthcare R&D — women & AI in medicine (featured track sources)
+- **UNESCO — Women for Ethical AI: Outlook Study on AI and Gender** (2024) — global synthesis; women as % of AI researchers/faculty/executives. unesdoc.unesco.org/ark:/48223/pf0000391719 — Tier 1
+- **International Labour Organization — generative-AI workplace exposure by gender** (2025) — ilo.org — Tier 1
+- **NSF NCSES — Women in Business R&D (NSF 23-328)** (2020 data) — US business-R&D workforce by function/gender. ncses.nsf.gov/pubs/nsf23328 — Tier 1
+- **Nature Medicine — Seyyed-Kalantari et al., Underdiagnosis bias of AI on chest radiographs** (2021) — algorithmic underdiagnosis of female/under-served patients. nature.com — Tier 1
+- **JACC — Participation of Women in CV Drug-Approval Trials** (2018) — women's share of trial participants (training-data proxy). jacc.org — Tier 1
+- **Circulation — Women's Participation in Cardiovascular Clinical Trials 2010–2017** (2020) — ahajournals.org — Tier 1
+- **Canadian Association of Radiologists Journal (CARJ) — Yan et al., female authorship in AI radiology** (2023) — pubmed.ncbi.nlm.nih.gov/36062579 — Tier 2
+- **European Journal of Radiology — authorship gender in AI breast imaging** (2024) — pubmed.ncbi.nlm.nih.gov/38492508 — Tier 2
+- **Rock Health — Women in Focus / digital-health funding** (annual) — "women+ health" funding share. rockhealth.com — Tier 3
+- **Pharma's Almanac — biopharma leadership gender (CSO/CTO/CEO)** (2025) — pharmasalmanac.com — Tier 3
+- **Medical Design & Outsourcing — diversity in medtech** (2022) — medtech workforce vs. executive gender. medicaldesignandoutsourcing.com — Tier 3
+- **PharmaVoice — women in biotech/pharma leadership trends** — pharmavoice.com — Tier 3
+
 ---
 
 ## Tier 2 — Credible specialists and advocacy organizations with audited methodology
@@ -125,9 +139,14 @@ When a new credible source is discovered during a weekly run, append it here (no
 - INSEE — *Gender pay gap 2024 (France)*
 - Indeed Hiring Lab — *AI at Work Report 2025*
 - PNAS / NIH PMC — *Grad Cohort Workshop evaluation* (PMC5222789)
+- McKinsey/LeanIn — *Repairing the broken rung on the career ladder for women in technical roles* (technical-roles cut, 2021 — 52 women promoted to manager per 100 men in technical roles; the three enablers). https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/repairing-the-broken-rung-on-the-career-ladder-for-women-in-technical-roles  [Tier 1/2]
+- McKinsey — *Diversity Matters Even More* (2023 — gender-diverse leadership 48% more likely to outperform; 1,265 companies, 23 countries). https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/diversity-matters-even-more
 
 ### Tier 2 — confirmed credible secondary sources used
 - Interface EU — *AI's Missing Link* (2024). https://www.interface-eu.org/publications/ai-gender-gap
+- WEF — *How AI is worsening workplace gender gaps* (2025); pairs with *Gender Parity in the Intelligent Age* (men ~22% higher daily AI use). https://www.weforum.org/stories/2025/05/how-ai-is-worsening-workplace-gender-gaps-and-how-we-can-course-correct-7828b8eae9/
+- Women in Tech Network — *Women in Tech Stats 2025/2026* (STEM pipeline: 29% entry / 24.4% managerial / 12.2% C-suite; secondary aggregation of WitW). https://www.womentech.net/en-us/women-in-tech-stats
+- HR Brew — *Women have made strides … but a broken rung persists* (Dec 2025; WitW 2025 sponsorship and senior-women burnout figures). https://www.hr-brew.com/stories/2025/12/09/women-have-made-strides-in-the-workplace-in-recent-years-but-a-broken-rung-persists-report-finds  [Tier 3]
 - AI Now Institute — *Discriminating Systems* (2019)
 - AnitaB.org — *Top Companies for Women Technologists 2023* (program paused 2024)
 - Pew Research — pay gap and negotiation reports (2024, 2023)

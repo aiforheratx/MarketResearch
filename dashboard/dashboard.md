@@ -1,10 +1,10 @@
 # WAI-Research Dashboard
 
-*Last updated: 2026-06-09 — 5 reports filed (demo backfill run, rotation weeks 1–5)*
+*Last updated: 2026-06-29 — 7 reports filed (weeks 1–6 + Week 8 featured Healthcare R&D)*
 
 The agent overwrites this file at the end of every weekly run. It is the at-a-glance view of the knowledge base.
 
-🌐 **Live HTML dashboard:** [docs/index.html](../docs/index.html) (rendered via GitHub Pages once enabled — see *Setup* in README)
+🌐 **Live data dashboard:** [docs/index.html](../docs/index.html) · ⚙️ **Agent operations dashboard** (pipeline, scheduler, test agent): [docs/agent-dashboard.html](../docs/agent-dashboard.html)
 
 ---
 
@@ -12,6 +12,11 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Metric | Latest value | Year | Source | Report |
 |---|---|---|---|---|
+| % women among AI researchers (health-AI focus) | **12%** | 2024 | UNESCO Women for Ethical AI | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
+| % women among AI faculty | **16%** | 2024 | UNESCO Women for Ethical AI | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
+| Female first authors on AI breast-imaging papers | **35.7%** | 2024 | Eur J Radiology | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
+| Women in cardiovascular drug-approval trials (AI training data) | **34%** | 2018 | JACC [dated] | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
+| % women among biopharma CTOs / CSOs | **14% / 20%** | 2025 | Pharma's Almanac | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
 | % women in global AI workforce (role-based) | **22%** | 2024 | Stanford HAI AI Index 2024; UNESCO 2024 | [Week 1](../reports/2026-05-11_workforce-representation.md) |
 | % women listing AI engineering skills (LinkedIn) | **30.5%** | 2024 | LinkedIn Economic Graph / WEF GGGR 2024 | [Week 1](../reports/2026-05-11_workforce-representation.md) |
 | % women in senior executive AI roles | **<14%** | 2024 | Interface EU | [Week 1](../reports/2026-05-11_workforce-representation.md) |
@@ -30,6 +35,10 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Equity gap: women's share of equity-holders / equity value | **35% / 20%** | 2024 | Carta Gap Table | [Week 5](../reports/2026-06-08_pay-gap.md) |
 | Pay gap, US Black women vs. white non-Hispanic men | **$0.63** | 2024 | NWLC / IWPR | [Week 5](../reports/2026-06-08_pay-gap.md) |
 | Pay gap, US Latinas vs. white non-Hispanic men | **$0.54–$0.58** | 2024 | NWLC / IWPR | [Week 5](../reports/2026-06-08_pay-gap.md) |
+| Broken rung, technical roles (women promoted to mgr per 100 men) | **52** | 2021 | McKinsey/LeanIn WitW 2021 | [Week 6](../reports/2026-06-15_broken-rung.md) |
+| Broken rung, all industries (promotions to mgr per 100 men) | **93** (↑ from 81 in 2024) | 2025 | McKinsey/LeanIn WitW 2025 | [Week 6](../reports/2026-06-15_broken-rung.md) |
+| Broken rung, women of color / Black women | **74 / 60** | 2025 | McKinsey/LeanIn WitW 2025 | [Week 6](../reports/2026-06-15_broken-rung.md) |
+| Women's representation: entry → manager → C-suite | **48% → 39% → 29%** | 2025 | McKinsey/LeanIn WitW 2025 | [Week 6](../reports/2026-06-15_broken-rung.md) |
 
 ---
 
@@ -40,11 +49,13 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Pre-entry | 2 | 2026-05-25 | No national US CS attrition rate; no AI-specific UG concentration data |
 | Entry | 2 | 2026-06-01 | No public AI hiring funnel by gender; AI residencies don't disclose demographics |
 | Early career | 1 (partial) | 2026-06-01 | No 12-month AI-role retention split by gender |
-| Mid-career | 0 | — | — |
+| Mid-career | 1 | 2026-06-15 | No AI-specific broken-rung number; technical-roles cut (52) not refreshed since 2021 |
 | Senior | 0 | — | — |
 | Executive / founder | 1 (partial) | 2026-05-11 | No public Principal/Staff+ AI IC representation data |
 | Re-entry | 0 | — | — |
 | All phases | 2 | 2026-06-08 | Pay gap, workforce representation |
+
+*Note: the broken rung (Week 6) is the documented mechanism linking the entry/early-career leak to the senior and executive gaps — it is why the pipeline never reaches parity even when entry hiring does.*
 
 ## Coverage by geography
 
@@ -72,7 +83,7 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Reinforcement learning | 0 | — |
 | AI safety / alignment | 0 | — |
 | AI ethics / governance | 0 | — |
-| Applied AI — healthcare | 0 | — |
+| Applied AI — healthcare / life sciences | 1 (featured track) | 2026-06-29 |
 | Applied AI — finance | 1 (sectoral decline flagged) | 2026-06-01 |
 | Applied AI — autonomous systems | 0 | — |
 | AI product management | 0 | — |
@@ -85,6 +96,8 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Date | Week | Topic | Markdown | White paper |
 |---|---|---|---|---|
+| 2026-06-29 | 8 ⭐ | Women & AI in healthcare R&D: the state of representation | [md](../reports/2026-06-29_healthcare-rnd.md) | [white paper](../whitepapers/2026-06-29_healthcare-rnd.html) |
+| 2026-06-15 | 6 | The broken rung: promotion from IC to first management | [md](../reports/2026-06-15_broken-rung.md) | [white paper](../whitepapers/2026-06-15_broken-rung.html) |
 | 2026-06-08 | 5 | The pay gap in AI and machine learning roles | [md](../reports/2026-06-08_pay-gap.md) | [white paper](../whitepapers/2026-06-08_pay-gap.html) |
 | 2026-06-01 | 4 | Entry-level AI roles: first job in AI/ML | [md](../reports/2026-06-01_entry-level-roles.md) | [white paper](../whitepapers/2026-06-01_entry-level-roles.html) |
 | 2026-05-25 | 3 | Graduate school: women in AI/ML PhD programs | [md](../reports/2026-05-25_phd-programs.md) | [white paper](../whitepapers/2026-05-25_phd-programs.html) |
@@ -99,7 +112,7 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | CRA Taulbee Survey (2022/2023/2024) | 4 | 1 |
 | WEF Global Gender Gap Report 2024 | 4 | 1 |
 | UNESCO Women for Ethical AI (2024) | 3 | 1 |
-| McKinsey/LeanIn Women in the Workplace (2024/2025) | 3 | 1 |
+| McKinsey/LeanIn Women in the Workplace (2021/2023/2024/2025) | 4 | 1 |
 | LinkedIn Economic Graph | 3 | 1 |
 | Interface EU — AI's Missing Link | 3 | 2 |
 | NSF NCSES Diversity and STEM | 3 | 1 |
@@ -121,6 +134,8 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Code2040 Fellows | Code2040 | ~90% return-offer rate vs. ~45–50% industry baseline | [Week 4](../reports/2026-06-01_entry-level-roles.md) |
 | Salesforce equal-pay audits | Salesforce (annual since 2015) | ~$10.3M cumulative adjustments by 2019; $5.6M in 2022 alone | [Week 5](../reports/2026-06-08_pay-gap.md) |
 | Colorado Equal Pay for Equal Work Act | Colorado state policy | State pay gap 78¢ (2021) → 86¢ (Jul 2025) | [Week 5](../reports/2026-06-08_pay-gap.md) |
+| Structured, committee-based promotion systems | Fortune 100 tech firms (McKinsey interviews) | Only 2 of 40 leaders reported no broken-rung problem — both used heavily structured, debiased promotion systems | [Week 6](../reports/2026-06-15_broken-rung.md) |
+| Sponsorship parity (vs. mentorship) | McKinsey/LeanIn finding | When women get equal career support, the promotion-ambition gap disappears entirely | [Week 6](../reports/2026-06-15_broken-rung.md) |
 | AnitaB.org Top Companies benchmark | AnitaB.org (paused 2024) | 7 consecutive years of rising tech-women hire share at participating firms | [Week 1](../reports/2026-05-11_workforce-representation.md) |
 
 ## What's missing — evidence gaps logged
@@ -128,6 +143,10 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Gap | First flagged | Status |
 |---|---|---|
 | No public dataset of AI-PhD completion rates by gender | Week 3 | Open — largest single gap in evidence base |
+| No AI-specific broken-rung (IC→manager promotion) number exists | Week 6 | Open — closest proxy is 2021 technical-roles cut (52/100) |
+| Technical-roles broken rung (52/100) not refreshed since 2021 | Week 6 | Open — all-industry rung is annual, technical cut is not |
+| No intersectional (race × gender) promotion data inside AI/technical roles | Week 6 | Open |
+| No named AI lab publishes first-line-manager representation/promotion by gender | Week 6 | Open |
 | No primary-source figure for women's share of Principal/Staff+ AI IC roles | Week 1 | Open |
 | No 2023+ figure for Black women's share of AI-specific technical roles | Week 1 | Open |
 | No primary source isolates AI engineer / ML scientist pay gap (no SOC code) | Week 5 | Open |

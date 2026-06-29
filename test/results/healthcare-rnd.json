@@ -1,0 +1,185 @@
+{
+  "report": "2026-06-29_healthcare-rnd.md",
+  "whitepaper": "2026-06-29_healthcare-rnd.html",
+  "slug": "healthcare-rnd",
+  "topic": "Women & AI in healthcare R&D: the state of representation",
+  "week": "8",
+  "reviewed": "2026-06-29",
+  "reviewer": "WAI-Test",
+  "verdict": "SHIP",
+  "overall_pct": 100,
+  "fails": 0,
+  "warns": 0,
+  "word_count": 2397,
+  "stat_rows": 12,
+  "source_count": 17,
+  "dimensions": {
+    "format": {
+      "passed": 6,
+      "warned": 0,
+      "failed": 0,
+      "total": 6,
+      "pct": 100
+    },
+    "content": {
+      "passed": 6,
+      "warned": 0,
+      "failed": 0,
+      "total": 6,
+      "pct": 100
+    },
+    "data": {
+      "passed": 6,
+      "warned": 0,
+      "failed": 0,
+      "total": 6,
+      "pct": 100
+    }
+  },
+  "checks": [
+    {
+      "id": "F1",
+      "name": "Filename matches reports/YYYY-MM-DD_<slug>.md",
+      "dimension": "format",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "2026-06-29_healthcare-rnd.md"
+    },
+    {
+      "id": "F2",
+      "name": "Frontmatter has all required keys",
+      "dimension": "format",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "id": "F3",
+      "name": "All required sections present",
+      "dimension": "format",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "9/9 sections"
+    },
+    {
+      "id": "F4",
+      "name": "Matching white paper exists",
+      "dimension": "format",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "2026-06-29_healthcare-rnd.html"
+    },
+    {
+      "id": "F5",
+      "name": "White paper <head> valid (css, title, viewport)",
+      "dimension": "format",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "id": "F6",
+      "name": "White paper has \u22651 inline SVG chart",
+      "dimension": "format",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "2 svg element(s)"
+    },
+    {
+      "id": "C1",
+      "name": "Body word count 1,500\u20133,500",
+      "dimension": "content",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "2397 words"
+    },
+    {
+      "id": "C2",
+      "name": "Executive summary is 2\u20134 sentences",
+      "dimension": "content",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "3 sentences"
+    },
+    {
+      "id": "C3",
+      "name": "Numbers table has \u22655 statistic rows",
+      "dimension": "content",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "12 rows"
+    },
+    {
+      "id": "C4",
+      "name": "Recommended actions lists 3\u20135 moves",
+      "dimension": "content",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "5 actions"
+    },
+    {
+      "id": "C5",
+      "name": "Sources section lists \u22655 citations",
+      "dimension": "content",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "17 citations"
+    },
+    {
+      "id": "C6",
+      "name": "\u22651 statistic dated within last 12 months",
+      "dimension": "content",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "newest year cited: 2025"
+    },
+    {
+      "id": "D1",
+      "name": "Every statistic row has a source",
+      "dimension": "data",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "12/12 rows sourced"
+    },
+    {
+      "id": "D2",
+      "name": "Every statistic row carries a year",
+      "dimension": "data",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "12/12 rows dated"
+    },
+    {
+      "id": "D3",
+      "name": "Sources contain \u22651 resolvable URL",
+      "dimension": "data",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "17 URLs"
+    },
+    {
+      "id": "D4",
+      "name": "Stats older than 3 years flagged [dated]",
+      "dimension": "data",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "[dated] tag present"
+    },
+    {
+      "id": "D5",
+      "name": "No template placeholders remain",
+      "dimension": "data",
+      "severity": "FAIL",
+      "status": "PASS",
+      "detail": "clean"
+    },
+    {
+      "id": "D6",
+      "name": "Source tiers declared",
+      "dimension": "data",
+      "severity": "WARN",
+      "status": "PASS",
+      "detail": "tiers present"
+    }
+  ]
+}

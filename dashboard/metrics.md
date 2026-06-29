@@ -6,6 +6,36 @@ Row format: `| date_observed | value | year_of_value | source | report_file | no
 
 ---
 
+## Women & AI in healthcare R&D (featured track — added Week 8)
+
+### % women among AI researchers / faculty
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-29 | 12% (researchers) | 2024 | UNESCO Women for Ethical AI | reports/2026-06-29_healthcare-rnd.md | AI research positions; 38% gap vs 21% general science R&D |
+| 2026-06-29 | 16% (faculty) | 2024 | UNESCO Women for Ethical AI | reports/2026-06-29_healthcare-rnd.md | AI academic faculty |
+
+### Female authorship of medical-AI papers
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-29 | 22.3% first / 27.3% senior | 2023 | Yan et al., CARJ | reports/2026-06-29_healthcare-rnd.md | AI radiology, 453 articles, 24 countries |
+| 2026-06-29 | 35.7% first / 37.4% senior | 2024 | Eur J Radiology | reports/2026-06-29_healthcare-rnd.md | AI breast-imaging, 115 studies |
+
+### Women's share of cardiovascular trial participants (AI training-data proxy)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-29 | 34% | 2018 | JACC [dated] | reports/2026-06-29_healthcare-rnd.md | 36 FDA CV drug approvals, n=224,417 |
+| 2026-06-29 | 38.2% | 2010–17 | Circulation [dated] | reports/2026-06-29_healthcare-rnd.md | 740 trials, n=862,652 |
+
+### Women in biopharma / medtech leadership & health-AI funding
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-29 | 14% CTO / 20% CSO | 2025 | Pharma's Almanac | reports/2026-06-29_healthcare-rnd.md | <10% biopharma CEOs |
+| 2026-06-29 | 21% execs (40% workforce) | 2022 | Med Design & Outsourcing [dated] | reports/2026-06-29_healthcare-rnd.md | Medtech |
+| 2026-06-29 | 6.6% ($671M) | 2024 | Rock Health | reports/2026-06-29_healthcare-rnd.md | "Women+ health" share of US digital-health funding |
+| 2026-06-29 | ~1–2% | 2024 | PitchBook All In | reports/2026-06-29_healthcare-rnd.md | All-female founding teams' share of US VC |
+
+---
+
 ## % women in global AI workforce (role-based)
 
 | Observed | Value | Year of value | Source | Report | Notes |
@@ -73,6 +103,43 @@ Row format: `| date_observed | value | year_of_value | source | report_file | no
 |---|---|---|---|---|---|
 | 2026-06-01 | 79 | 2018 | McKinsey/LeanIn WitW | reports/2026-06-01_entry-level-roles.md | |
 | 2026-06-01 | 81 | 2024 | McKinsey/LeanIn WitW 2024 | reports/2026-06-01_entry-level-roles.md | 2-point gain over 6 years |
+
+## Broken rung: women promoted to first-level manager per 100 men (promotions-only metric)
+
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-15 | 86 | 2021 | McKinsey/LeanIn WitW 2021 | reports/2026-06-15_broken-rung.md | All roles & industries |
+| 2026-06-15 | 87 | 2023 | McKinsey/LeanIn WitW 2023 | reports/2026-06-15_broken-rung.md | All roles |
+| 2026-06-15 | 81 | 2024 | McKinsey/LeanIn WitW 2024 | reports/2026-06-15_broken-rung.md | All roles (promotions-only framing) |
+| 2026-06-15 | 93 | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | All roles — first material gain in series |
+
+## Broken rung by race (women per 100 men promoted to manager)
+
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-15 | 74 | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | All women of color — essentially flat vs 2024 |
+| 2026-06-15 | 82 | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | Asian women |
+| 2026-06-15 | 82 | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | Latinas |
+| 2026-06-15 | 60 | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | Black women — unchanged from 2024 |
+
+## Broken rung in technical roles (women per 100 men promoted to manager)
+
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-15 | 52 | 2021 | McKinsey/LeanIn WitW 2021 (technical cut) | reports/2026-06-15_broken-rung.md | ~2x worse than all-roles; not refreshed since 2021 [dated] |
+| 2026-06-15 | 34% | 2021 | McKinsey/LeanIn WitW 2021 | reports/2026-06-15_broken-rung.md | Women's share of entry-level eng/product roles |
+| 2026-06-15 | 26% | 2021 | McKinsey/LeanIn WitW 2021 | reports/2026-06-15_broken-rung.md | Women's share of first-level technical managers |
+
+## Representation pyramid: women's share by level
+
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-06-15 | 48% | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | Entry-level (all industries) |
+| 2026-06-15 | 39% | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | First-level manager |
+| 2026-06-15 | 29% | 2025 | McKinsey/LeanIn WitW 2025 | reports/2026-06-15_broken-rung.md | C-suite — unchanged from 2024 |
+| 2026-06-15 | 29% | 2024 | Women in Tech Network / WitW | reports/2026-06-15_broken-rung.md | STEM entry-level |
+| 2026-06-15 | 24.4% | 2024 | Women in Tech Network / WitW | reports/2026-06-15_broken-rung.md | STEM managerial |
+| 2026-06-15 | 12.2% | 2024 | Women in Tech Network / WitW | reports/2026-06-15_broken-rung.md | STEM C-suite |
 
 ## Pay gap, US Computer & Mathematical (women's $ per men's $1)
 

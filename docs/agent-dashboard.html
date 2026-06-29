@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WAI-Research — Agent Operations Dashboard</title>
+<meta name="description" content="Live operations view of the WAI-Research agent: how it researches and writes reports on women & AI in healthcare R&D, how the WAI-Test agent reviews them, the weekly Monday 09:00 CST schedule, and the topics queued for generation.">
+<style>
+  :root{
+    --navy:#100a45;            /* Medtronic deep navy */
+    --navy-2:#1d1466;
+    --blue:#0a6bff;            /* electric blue */
+    --blue-d:#0048d6;
+    --cyan:#00b6f0;
+    --sky:#e8f1ff;
+    --sky-2:#f4f8ff;
+    --ice:#dbe9ff;
+    --ink:#1a2236;
+    --muted:#5b6b88;
+    --dim:#8a98b4;
+    --line:#dce7fb;
+    --good:#0bb07b;
+    --good-bg:#e4faf2;
+    --warn:#e69414;
+    --warn-bg:#fff5e2;
+    --bad:#e5484d;
+    --bad-bg:#fdecec;
+    --card:#ffffff;
+    --shadow:0 1px 2px rgba(16,40,90,.04),0 8px 24px rgba(16,40,90,.06);
+    --shadow-lg:0 12px 40px rgba(10,107,255,.14);
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:
+     radial-gradient(1200px 600px at 80% -10%, #e9f2ff 0%, rgba(233,242,255,0) 60%),
+     radial-gradient(900px 500px at -10% 0%, #eafaff 0%, rgba(234,250,255,0) 55%),
+     var(--sky-2);
+     color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue-d);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:26px 22px 90px}
+
+  /* Brand bar */
+  .brandbar{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:800;letter-spacing:.02em;font-size:14px}
+  .brandbar .pulse{width:30px;height:30px}
+  .brandbar .edition{margin-left:auto;font-weight:600;font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+
+  /* Header */
+  header.hero{margin-top:18px;background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 45%,var(--blue-d) 120%);
+     color:#fff;border-radius:22px;padding:30px 32px;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+  header.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;
+     background:radial-gradient(circle at 30% 30%,rgba(0,182,240,.55),rgba(10,107,255,0) 70%)}
+  .hero .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fc2ff;font-weight:700}
+  .hero h1{margin:8px 0 8px;font-size:30px;line-height:1.12;font-weight:800;letter-spacing:-.01em;max-width:760px}
+  .hero p{margin:0;color:#cfe0ff;font-size:15px;max-width:680px}
+  .hero .live{position:absolute;right:28px;bottom:24px;display:flex;align-items:center;gap:8px;font-size:12px;color:#bfe9ff;font-weight:600}
+  .dot{width:9px;height:9px;border-radius:50%;background:#27e0a3;box-shadow:0 0 0 0 rgba(39,224,163,.7);animation:beat 1.6s infinite}
+  @keyframes beat{0%{box-shadow:0 0 0 0 rgba(39,224,163,.55)}70%{box-shadow:0 0 0 9px rgba(39,224,163,0)}100%{box-shadow:0 0 0 0 rgba(39,224,163,0)}}
+
+  /* Status strip */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+  .kpi .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);font-weight:700}
+  .kpi .v{font-size:26px;font-weight:800;color:var(--navy);margin-top:4px;line-height:1.1}
+  .kpi .s{font-size:12px;color:var(--muted);margin-top:3px}
+  .kpi.accent{background:linear-gradient(180deg,#f1f7ff,#ffffff);border-color:var(--ice)}
+  .kpi .v .em{color:var(--blue)}
+
+  /* Sections */
+  section{margin-top:34px}
+  .sec-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+  .sec-head h2{font-size:19px;font-weight:800;color:var(--navy);margin:0;letter-spacing:-.01em}
+  .sec-head .note{font-size:13px;color:var(--muted)}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px}
+  .badge.ship{background:var(--good-bg);color:#06794f}
+  .badge.hold{background:var(--bad-bg);color:#b42318}
+  .badge.blue{background:var(--sky);color:var(--blue-d)}
+
+  /* Pipeline */
+  .pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow);position:relative;z-index:1}
+  .pipe > .arrow{align-self:center;display:flex;align-items:center;justify-content:center;color:var(--blue);min-width:34px}
+  .pipe{grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr}
+  .stage .num{position:absolute;top:-12px;left:16px;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(10,107,255,.4)}
+  .stage .ic{width:40px;height:40px;border-radius:11px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin:6px 0 10px}
+  .stage h3{margin:0 0 4px;font-size:14px;font-weight:800;color:var(--navy)}
+  .stage .who{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.05em}
+  .stage p{margin:8px 0 10px;font-size:12.5px;color:var(--muted)}
+  .stage .last{font-size:11px;color:var(--dim);border-top:1px dashed var(--line);padding-top:8px}
+  .stage .last b{color:var(--ink)}
+  .arrow svg{animation:flow 1.8s linear infinite}
+  @keyframes flow{0%{transform:translateX(-3px);opacity:.5}50%{opacity:1}100%{transform:translateX(3px);opacity:.5}}
+
+  /* Two-column grid */
+  .grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .panel h3.ph{margin:0 0 2px;font-size:15px;font-weight:800;color:var(--navy)}
+  .panel .psub{font-size:12.5px;color:var(--muted);margin:0 0 16px}
+
+  /* Test gauges */
+  .gauges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+  .gauge .label{font-size:12px;font-weight:700;color:var(--navy);margin-top:6px}
+  .gauge .sub{font-size:11px;color:var(--dim)}
+  .ring{transform:rotate(-90deg)}
+  .ring .bg{fill:none;stroke:var(--ice);stroke-width:11}
+  .ring .fg{fill:none;stroke:url(#g1);stroke-width:11;stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+  .ring-wrap{position:relative;display:inline-block}
+  .ring-wrap .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy);font-size:18px}
+
+  /* checks */
+  .checks{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+  .chk{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink);padding:4px 0;border-bottom:1px solid #eef3fc}
+  .chk .tick{width:16px;height:16px;border-radius:50%;background:var(--good-bg);color:#06794f;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;flex:0 0 auto}
+  .chk .id{color:var(--dim);font-weight:700;font-size:10px;width:22px}
+  .chk .d{color:var(--dim);margin-left:auto;font-size:10.5px}
+
+  /* schedule */
+  .sched-row{display:flex;align-items:center;gap:10px;font-size:13px;padding:7px 0;border-bottom:1px solid #eef3fc;color:var(--ink)}
+  .sched-row:last-child{border-bottom:none}
+  .sched-row .lab{color:var(--muted);width:96px;flex:0 0 auto;font-size:12px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:var(--sky);border:1px solid var(--ice);color:var(--navy);
+     border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:600;margin:4px 6px 0 0}
+  .chip .av{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .cron{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--navy);color:#9fe6ff;padding:3px 9px;border-radius:7px;font-size:12px}
+
+  /* topics */
+  .track{display:grid;gap:8px}
+  .topic{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+  .topic .code{font-weight:800;font-size:12px;color:#fff;background:var(--blue);border-radius:8px;padding:5px 9px;flex:0 0 auto;min-width:34px;text-align:center}
+  .topic.done .code{background:var(--good)}
+  .topic.active{border-color:var(--blue);box-shadow:0 0 0 2px rgba(10,107,255,.16),var(--shadow);background:linear-gradient(180deg,#f3f8ff,#fff)}
+  .topic.active .code{background:var(--navy)}
+  .topic .t{font-size:13.5px;font-weight:700;color:var(--navy)}
+  .topic .l{font-size:11.5px;color:var(--muted)}
+  .topic .st{margin-left:auto;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;flex:0 0 auto}
+  .st.s-done{background:var(--good-bg);color:#06794f}
+  .st.s-now{background:var(--sky);color:var(--blue-d)}
+  .st.s-next{background:var(--warn-bg);color:#9a6406}
+  .st.s-queue{background:#eef2f9;color:var(--muted)}
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+  /* spotlight */
+  .spot{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center}
+  .spot .big{background:linear-gradient(135deg,var(--navy),var(--blue-d));color:#fff;border-radius:16px;padding:22px;text-align:center}
+  .spot .big .n{font-size:46px;font-weight:800;line-height:1}
+  .spot .big .c{font-size:12px;color:#cfe0ff;margin-top:8px}
+  .obs{display:grid;gap:8px}
+  .obs li{font-size:13px;color:var(--ink)}
+  .stat-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  .sm{background:var(--sky-2);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .sm .v{font-size:20px;font-weight:800;color:var(--navy)}
+  .sm.bad .v{color:var(--bad)} .sm.warn .v{color:var(--warn)}
+  .sm .l{font-size:11px;color:var(--muted);margin-top:3px}
+  .sm .s{font-size:10px;color:var(--dim);margin-top:6px}
+
+  .reportlinks a{display:inline-block;margin-right:14px;font-size:12.5px;font-weight:600}
+
+  footer{margin-top:46px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  footer a{color:var(--muted)}
+
+  @media(max-width:980px){
+    .strip{grid-template-columns:repeat(2,1fr)}
+    .pipe{grid-template-columns:1fr;gap:14px}
+    .pipe>.arrow{transform:rotate(90deg);min-width:0;height:20px}
+    .grid2,.cols2{grid-template-columns:1fr}
+    .spot{grid-template-columns:1fr}
+    .checks{grid-template-columns:1fr}
+    .stat-mini{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brandbar">
+    <svg class="pulse" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <circle cx="24" cy="24" r="22" fill="#0a6bff" opacity="0.12"/>
+      <path d="M6 25 H16 L20 14 L27 34 L31 25 H42" stroke="#0a6bff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Women and AI · Research Agent
+    <span class="edition">Medtronic R&amp;D edition</span>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">Agent Operations Dashboard</div>
+    <h1>How the agent researches, writes, tests, and ships the weekly women-in-AI report</h1>
+    <p>A live view of the autonomous research pipeline — now focused on <b>women &amp; AI in healthcare R&amp;D</b>. Every Monday at 09:00 CST it picks a topic, gathers cited statistics, drafts the report, runs an independent QA review, and emails the result to the Medtronic team.</p>
+    <div class="live"><span class="dot"></span> Pipeline healthy · last run 2026-06-29</div>
+  </header>
+
+  <!-- STATUS STRIP -->
+  <div class="strip">
+    <div class="kpi accent"><div class="k">Next scheduled run</div><div class="v">Mon Jul 6</div><div class="s">09:00 CST · America/Chicago</div></div>
+    <div class="kpi"><div class="k">Reports filed</div><div class="v">7</div><div class="s">Week 8 just shipped</div></div>
+    <div class="kpi"><div class="k">Latest QA verdict</div><div class="v"><span class="em">SHIP</span> · 100%</div><div class="s">WAI-Test · 0 fail / 0 warn</div></div>
+    <div class="kpi"><div class="k">Featured track</div><div class="v" style="font-size:18px">Healthcare R&amp;D</div><div class="s">7-topic priority queue</div></div>
+  </div>
+
+  <!-- PIPELINE -->
+  <section>
+    <div class="sec-head"><h2>The report pipeline</h2><span class="note">four agents/stages, every Monday — left to right</span></div>
+    <div class="pipe">
+
+      <div class="stage">
+        <div class="num">1</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#0a6bff" stroke-width="2"/><path d="M16 16 L21 21" stroke="#0a6bff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="who">Research Agent</div>
+        <h3>Pick topic &amp; gather evidence</h3>
+        <p>Reads the brain, selects this week's topic (featured track first), and fans out web searches for primary, cited statistics — no number without a source.</p>
+        <div class="last"><b>Last:</b> 17 sources, 12 statistics on women &amp; AI in healthcare R&amp;D</div>
+      </div>
+
+      <div class="arrow"><svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+      <div class="stage">
+        <div class="num">2</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3h8l4 4v14H6z" stroke="#0a6bff" stroke-width="2" stroke-linejoin="round"/><path d="M9 12h6M9 16h6" stroke="#0a6bff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="who">Report Writer</div>
+        <h3>Draft report + white paper</h3>
+        <p>Writes the 1,500–3,500-word markdown report and a presentation white paper with inline SVG charts — in the established WAI format.</p>
+        <div class="last"><b>Last:</b> 2,397 words · 2 charts · md + HTML + Word</div>
+      </div>
+
+      <div class="arrow"><svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+      <div class="stage">
+        <div class="num">3</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" stroke="#0a6bff" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="who">WAI-Test agent</div>
+        <h3>Review: format · content · data</h3>
+        <p>Independently scores the report against 18 checks across three dimensions. It never edits — it gates. Nothing ships until the verdict is <b>SHIP</b>.</p>
+        <div class="last"><b>Last:</b> <span class="badge ship">✓ SHIP · 100%</span></div>
+      </div>
+
+      <div class="arrow"><svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+      <div class="stage">
+        <div class="num">4</div>
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#0a6bff" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="who">Scheduler &amp; email</div>
+        <h3>Send Mon 09:00 CST</h3>
+        <p>On a passing review, the cron routine emails the Word + white-paper files to the Medtronic distribution list, then logs the run.</p>
+        <div class="last"><b>To:</b> 3 Medtronic recipients · .docx + .html</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEST AGENT + SCHEDULER -->
+  <section>
+    <div class="grid2">
+
+      <!-- Test agent panel -->
+      <div class="panel">
+        <h3 class="ph">WAI-Test review — how the test agent checks the report <span class="badge ship">SHIP</span></h3>
+        <p class="psub">Latest review of <b>2026-06-29 · Women &amp; AI in healthcare R&amp;D</b>. Three dimensions, 18 checks. Source: <code>test/results/healthcare-rnd.json</code>.</p>
+
+        <svg width="0" height="0"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a6bff"/><stop offset="1" stop-color="#00b6f0"/></linearGradient></defs></svg>
+
+        <div class="gauges">
+          <div class="gauge">
+            <div class="ring-wrap">
+              <svg class="ring" width="120" height="120"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" cx="60" cy="60" r="52" stroke-dasharray="327" stroke-dashoffset="0"/></svg>
+              <div class="pct">100%</div>
+            </div>
+            <div class="label">Format</div><div class="sub">6 / 6 checks · structure</div>
+          </div>
+          <div class="gauge">
+            <div class="ring-wrap">
+              <svg class="ring" width="120" height="120"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" cx="60" cy="60" r="52" stroke-dasharray="327" stroke-dashoffset="0"/></svg>
+              <div class="pct">100%</div>
+            </div>
+            <div class="label">Content</div><div class="sub">6 / 6 checks · completeness</div>
+          </div>
+          <div class="gauge">
+            <div class="ring-wrap">
+              <svg class="ring" width="120" height="120"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" cx="60" cy="60" r="52" stroke-dasharray="327" stroke-dashoffset="0"/></svg>
+              <div class="pct">100%</div>
+            </div>
+            <div class="label">Report data</div><div class="sub">6 / 6 checks · integrity</div>
+          </div>
+        </div>
+
+        <div class="checks">
+          <div class="chk"><span class="tick">✓</span><span class="id">F1</span>Filename pattern <span class="d">ok</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C1</span>Word count 1.5–3.5k <span class="d">2,397</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">F2</span>Frontmatter keys <span class="d">7/7</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C2</span>Exec summary 2–4 sent. <span class="d">ok</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">F3</span>All 9 sections <span class="d">9/9</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C3</span>≥5 statistic rows <span class="d">12</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">F4</span>White paper exists <span class="d">ok</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C4</span>3–5 actions <span class="d">5</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">F5</span>White-paper &lt;head&gt; <span class="d">ok</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C5</span>≥5 sources <span class="d">17</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">F6</span>Inline SVG chart <span class="d">2</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C6</span>Recent stat ≤12mo <span class="d">2026</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D1</span>Every row sourced <span class="d">12/12</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D4</span>Old stats [dated] <span class="d">flagged</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D2</span>Every row dated <span class="d">12/12</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D5</span>No placeholders <span class="d">clean</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D3</span>Source URLs <span class="d">17</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D6</span>Tiers declared <span class="d">ok</span></div>
+        </div>
+      </div>
+
+      <!-- Scheduler panel -->
+      <div class="panel">
+        <h3 class="ph">Scheduler</h3>
+        <p class="psub">Autonomous weekly cadence. Emails sent only after the report clears WAI-Test.</p>
+        <div class="sched-row"><span class="lab">Cadence</span><b>Every Monday, 09:00 CST</b></div>
+        <div class="sched-row"><span class="lab">Cron</span><span class="cron">0 9 * * 1</span> &nbsp;<span style="color:var(--muted);font-size:12px">America/Chicago</span></div>
+        <div class="sched-row"><span class="lab">Next run</span><b>Mon, Jul 6 2026 · 09:00 CST</b></div>
+        <div class="sched-row"><span class="lab">Attaches</span>Word (.docx) + presentation white paper (.html)</div>
+        <div style="margin-top:14px">
+          <div style="font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Distribution list</div>
+          <span class="chip"><span class="av">M</span>mugdha.v.tasgaonkar@medtronic.com</span>
+          <span class="chip"><span class="av">S</span>sue.delfidio@medtronic.com</span>
+          <span class="chip"><span class="av">T</span>tyler.w.stigen@medtronic.com</span>
+        </div>
+        <div style="margin-top:16px;background:var(--sky-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:12.5px;color:var(--muted)">
+          <b style="color:var(--navy)">Gate:</b> if WAI-Test returns <span class="badge hold">HOLD</span>, the email is withheld and the Research Agent fixes the flagged checks before the next attempt.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section>
+    <div class="sec-head"><h2>Topics for report generation</h2><span class="note">featured Healthcare R&amp;D track runs first; standard rotation fills the gaps</span></div>
+    <div class="cols2">
+
+      <div>
+        <div style="font-size:12px;font-weight:800;color:var(--blue-d);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">⭐ Featured — Women &amp; AI in healthcare R&amp;D</div>
+        <div class="track">
+          <div class="topic done"><span class="code">H1</span><div><div class="t">State of representation in health-AI R&amp;D</div><div class="l">Workforce · authorship · leadership</div></div><span class="st s-done">Filed · Wk 8</span></div>
+          <div class="topic active"><span class="code">H2</span><div><div class="t">Gender bias inside medical AI</div><div class="l">Male-skewed training data, clinical-trial gaps</div></div><span class="st s-next">Up next</span></div>
+          <div class="topic"><span class="code">H3</span><div><div class="t">Women in medical-device &amp; diagnostics AI</div><div class="l">Medtech engineering &amp; research roles</div></div><span class="st s-queue">Queued</span></div>
+          <div class="topic"><span class="code">H4</span><div><div class="t">Women and AI drug discovery &amp; comp. biology</div><div class="l">Biotech / pharma AI representation</div></div><span class="st s-queue">Queued</span></div>
+          <div class="topic"><span class="code">H5</span><div><div class="t">Women founders in health-AI &amp; femtech</div><div class="l">VC deal counts &amp; dollar share</div></div><span class="st s-queue">Queued</span></div>
+          <div class="topic"><span class="code">H6</span><div><div class="t">Women leading clinical AI deployment</div><div class="l">Who decides which AI reaches the bedside</div></div><span class="st s-queue">Queued</span></div>
+          <div class="topic"><span class="code">H7</span><div><div class="t">What works: moving women into health-AI</div><div class="l">Interventions with measured outcomes</div></div><span class="st s-queue">Queued</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Standard 52-week rotation — next up</div>
+        <div class="track">
+          <div class="topic"><span class="code">W7</span><div><div class="t">Women and AI research: top-tier paper authorship</div><div class="l">NeurIPS, ICML, ICLR, ACL demographics</div></div><span class="st s-queue">Rotation</span></div>
+          <div class="topic"><span class="code">W9</span><div><div class="t">Women and AI leadership at large tech firms</div><div class="l">C-suite, VP, director representation</div></div><span class="st s-queue">Rotation</span></div>
+          <div class="topic"><span class="code">W10</span><div><div class="t">Women and AI ethics, governance &amp; policy</div><div class="l">Where women are over/under-represented</div></div><span class="st s-queue">Rotation</span></div>
+          <div class="topic"><span class="code">W11</span><div><div class="t">Intersectional view: Black women in AI</div><div class="l">Representation, funding, citation gaps</div></div><span class="st s-queue">Rotation</span></div>
+        </div>
+
+        <div style="font-size:12px;font-weight:800;color:var(--good);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 10px">Already covered</div>
+        <div class="track">
+          <div class="topic done"><span class="code">W1</span><div><div class="t">Workforce representation</div></div><span class="st s-done">Done</span></div>
+          <div class="topic done"><span class="code">W2</span><div><div class="t">Undergraduate pipeline</div></div><span class="st s-done">Done</span></div>
+          <div class="topic done"><span class="code">W3</span><div><div class="t">PhD programs</div></div><span class="st s-done">Done</span></div>
+          <div class="topic done"><span class="code">W4</span><div><div class="t">Entry-level AI roles</div></div><span class="st s-done">Done</span></div>
+          <div class="topic done"><span class="code">W5</span><div><div class="t">Pay gap in AI/ML</div></div><span class="st s-done">Done</span></div>
+          <div class="topic done"><span class="code">W6</span><div><div class="t">The broken rung</div></div><span class="st s-done">Done</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LATEST REPORT SPOTLIGHT -->
+  <section>
+    <div class="sec-head"><h2>Latest report</h2><span class="badge blue">Week 8 · 2026-06-29</span><span class="note">Women &amp; AI in healthcare R&amp;D</span></div>
+    <div class="panel">
+      <div class="spot">
+        <div class="big">
+          <div class="n">12%</div>
+          <div class="c">of AI researchers are women — and just 16% of AI faculty (UNESCO, 2024)</div>
+        </div>
+        <div>
+          <div style="font-size:13px;color:var(--muted);font-weight:700;margin-bottom:8px">Key observations the agent surfaced</div>
+          <ul class="obs">
+            <li>Women are a minority at <b>every layer</b> of health-AI R&amp;D — research, authorship, funding, leadership, and the engineering bench (lowest, at 12%).</li>
+            <li>Female authorship of medical-AI papers stays <b>under 40%</b>, and in radiology appears to <i>fall</i> the more central AI becomes to the study.</li>
+            <li>The gap is <b>encoded into the product</b>: chest-X-ray AI underdiagnoses women (Nature Medicine, 2021), trained on trials that were only 34–38% female.</li>
+            <li>Capital lags too: all-female teams took ~1–2% of US VC; "women+ health" got 6.6% of 2024 digital-health funding.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stat-mini">
+        <div class="sm warn"><div class="v">35.7%</div><div class="l">female 1st authors, AI breast-imaging</div><div class="s">Eur J Radiology 2024</div></div>
+        <div class="sm bad"><div class="v">34%</div><div class="l">women in CV drug-approval trials</div><div class="s">JACC 2018 [dated]</div></div>
+        <div class="sm bad"><div class="v">14%</div><div class="l">biopharma CTOs are women</div><div class="s">Pharma's Almanac 2025</div></div>
+        <div class="sm warn"><div class="v">21%</div><div class="l">medtech executives are women</div><div class="s">MD&amp;O 2022</div></div>
+      </div>
+
+      <div class="reportlinks" style="margin-top:18px">
+        <a href="../whitepapers/2026-06-29_healthcare-rnd.html">📊 White paper (charts)</a>
+        <a href="../reports/2026-06-29_healthcare-rnd.md">📄 Markdown report</a>
+        <a href="../reports/2026-06-29_healthcare-rnd.docx">📝 Word (.docx)</a>
+        <a href="index.html">📈 Full data dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>WAI-Research</b> · Agent Operations Dashboard · Medtronic R&amp;D edition. The Research Agent and the WAI-Test review agent run every Monday at 09:00 America/Chicago; on a passing review the report is emailed to the distribution list. This page is regenerated at the end of each weekly run.</p>
+    <p><a href="index.html">Data dashboard</a> · <a href="../README.md">README</a> · <a href="../AGENT.md">Agent contract</a> · <a href="../brain/test_agent.md">WAI-Test spec</a> · <a href="../brain/topic_rotation.md">Topic rotation</a> · <a href="../schedule/cron_config.md">Schedule</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
