@@ -1,6 +1,6 @@
 # WAI-Research Dashboard
 
-*Last updated: 2026-06-29 — 7 reports filed (weeks 1–6 + Week 8 featured Healthcare R&D)*
+*Last updated: 2026-07-13 — 9 reports filed (weeks 1–6 + Week 8 featured Healthcare R&D + Week 9 research authorship + Week 10 startup funding)*
 
 The agent overwrites this file at the end of every weekly run. It is the at-a-glance view of the knowledge base.
 
@@ -12,11 +12,18 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Metric | Latest value | Year | Source | Report |
 |---|---|---|---|---|
+| Female-founded share of US VC deal value (≥1 female founder) | **27.7%** (record; $73.6B) | 2025 | PitchBook 2025 US All In | [Week 10](../reports/2026-07-13_startup-funding.md) |
+| US VC to **all-women** founding teams | **1%** (6% of deals) | 2024 | PitchBook 2024 US All In | [Week 10](../reports/2026-07-13_startup-funding.md) |
+| Female-founded VC dollars, ex-Anthropic + Scale AI | **$42.8B** (below 2021–22) | 2025 | PitchBook / Fortune | [Week 10](../reports/2026-07-13_startup-funding.md) |
+| Global VC to all-women teams (of $289B) | **2.3%** ($6.7B) | 2024 | PitchBook (global) | [Week 10](../reports/2026-07-13_startup-funding.md) |
 | % women among AI researchers (health-AI focus) | **12%** | 2024 | UNESCO Women for Ethical AI | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
 | % women among AI faculty | **16%** | 2024 | UNESCO Women for Ethical AI | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
 | Female first authors on AI breast-imaging papers | **35.7%** | 2024 | Eur J Radiology | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
 | Women in cardiovascular drug-approval trials (AI training data) | **34%** | 2018 | JACC [dated] | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
 | % women among biopharma CTOs / CSOs | **14% / 20%** | 2025 | Pharma's Almanac | [Week 8](../reports/2026-06-29_healthcare-rnd.md) |
+| Female first / last authors at a top AI venue (ICLR 2020) | **10.6% / 9.7%** | 2020 | Tran et al. [dated] | [Week 9](../reports/2026-07-06_research-authorship.md) |
+| Female first / last authors across ACL Anthology (NLP) | **29.2% / 25.5%** | 1965–2019 | Mohammad, ACL 2020 [dated] | [Week 9](../reports/2026-07-06_research-authorship.md) |
+| NLP citation gap (female-first vs male-first, mean) | **37.6 vs 50.4** (~34% fewer) | 2016 | Mohammad, ACL 2020 [dated] | [Week 9](../reports/2026-07-06_research-authorship.md) |
 | % women in global AI workforce (role-based) | **22%** | 2024 | Stanford HAI AI Index 2024; UNESCO 2024 | [Week 1](../reports/2026-05-11_workforce-representation.md) |
 | % women listing AI engineering skills (LinkedIn) | **30.5%** | 2024 | LinkedIn Economic Graph / WEF GGGR 2024 | [Week 1](../reports/2026-05-11_workforce-representation.md) |
 | % women in senior executive AI roles | **<14%** | 2024 | Interface EU | [Week 1](../reports/2026-05-11_workforce-representation.md) |
@@ -50,8 +57,8 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Entry | 2 | 2026-06-01 | No public AI hiring funnel by gender; AI residencies don't disclose demographics |
 | Early career | 1 (partial) | 2026-06-01 | No 12-month AI-role retention split by gender |
 | Mid-career | 1 | 2026-06-15 | No AI-specific broken-rung number; technical-roles cut (52) not refreshed since 2021 |
-| Senior | 0 | — | — |
-| Executive / founder | 1 (partial) | 2026-05-11 | No public Principal/Staff+ AI IC representation data |
+| Senior | 1 | 2026-07-06 | No venue-specific women's-authorship share for 2023–2025; AI Index dropped author-gender reporting |
+| Executive / founder | 2 | 2026-07-13 | No recurring AI-sector × gender funding series; "≥1 female founder" metric composition-sensitive; no health-AI/femtech funding cut |
 | Re-entry | 0 | — | — |
 | All phases | 2 | 2026-06-08 | Pay gap, workforce representation |
 
@@ -77,8 +84,8 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Sub-field | Reports filed | Last covered |
 |---|---|---|
-| AI research (general) | 5 | 2026-06-08 |
-| NLP / language models | 0 | — |
+| AI research (general) | 6 | 2026-07-06 |
+| NLP / language models | 1 (authorship/citation data) | 2026-07-06 |
 | Computer vision | 0 | — |
 | Reinforcement learning | 0 | — |
 | AI safety / alignment | 0 | — |
@@ -96,6 +103,8 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Date | Week | Topic | Markdown | White paper |
 |---|---|---|---|---|
+| 2026-07-13 | 10 | Women founders in AI startups: funding share | [md](../reports/2026-07-13_startup-funding.md) | [white paper](../whitepapers/2026-07-13_startup-funding.html) |
+| 2026-07-06 | 9 | Women & AI research: authorship of top-tier papers | [md](../reports/2026-07-06_research-authorship.md) | [white paper](../whitepapers/2026-07-06_research-authorship.html) |
 | 2026-06-29 | 8 ⭐ | Women & AI in healthcare R&D: the state of representation | [md](../reports/2026-06-29_healthcare-rnd.md) | [white paper](../whitepapers/2026-06-29_healthcare-rnd.html) |
 | 2026-06-15 | 6 | The broken rung: promotion from IC to first management | [md](../reports/2026-06-15_broken-rung.md) | [white paper](../whitepapers/2026-06-15_broken-rung.html) |
 | 2026-06-08 | 5 | The pay gap in AI and machine learning roles | [md](../reports/2026-06-08_pay-gap.md) | [white paper](../whitepapers/2026-06-08_pay-gap.html) |
@@ -137,6 +146,7 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Structured, committee-based promotion systems | Fortune 100 tech firms (McKinsey interviews) | Only 2 of 40 leaders reported no broken-rung problem — both used heavily structured, debiased promotion systems | [Week 6](../reports/2026-06-15_broken-rung.md) |
 | Sponsorship parity (vs. mentorship) | McKinsey/LeanIn finding | When women get equal career support, the promotion-ambition gap disappears entirely | [Week 6](../reports/2026-06-15_broken-rung.md) |
 | AnitaB.org Top Companies benchmark | AnitaB.org (paused 2024) | 7 consecutive years of rising tech-women hire share at participating firms | [Week 1](../reports/2026-05-11_workforce-representation.md) |
+| Double-blind peer review | WSDM 2017 experiment / PNAS 2017; Behavioral Ecology 2001; EvoLang 2016 | Removes prestige bias that penalizes women; single-blind favored famous authors ×1.63, top companies ×2.10, female authors ×0.78; journal switch raised female first-authorship | [Week 9](../reports/2026-07-06_research-authorship.md) |
 
 ## What's missing — evidence gaps logged
 
@@ -162,7 +172,10 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | No India-specific AI/ML gender pay number | Week 5 | Open |
 | 2024 Taulbee AI-specialty × gender cross-tab not publicly summarized | Week 3 | Open — last published 2019 |
 | No AI postdoc population gender data | Week 3 | Open |
-| No measured longitudinal placement outcomes for WiML or Rising Stars in EECS | Week 3 | Open |
+| No measured longitudinal placement outcomes for WiML or Rising Stars in EECS | Week 3 / Week 9 | Open — reaffirmed Week 9 |
+| No venue-specific women's-authorship share for 2023–2025 (best data pre-2021) | Week 9 | Open — the field stopped publishing it |
+| Stanford AI Index dropped author-gender reporting after its 2024 edition | Week 9 | Open |
+| No gender × AI-specialty PhD cross-tab (the "~19–21%" figure is unverifiable) | Week 9 | Open — [methodology gap] |
 
 ---
 

@@ -184,14 +184,14 @@
   <header class="hero">
     <div class="eyebrow">Agent Operations Dashboard</div>
     <h1>How the agent researches, writes, tests, and ships the weekly women-in-AI report</h1>
-    <p>A live view of the autonomous research pipeline — now focused on <b>women &amp; AI in healthcare R&amp;D</b>. Every Monday at 09:00 CST it picks a topic, gathers cited statistics, drafts the report, runs an independent QA review, and emails the result to the Medtronic team.</p>
-    <div class="live"><span class="dot"></span> Pipeline healthy · last run 2026-06-29</div>
+    <p>A live view of the autonomous research pipeline — covering <b>women &amp; AI</b> across research, representation, and the featured healthcare-R&amp;D track. Every Monday at 09:00 CST it picks a topic, gathers cited statistics, drafts the report, runs an independent QA review, and emails the result to the Medtronic team.</p>
+    <div class="live"><span class="dot"></span> Pipeline healthy · last run 2026-07-13</div>
   </header>
 
   <!-- STATUS STRIP -->
   <div class="strip">
-    <div class="kpi accent"><div class="k">Next scheduled run</div><div class="v">Mon Jul 6</div><div class="s">09:00 CST · America/Chicago</div></div>
-    <div class="kpi"><div class="k">Reports filed</div><div class="v">7</div><div class="s">Week 8 just shipped</div></div>
+    <div class="kpi accent"><div class="k">Next scheduled run</div><div class="v">Mon Jul 20</div><div class="s">09:00 CST · America/Chicago</div></div>
+    <div class="kpi"><div class="k">Reports filed</div><div class="v">9</div><div class="s">Week 10 just shipped</div></div>
     <div class="kpi"><div class="k">Latest QA verdict</div><div class="v"><span class="em">SHIP</span> · 100%</div><div class="s">WAI-Test · 0 fail / 0 warn</div></div>
     <div class="kpi"><div class="k">Featured track</div><div class="v" style="font-size:18px">Healthcare R&amp;D</div><div class="s">7-topic priority queue</div></div>
   </div>
@@ -209,7 +209,7 @@
         <div class="who">Research Agent</div>
         <h3>Pick topic &amp; gather evidence</h3>
         <p>Reads the brain, selects this week's topic (featured track first), and fans out web searches for primary, cited statistics — no number without a source.</p>
-        <div class="last"><b>Last:</b> 17 sources, 12 statistics on women &amp; AI in healthcare R&amp;D</div>
+        <div class="last"><b>Last:</b> 8 sources, 9 statistics on women founders &amp; AI startup funding</div>
       </div>
 
       <div class="arrow"><svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -222,7 +222,7 @@
         <div class="who">Report Writer</div>
         <h3>Draft report + white paper</h3>
         <p>Writes the 1,500–3,500-word markdown report and a presentation white paper with inline SVG charts — in the established WAI format.</p>
-        <div class="last"><b>Last:</b> 2,397 words · 2 charts · md + HTML + Word</div>
+        <div class="last"><b>Last:</b> 2,692 words · 3 charts · md + HTML + PDF</div>
       </div>
 
       <div class="arrow"><svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="#0a6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -248,7 +248,7 @@
         <div class="who">Scheduler &amp; email</div>
         <h3>Send Mon 09:00 CST</h3>
         <p>On a passing review, the cron routine emails the Word + white-paper files to the Medtronic distribution list, then logs the run.</p>
-        <div class="last"><b>To:</b> 3 Medtronic recipients · .docx + .html</div>
+        <div class="last"><b>To:</b> 4 Medtronic recipients · .docx + .html</div>
       </div>
 
     </div>
@@ -261,7 +261,7 @@
       <!-- Test agent panel -->
       <div class="panel">
         <h3 class="ph">WAI-Test review — how the test agent checks the report <span class="badge ship">SHIP</span></h3>
-        <p class="psub">Latest review of <b>2026-06-29 · Women &amp; AI in healthcare R&amp;D</b>. Three dimensions, 18 checks. Source: <code>test/results/healthcare-rnd.json</code>.</p>
+        <p class="psub">Latest review of <b>2026-07-13 · Women founders in AI startups: funding share</b>. Three dimensions, 18 checks. Source: <code>test/results/startup-funding.json</code>.</p>
 
         <svg width="0" height="0"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a6bff"/><stop offset="1" stop-color="#00b6f0"/></linearGradient></defs></svg>
 
@@ -291,22 +291,22 @@
 
         <div class="checks">
           <div class="chk"><span class="tick">✓</span><span class="id">F1</span>Filename pattern <span class="d">ok</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">C1</span>Word count 1.5–3.5k <span class="d">2,397</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C1</span>Word count 1.5–3.5k <span class="d">2,692</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">F2</span>Frontmatter keys <span class="d">7/7</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">C2</span>Exec summary 2–4 sent. <span class="d">ok</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">F3</span>All 9 sections <span class="d">9/9</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">C3</span>≥5 statistic rows <span class="d">12</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C3</span>≥5 statistic rows <span class="d">9</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">F4</span>White paper exists <span class="d">ok</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">C4</span>3–5 actions <span class="d">5</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">F5</span>White-paper &lt;head&gt; <span class="d">ok</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">C5</span>≥5 sources <span class="d">17</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">F6</span>Inline SVG chart <span class="d">2</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">C6</span>Recent stat ≤12mo <span class="d">2026</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">D1</span>Every row sourced <span class="d">12/12</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C5</span>≥5 sources <span class="d">8</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">F6</span>Inline SVG chart <span class="d">3</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">C6</span>Recent stat ≤12mo <span class="d">2025</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D1</span>Every row sourced <span class="d">9/9</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">D4</span>Old stats [dated] <span class="d">flagged</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">D2</span>Every row dated <span class="d">12/12</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D2</span>Every row dated <span class="d">9/9</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">D5</span>No placeholders <span class="d">clean</span></div>
-          <div class="chk"><span class="tick">✓</span><span class="id">D3</span>Source URLs <span class="d">17</span></div>
+          <div class="chk"><span class="tick">✓</span><span class="id">D3</span>Source URLs <span class="d">8</span></div>
           <div class="chk"><span class="tick">✓</span><span class="id">D6</span>Tiers declared <span class="d">ok</span></div>
         </div>
       </div>
@@ -317,7 +317,7 @@
         <p class="psub">Autonomous weekly cadence. Emails sent only after the report clears WAI-Test.</p>
         <div class="sched-row"><span class="lab">Cadence</span><b>Every Monday, 09:00 CST</b></div>
         <div class="sched-row"><span class="lab">Cron</span><span class="cron">0 9 * * 1</span> &nbsp;<span style="color:var(--muted);font-size:12px">America/Chicago</span></div>
-        <div class="sched-row"><span class="lab">Next run</span><b>Mon, Jul 6 2026 · 09:00 CST</b></div>
+        <div class="sched-row"><span class="lab">Next run</span><b>Mon, Jul 20 2026 · 09:00 CST</b></div>
         <div class="sched-row"><span class="lab">Attaches</span>Word (.docx) + presentation white paper (.html)</div>
         <div style="margin-top:14px">
           <div style="font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">Distribution list</div>
@@ -355,7 +355,6 @@
       <div>
         <div style="font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Standard 52-week rotation — next up</div>
         <div class="track">
-          <div class="topic"><span class="code">W7</span><div><div class="t">Women and AI research: top-tier paper authorship</div><div class="l">NeurIPS, ICML, ICLR, ACL demographics</div></div><span class="st s-queue">Rotation</span></div>
           <div class="topic"><span class="code">W9</span><div><div class="t">Women and AI leadership at large tech firms</div><div class="l">C-suite, VP, director representation</div></div><span class="st s-queue">Rotation</span></div>
           <div class="topic"><span class="code">W10</span><div><div class="t">Women and AI ethics, governance &amp; policy</div><div class="l">Where women are over/under-represented</div></div><span class="st s-queue">Rotation</span></div>
           <div class="topic"><span class="code">W11</span><div><div class="t">Intersectional view: Black women in AI</div><div class="l">Representation, funding, citation gaps</div></div><span class="st s-queue">Rotation</span></div>
@@ -369,6 +368,8 @@
           <div class="topic done"><span class="code">W4</span><div><div class="t">Entry-level AI roles</div></div><span class="st s-done">Done</span></div>
           <div class="topic done"><span class="code">W5</span><div><div class="t">Pay gap in AI/ML</div></div><span class="st s-done">Done</span></div>
           <div class="topic done"><span class="code">W6</span><div><div class="t">The broken rung</div></div><span class="st s-done">Done</span></div>
+          <div class="topic done"><span class="code">W7</span><div><div class="t">Research: top-tier paper authorship</div></div><span class="st s-done">Done · Wk 9</span></div>
+          <div class="topic done"><span class="code">W8</span><div><div class="t">Founders in AI startups: funding share</div></div><span class="st s-done">Done · Wk 10</span></div>
         </div>
       </div>
 
@@ -377,35 +378,35 @@
 
   <!-- LATEST REPORT SPOTLIGHT -->
   <section>
-    <div class="sec-head"><h2>Latest report</h2><span class="badge blue">Week 8 · 2026-06-29</span><span class="note">Women &amp; AI in healthcare R&amp;D</span></div>
+    <div class="sec-head"><h2>Latest report</h2><span class="badge blue">Week 10 · 2026-07-13</span><span class="note">Women founders in AI startups: funding share</span></div>
     <div class="panel">
       <div class="spot">
         <div class="big">
-          <div class="n">12%</div>
-          <div class="c">of AI researchers are women — and just 16% of AI faculty (UNESCO, 2024)</div>
+          <div class="n">1%</div>
+          <div class="c">of US VC funding went to all-women founding teams in 2024 — the lowest since 2017, even as the AI-inflated headline hit a record (PitchBook)</div>
         </div>
         <div>
           <div style="font-size:13px;color:var(--muted);font-weight:700;margin-bottom:8px">Key observations the agent surfaced</div>
           <ul class="obs">
-            <li>Women are a minority at <b>every layer</b> of health-AI R&amp;D — research, authorship, funding, leadership, and the engineering bench (lowest, at 12%).</li>
-            <li>Female authorship of medical-AI papers stays <b>under 40%</b>, and in radiology appears to <i>fall</i> the more central AI becomes to the study.</li>
-            <li>The gap is <b>encoded into the product</b>: chest-X-ray AI underdiagnoses women (Nature Medicine, 2021), trained on trials that were only 34–38% female.</li>
-            <li>Capital lags too: all-female teams took ~1–2% of US VC; "women+ health" got 6.6% of 2024 digital-health funding.</li>
+            <li>Female-founded startups took a record <b>27.7% of US venture value</b> in 2025 — but <b>two-thirds went to AI</b>, and Anthropic + Scale AI alone took &gt;$30B.</li>
+            <li>Strip out those two and female founders raised <b>$42.8B — less than in 2021 or 2022</b>. The record is a composition effect, not broader access.</li>
+            <li><b>All-women teams</b> got just 1% of US VC (2024); globally, <b>2.3%</b> of the $289B deployed. Deal counts fell a <b>fourth straight year</b>.</li>
+            <li>The honest gauge is the <b>all-women-team share</b>, not the AI-inflated top-line a single trophy round can move.</li>
           </ul>
         </div>
       </div>
 
       <div class="stat-mini">
-        <div class="sm warn"><div class="v">35.7%</div><div class="l">female 1st authors, AI breast-imaging</div><div class="s">Eur J Radiology 2024</div></div>
-        <div class="sm bad"><div class="v">34%</div><div class="l">women in CV drug-approval trials</div><div class="s">JACC 2018 [dated]</div></div>
-        <div class="sm bad"><div class="v">14%</div><div class="l">biopharma CTOs are women</div><div class="s">Pharma's Almanac 2025</div></div>
-        <div class="sm warn"><div class="v">21%</div><div class="l">medtech executives are women</div><div class="s">MD&amp;O 2022</div></div>
+        <div class="sm warn"><div class="v">27.7%</div><div class="l">US VC value to ≥1-female-founder startups (record)</div><div class="s">PitchBook 2025 · $73.6B</div></div>
+        <div class="sm bad"><div class="v">$42.8B</div><div class="l">ex-Anthropic + Scale AI — below 2021–22</div><div class="s">PitchBook / Fortune 2026</div></div>
+        <div class="sm bad"><div class="v">1%</div><div class="l">US VC to all-women founding teams (6% of deals)</div><div class="s">PitchBook 2024 US All In</div></div>
+        <div class="sm bad"><div class="v">2.3%</div><div class="l">global VC to all-women teams ($6.7B of $289B)</div><div class="s">PitchBook (global) 2024</div></div>
       </div>
 
       <div class="reportlinks" style="margin-top:18px">
-        <a href="../whitepapers/2026-06-29_healthcare-rnd.html">📊 White paper (charts)</a>
-        <a href="../reports/2026-06-29_healthcare-rnd.md">📄 Markdown report</a>
-        <a href="../reports/2026-06-29_healthcare-rnd.docx">📝 Word (.docx)</a>
+        <a href="../whitepapers/2026-07-13_startup-funding.html">📊 White paper (charts)</a>
+        <a href="../reports/2026-07-13_startup-funding.md">📄 Markdown report</a>
+        <a href="../reports/2026-07-13_startup-funding.pdf">📝 PDF</a>
         <a href="index.html">📈 Full data dashboard</a>
       </div>
     </div>

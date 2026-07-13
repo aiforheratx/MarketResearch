@@ -15,6 +15,8 @@ These complement (do not replace) the markdown reports in `../reports/`. Same ev
 | 5 | 2026-06-08 | The pay gap in AI and machine learning roles | [md](../reports/2026-06-08_pay-gap.md) | [white paper](./2026-06-08_pay-gap.html) |
 | 6 | 2026-06-15 | The broken rung: promotion from IC to first management | [md](../reports/2026-06-15_broken-rung.md) | [white paper](./2026-06-15_broken-rung.html) |
 | 8 ⭐ | 2026-06-29 | Women & AI in healthcare R&D: the state of representation | [md](../reports/2026-06-29_healthcare-rnd.md) | [white paper](./2026-06-29_healthcare-rnd.html) |
+| 9 | 2026-07-06 | Women & AI research: authorship of top-tier papers | [md](../reports/2026-07-06_research-authorship.md) | [white paper](./2026-07-06_research-authorship.html) |
+| 10 | 2026-07-13 | Women founders in AI startups: funding share | [md](../reports/2026-07-13_startup-funding.md) | [white paper](./2026-07-13_startup-funding.html) |
 
 ## Style
 

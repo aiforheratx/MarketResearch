@@ -183,3 +183,43 @@ When a new credible source is discovered during a weekly run, append it here (no
 - AI4ALL *Results*
 - Rockman et al. *Black Girls CODE case study 2017*
 - CACM — *Toward Improving Female Retention in CS*
+
+---
+
+## Sources discovered and confirmed — Week 9 (2026-07-06, research authorship)
+
+### Tier 1 — primary / peer-reviewed
+- Tran, D. et al. — *An Open Review of OpenReview: A Critical Analysis of the ML Conference Review Process* (2020). arXiv:2010.05137. ICLR 2017–2020 OpenReview records; women 10.6% first / 9.7% last authors at ICLR 2020; acceptance 23.5% vs 27.1%. https://arxiv.org/abs/2010.05137 — Tier 1 [dated]
+- Mohammad, S. — *Gender Gap in Natural Language Processing Research: Disparities in Authorship and Citations* (ACL 2020). ACL Anthology corpus; 29.2% first / 25.5% last female authors; 37.6 vs 50.4 citation gap. https://aclanthology.org/2020.acl-main.702/ — Tier 1 [dated]
+- Tomkins, A., Zhang, M. & Heavlin, W. — *Reviewer bias in single- versus double-blind peer review* (PNAS 2017; WSDM 2017 experiment). arXiv:1702.00502. Single-blind favors famous ×1.63 / top companies ×2.10; female ×0.78. https://arxiv.org/abs/1702.00502 — Tier 1 [dated]
+- Budden, A. et al. — *Double-blind review favours increased representation of female authors* (Trends in Ecology & Evolution, 2008). https://pubmed.ncbi.nlm.nih.gov/17963996/ — Tier 1 [dated]
+- Computing Research Association — *2024 Taulbee Survey* (data 2023–24); 25.9% female CS/CE/I PhD recipients. https://datavisualization.cra.org/TaulbeeSurvey/CRA_Taulbee_Survey_Report_2024.html — Tier 1
+- World Economic Forum — *Global Gender Gap Report 2025* (LinkedIn Economic Graph); 29.4% AI-engineering skill-listers women (first YoY decline). https://www.weforum.org/publications/global-gender-gap-report-2025/ — Tier 1
+
+### Tier 2 — credible specialist
+- Nesta (Stathoulopoulos & Mateos-Garcia) — *Gender Diversity in AI Research* (2019). ~1.5M arXiv papers; 13.8% female AI authors; company/country breakdowns. https://www.nesta.org.uk/report/gender-diversity-ai/ — Tier 2 [dated]
+- Zhao, F. et al. — *Voices of Her: Analyzing Gender Differences in the AI Publication World* (2023). arXiv:2305.14597. 78K AI researchers; citation gap + co-authorship homophily. https://arxiv.org/abs/2305.14597 — Tier 2
+
+### Tier 3 — industry
+- Element AI — *Global AI Talent Report 2019*. ~12% female authors at top-21 AI conferences; 18% of papers with ≥1 female author (original page defunct; via secondary coverage). https://techhq.com/2019/04/theres-a-global-ai-talent-shortage-and-a-lack-of-diversity/ — Tier 3 [dated]
+
+**Data note (Week 9):** No venue-specific women's-authorship share exists for 2023–2025; Stanford AI Index dropped author-gender reporting after its 2024 edition. All authorship figures rely on name-based gender inference (excludes non-binary). The "~19–21% of AI-specific PhDs are women" figure is unverified against a primary cross-tab — treat as [methodology gap].
+
+---
+
+## Sources discovered and confirmed — Week 10 (2026-07-13, startup funding)
+
+### Tier 1 — primary funding datasets
+- PitchBook — *2025 US All In: Female Founders in the VC Ecosystem* (2026). Record $73.6B / 27.7% of US VC deal value to ≥1-female-founder startups; two-thirds to AI; ex-Anthropic/Scale AI = $42.8B. https://pitchbook.com/news/reports/2025-us-all-in-female-founders-in-the-vc-ecosystem — Tier 1
+- PitchBook — *2024 US All In: Female Founders in the VC Ecosystem* (Mar 2025). All-female teams 1% of US VC / 6% of deals (lowest since 2017); ≥1-female value share 19.9% (from 20.8%), count share 25.1%; $38.8B total; global $289B split 83.6% all-male / 14.1% mixed / 2.3% all-women ($6.7B). https://pitchbook.com/news/reports/2024-us-all-in-female-founders-in-the-vc-ecosystem — Tier 1
+
+### Tier 2 — credible secondary / named coverage
+- Fortune (Hinchliffe, E., *The Broadsheet*) — *Venture dollars to female founders doubled to a record $73 billion last year — but Anthropic and Scale AI skewed the data* (6 Mar 2026). Carries the $42.8B ex-two-companies figure and two-thirds-to-AI share. https://fortune.com/2026/03/06/venture-dollars-female-founders-pitchbook-ai/ — Tier 2
+- Atomico — *State of European Tech 2024*, women-founder chapter (via Sifted, Dec 2024). Europe female founders €5.76B / 12% of VC (down 12% YoY); all-women teams 6% flat since 2016; 25% of largest female-founder rounds to AI. https://sifted.eu/articles/women-founded-startups-funding-2024 — Tier 2
+- Inc. (Conrad, J.) — *Wholly Women-Led Companies Attracted Just 1 Percent of VC Funding in 2024* (Mar 2025). Secondary corroboration of PitchBook 1% all-women-team figure. https://www.inc.com/jennifer-conrad/wholly-women-led-companies-attracted-just-1-of-vc-funding-in-2024-tanking-an-already-abysmal-stat/91156396 — Tier 2
+
+### Tier 3 — named industry research
+- Crunchbase News (Teare, G.) — *The Portion of US VC Funding That Went to Female Founders Hit a New Peak in 2023, Thanks to Massive AI Deals* (2024). AI-sector cut: >50% of US AI dollars (~$21B, 360+ rounds) touched ≥1-female-founder firm, but <20% of AI rounds had one. https://news.crunchbase.com/diversity/us-vc-funding-female-founders-peaked-2023-ai-openai-anthropic/ — Tier 3 [dated]
+- Crunchbase News (Teare, G.) — *As Funding Fell, So Did the Number of New Female-Founded Unicorn Startups* (2025). Only 7 US female-founded unicorns across 2023–24 (5 of 7 AI-related) vs dozens in 2021. https://news.crunchbase.com/diversity/female-founded-unicorn-startups-ai-anthropic-zum/ — Tier 3
+
+**Data note (Week 10):** No recurring series measures the female-founded share of *AI-sector* funding specifically — it surfaces only in one-off analyses. The "≥1 female founder" metric is composition-sensitive: two 2025 mega-rounds (Anthropic, Scale AI) swing the US aggregate to a record 27.7% while access measures (all-female-team share, deal counts) regress. Health-AI/femtech gender-funding cut remains unbroken-out (closest anchor: Rock Health "women+ health" 6.6% of digital-health funding, from Week 8).

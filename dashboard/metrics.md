@@ -190,6 +190,62 @@ Row format: `| date_observed | value | year_of_value | source | report_file | no
 
 ---
 
+## Women's share of top-tier AI authorship (added Week 9)
+
+### Top-venue authorship — first vs last (senior) author
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-06 | 10.6% first / 9.7% last | 2020 | Tran et al. (arXiv 2010.05137) [dated] | reports/2026-07-06_research-authorship.md | ICLR 2020; 12.3% / 13.4% at top-10 schools |
+| 2026-07-06 | 29.2% first / 25.5% last | 1965–2019 | Mohammad, ACL 2020 [dated] | reports/2026-07-06_research-authorship.md | ACL Anthology (NLP) |
+| 2026-07-06 | 13.8% | 2019 | Nesta [dated] | reports/2026-07-06_research-authorship.md | AI authors across ~1.5M arXiv papers |
+| 2026-07-06 | ~12% | 2019 | Element AI [dated] | reports/2026-07-06_research-authorship.md | Authors at top-21 AI conferences; 18% of papers ≥1 female author |
+
+### NLP citation gap by first-author gender (mean citations/paper)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-06 | 37.6 (F) / 50.4 (M) | 2016 | Mohammad, ACL 2020 [dated] | reports/2026-07-06_research-authorship.md | ~34% gap; persists controlling for academic age + 66 topics |
+
+### Peer-review acceptance rate by first-author gender
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-06 | 23.5% (F) / 27.1% (M) | 2020 | Tran et al. [dated] | reports/2026-07-06_research-authorship.md | ICLR 2020; women's review scores ~0.16 lower |
+
+### % women in CS/CE/I PhD recipients — Taulbee series (extends Week 3 series)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-06 | 24.1% | 2022–23 | CRA Taulbee 2023 | reports/2026-07-06_research-authorship.md | Recipients; 26.3% enrolled doctoral |
+| 2026-07-06 | 25.9% | 2023–24 | CRA Taulbee 2024 | reports/2026-07-06_research-authorship.md | 8th consecutive annual rise |
+
+---
+
+## Women founders' share of AI/VC startup funding (added Week 10)
+
+### Female-founded share of US VC — headline (≥1 female founder) vs access (all-women teams)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-13 | 20.8% (≥1 F) / 2% (all-women) | 2023 | PitchBook US All In | reports/2026-07-13_startup-funding.md | Deal-value share; all-women-team peak-recent |
+| 2026-07-13 | 19.9% (≥1 F) / 1% (all-women) | 2024 | PitchBook 2024 US All In | reports/2026-07-13_startup-funding.md | All-women 1% = lowest since 2017; 6% of deals; $38.8B total |
+| 2026-07-13 | 27.7% (≥1 F) | 2025 | PitchBook 2025 US All In (via Fortune) | reports/2026-07-13_startup-funding.md | Record; $73.6B; composition-driven by AI mega-rounds |
+
+### AI concentration of female-founder dollars (US)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-13 | ~two-thirds to AI; >$30B to Anthropic+Scale AI | 2025 | PitchBook / Fortune | reports/2026-07-13_startup-funding.md | Ex-those two: $42.8B, below 2021–22 |
+| 2026-07-13 | >50% of US AI $ (~$21B/360+ rounds) touched ≥1-F firm; <20% of AI rounds | 2023 | Crunchbase | reports/2026-07-13_startup-funding.md | [dated]; skewed by OpenAI/Anthropic mega-rounds |
+| 2026-07-13 | 7 US female-founded unicorns (5 of 7 AI) across 2023–24 | 2023–24 | Crunchbase | reports/2026-07-13_startup-funding.md | vs dozens in 2021 |
+
+### Global gender allocation of VC
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-13 | 83.6% all-male / 14.1% mixed / 2.3% all-women ($6.7B) | 2024 | PitchBook (global) | reports/2026-07-13_startup-funding.md | Of $289B deployed globally |
+
+### European female-founder funding share
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-13 | €5.76B = 12% of VC (all-women teams 6%) | 2024 | Atomico State of European Tech | reports/2026-07-13_startup-funding.md | Down 12% YoY absolute; 6% flat since 2016; 25% of largest F-rounds to AI |
+
+---
+
 ## Adding a new tracked metric
 
 When a weekly report introduces a number worth tracking over time:

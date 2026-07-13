@@ -26,6 +26,36 @@ Append a new entry at the **top** of this file after every weekly run. Use the f
 
 ## Entries (newest first)
 
+### 2026-07-13 — Week 10 — Women founders in AI startups: funding share
+
+- Report: reports/2026-07-13_startup-funding.md (+ whitepaper, + PDF)
+- Topic source: rotation row 8 (standard ISO-week rotation; confirmed as next by Week 9 colophon). Featured Healthcare R&D track (H-series) resumes later this month. **Manual/off-schedule run** — the Monday 09:00 CST cloud routine did not fire today; owner initiated this run manually. Logged as manual run.
+- Top 3 statistics found:
+  1. Startups with ≥1 female founder captured a record 27.7% of US VC deal value ($73.6B) in 2025 — but two-thirds went to AI and Anthropic + Scale AI alone took >$30B; excluding those two, female founders raised just $42.8B, below 2021–22 (PitchBook 2025 US All In, via Fortune)
+  2. All-female founding teams took just 1% of US VC funding / 6% of deals in 2024 — lowest since 2017, down from 2% in 2023 (PitchBook 2024 US All In)
+  3. Globally, of $289B deployed in 2024, all-women teams received 2.3% ($6.7B) vs 83.6% all-male / 14.1% mixed (PitchBook)
+- Sources cited: 8 (Tier 1: 2, Tier 2: 4, Tier 3: 2)
+- New sources added to sources.md: PitchBook *2025 US All In*; PitchBook *2024 US All In*; Fortune (Broadsheet) female-founders/AI analysis (Mar 2026); Atomico *State of European Tech 2024* (via Sifted); Inc. all-women-teams-1% coverage; Crunchbase News *female-founder peak 2023* and *female-founded unicorns* pieces
+- WAI-Test review: **SHIP — 100%** (format 6/6, content 6/6, data 6/6); test/results/startup-funding.json
+- Tracked metrics updated in dashboard/metrics.md: female-founded US VC share (≥1 founder vs all-women teams); AI concentration of female-founder dollars; global gender allocation of VC; European female-founder share
+- Notable gaps in evidence this week: no recurring AI-sector × gender funding series; "≥1 female founder" metric is composition-sensitive (two mega-rounds swing the aggregate); no health-AI/femtech gender-funding cut (closest anchor Rock Health "women+ health" 6.6%)
+- Run health: OK
+
+### 2026-07-06 — Week 9 — Women & AI research: authorship of top-tier papers
+
+- Report: reports/2026-07-06_research-authorship.md (+ whitepaper, + PDF)
+- Topic source: rotation row 7 (standard ISO-week rotation). Featured Healthcare R&D track (H1) ran last week (2026-06-29) and does not override this week; resumes next month. Manual run initiated by owner (a day before the Monday cloud routine); logged as owner-initiated.
+- Top 3 statistics found:
+  1. 10.6% female first authors / 9.7% female last authors at ICLR 2020 — roughly half women's ~24% CS-PhD share (Tran et al., *An Open Review of OpenReview*, 2020) [dated]
+  2. Female-first-authored NLP papers cited ~34% less (37.6 vs 50.4), gap persists controlling for academic age + 66 topics (Mohammad, ACL 2020) [dated]
+  3. Double-blind review is the one lever with causal evidence: single-blind reviewers favored famous authors ×1.63, top companies ×2.10; female-author odds ×0.78 (Tomkins et al., PNAS 2017) [dated]
+- Sources cited: 12 (Tier 1: 8, Tier 2: 3, Tier 3: 1)
+- New sources added to sources.md: Tran et al. *An Open Review of OpenReview* (arXiv 2010.05137); Nesta *Gender Diversity in AI Research* (2019); Mohammad *Gender Gap in NLP Research* (ACL 2020); Element AI *Global AI Talent Report 2019*; CRA *2024 Taulbee Survey*; Tomkins et al. *Reviewer bias in single- vs double-blind peer review* (PNAS 2017); Budden et al. *Double-blind review favours female authors* (TREE 2008); WEF *Global Gender Gap Report 2025*; Zhao et al. *Voices of Her* (2023)
+- WAI-Test review: **SHIP — 100%** (format 6/6, content 6/6, data 6/6); test/results/research-authorship.json
+- Tracked metrics updated in dashboard/metrics.md: top-venue female authorship (first/last); NLP citation gap; CS-PhD female share (Taulbee series extended); AI-engineering skill share (2025)
+- Notable gaps in evidence this week: no venue-specific women's-authorship share exists for 2023–2025 (best data pre-2021); Stanford AI Index dropped author-gender reporting after 2024; no gender × AI-specialty cross-tab; all figures rest on name-based gender inference (excludes non-binary); WiML/Rising Stars lack causal evaluation
+- Run health: OK
+
 ### 2026-06-29 — Week 8 — Women & AI in healthcare R&D: the state of representation
 
 - Report: reports/2026-06-29_healthcare-rnd.md (+ whitepaper, + .docx)

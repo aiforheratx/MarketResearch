@@ -1,18 +1,18 @@
 {
-  "report": "2026-07-13_startup-funding.md",
-  "whitepaper": "2026-07-13_startup-funding.html",
-  "slug": "startup-funding",
-  "topic": "Women founders in AI startups: funding share",
-  "week": "10",
-  "reviewed": "2026-07-13",
+  "report": "2026-07-06_research-authorship.md",
+  "whitepaper": "2026-07-06_research-authorship.html",
+  "slug": "research-authorship",
+  "topic": "Women & AI research: authorship of top-tier papers",
+  "week": "9",
+  "reviewed": "2026-07-06",
   "reviewer": "WAI-Test",
   "verdict": "SHIP",
   "overall_pct": 100,
   "fails": 0,
   "warns": 0,
-  "word_count": 2692,
-  "stat_rows": 9,
-  "source_count": 8,
+  "word_count": 2573,
+  "stat_rows": 11,
+  "source_count": 12,
   "dimensions": {
     "format": {
       "passed": 6,
@@ -43,7 +43,7 @@
       "dimension": "format",
       "severity": "FAIL",
       "status": "PASS",
-      "detail": "2026-07-13_startup-funding.md"
+      "detail": "2026-07-06_research-authorship.md"
     },
     {
       "id": "F2",
@@ -67,7 +67,7 @@
       "dimension": "format",
       "severity": "FAIL",
       "status": "PASS",
-      "detail": "2026-07-13_startup-funding.html"
+      "detail": "2026-07-06_research-authorship.html"
     },
     {
       "id": "F5",
@@ -91,7 +91,7 @@
       "dimension": "content",
       "severity": "WARN",
       "status": "PASS",
-      "detail": "2692 words"
+      "detail": "2573 words"
     },
     {
       "id": "C2",
@@ -107,7 +107,7 @@
       "dimension": "content",
       "severity": "FAIL",
       "status": "PASS",
-      "detail": "9 rows"
+      "detail": "11 rows"
     },
     {
       "id": "C4",
@@ -123,7 +123,7 @@
       "dimension": "content",
       "severity": "FAIL",
       "status": "PASS",
-      "detail": "8 citations"
+      "detail": "12 citations"
     },
     {
       "id": "C6",
@@ -139,7 +139,7 @@
       "dimension": "data",
       "severity": "FAIL",
       "status": "PASS",
-      "detail": "9/9 rows sourced"
+      "detail": "11/11 rows sourced"
     },
     {
       "id": "D2",
@@ -147,7 +147,7 @@
       "dimension": "data",
       "severity": "WARN",
       "status": "PASS",
-      "detail": "9/9 rows dated"
+      "detail": "11/11 rows dated"
     },
     {
       "id": "D3",
@@ -155,7 +155,7 @@
       "dimension": "data",
       "severity": "FAIL",
       "status": "PASS",
-      "detail": "8 URLs"
+      "detail": "12 URLs"
     },
     {
       "id": "D4",

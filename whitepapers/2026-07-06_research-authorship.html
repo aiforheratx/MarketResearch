@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Women &amp; AI research: authorship of top-tier papers — WAI-Research Week 9</title>
+<link rel="stylesheet" href="_assets/report.css">
+</head>
+<body class="report">
+
+<div class="kicker">Women &amp; AI<span class="sep">·</span>Market Research<span class="sep">·</span>Research &amp; Authorship</div>
+<h1 class="title">Half the PhDs, a tenth of the bylines</h1>
+<p class="deck">Women earn nearly a quarter of computer-science doctorates but write barely a tenth of the papers at AI's
+top venues — the share falls again from junior to senior author, again in citations, and the field has quietly
+stopped counting it.</p>
+<div class="byline">
+  <span>By <b>WAI-Research</b>, on behalf of <b>Mugdha Tasgaonkar</b></span>
+  <span>Filed <b>06 July 2026</b> · Week 9</span>
+  <span>Reviewed by <b>WAI-Test</b> · verdict SHIP</span>
+</div>
+
+<div class="hero-fig">
+  <div class="n">10.6%</div>
+  <div class="t">of first authors at ICLR 2020 were women — and just 9.7% of senior (last) authors:
+  roughly <b>half</b> women's ~24% share of computer-science PhDs.
+  <span class="tag">Tran et al., 2020</span></div>
+</div>
+
+<div class="summary">
+  <span class="lbl">Executive summary</span>
+  At the field's defining venues, women write roughly <b>one paper in ten</b> — only <b>10.6% of first authors
+  and 9.7% of senior authors</b> at ICLR 2020, and about <b>13.8% of AI authors</b> across arXiv — a share that
+  runs at roughly half women's ~24% presence in CS PhD programs, then shrinks again from junior to senior
+  authorship, and again in citations, where female-first-authored NLP papers are cited <b>34% less</b> than
+  men's. The direction is not improvement but stagnation: female first-authorship in NLP has been flat since
+  2006 and AI co-authorship flat since the 1990s, even as entry pipelines widen. The highest-leverage move a
+  program chair or editor can make is to <b>adopt double-blind review</b> — the one intervention with causal
+  evidence that anonymity raises women's acceptance and first-authorship.
+</div>
+
+<p class="lead">There is no shortage of women credentialed to publish in AI — nearly a quarter of new
+computer-science PhDs are women, and that share has risen for eight straight years. What thins, and thins
+sharply, is what happens to that credential on the way to the byline: by the time a paper reaches the podium at
+a top venue, women hold barely a tenth of the first-author slots and fewer of the senior ones. And, unusually
+for a field that measures everything about itself, almost no one is counting anymore.</p>
+
+<h2><span class="no">01</span>The state of authorship</h2>
+<div class="h2sub">Scarce at the byline, scarcer at the senior slot</div>
+<p>Authorship is the one measure of standing in AI research you can count directly — the byline is public, and
+the last-author slot names who ran the lab. Counted that way, women are scarce. The most rigorous venue-level
+study opened the review records of a top conference: at <b>ICLR 2020</b>, only <b>10.6% of accepted papers had
+a female first author and 9.7% a female last author</b>, rising to just 12.3% and 13.4% among top-10-school
+submissions (Tran et al., 2020). A large-scale bibliometric baseline agrees on the order of magnitude — across
+roughly 1.5 million arXiv papers, <b>13.8% of AI-research authors were women</b> (Nesta, 2019). What makes
+those figures sting is the denominator: in 2019 women were already 23.2% of US CS PhD students, yet held barely
+half that share of the bylines (Figure 1). The pool has since grown — women were <b>24.1% of 2022–23 CS PhD
+recipients</b> and 25.9% in 2023–24 (CRA Taulbee) — which only sharpens the question of where those women are
+in the author lists at NeurIPS, ICML, ICLR and CVPR.</p>
+
+<div class="figure">
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Women's share falls from about 24 percent of CS PhDs to about 10 percent of top-venue authors">
+  <!-- axis -->
+  <line x1="240" y1="34" x2="240" y2="256" stroke="#15233b" stroke-width="1"/>
+  <!-- PhD-pool reference line at 24.1% : x = 240 + 24.1*13.333 = 561.3 -->
+  <line x1="561" y1="34" x2="561" y2="266" stroke="#0a4fd6" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="561" y="280" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#71809b">CS PhD pool ≈ 24%</text>
+  <!-- scale: 13.333 px per percentage point; bar height 20 -->
+  <!-- CS PhD students 23.2 (context) -->
+  <text x="232" y="59" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">CS PhD students (2019)</text>
+  <rect x="240" y="44" width="309" height="20" fill="#71809b"/>
+  <text x="557" y="59" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#41506b">23.2%</text>
+  <!-- CS PhD recipients 24.1 (context) -->
+  <text x="232" y="103" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">CS PhD recipients (2022–23)</text>
+  <rect x="240" y="88" width="321" height="20" fill="#71809b"/>
+  <text x="569" y="103" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#41506b">24.1%</text>
+  <!-- AI arXiv authors 13.8 -->
+  <text x="232" y="147" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">AI authors, arXiv (2019)</text>
+  <rect x="240" y="132" width="184" height="20" fill="#0a4fd6"/>
+  <text x="432" y="147" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15233b">13.8%</text>
+  <!-- Top-venue first authors 10.6 -->
+  <text x="232" y="191" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">Top-venue first authors (ICLR 2020)</text>
+  <rect x="240" y="176" width="141" height="20" fill="#0a4fd6"/>
+  <text x="389" y="191" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15233b">10.6%</text>
+  <!-- Top-venue last authors 9.7 (emphasis) -->
+  <text x="232" y="235" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">Top-venue senior authors (ICLR 2020)</text>
+  <rect x="240" y="220" width="129" height="20" fill="#103a8e"/>
+  <text x="377" y="235" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15233b">9.7%</text>
+</svg>
+<div class="cap"><b>Figure 1. The credential–byline gap.</b> Women's share roughly halves between the CS PhD pool and
+top-venue authorship, and is lowest at the senior (last-author) slot. Each bar is a distinct population, shown
+together to compare stages. Sources: CRA Taulbee (2023–24); Nesta (2019); Tran et al. (2020). Pre-2021 authorship
+figures — the field has not published a fresher venue-level cut.</div>
+</div>
+
+<h2><span class="no">02</span>The citation penalty</h2>
+<div class="h2sub">Fewer bylines, and each one counts for less</div>
+<p>The gap does not end at acceptance. In the ACL Anthology — the most complete corpus for a single AI subfield —
+women were 29.2% of first authors but only 25.5% of last authors across 1965–2019, the leaky pipeline made
+legible inside one dataset (Mohammad, ACL 2020). And the papers women do lead are cited less: female-first-authored
+NLP papers averaged <b>37.6 citations against 50.4</b> for male-first-authored work — about a third fewer — a gap
+that persisted after controlling for academic age and 66 research topics (Figure 2). The same asymmetry shows up
+in review: at ICLR 2020, papers with women first authors were accepted at <b>23.5% versus 27.1%</b> for men, and
+scored about 0.16 points lower.</p>
+
+<div class="figure">
+<svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Female-first-authored NLP papers average 37.6 citations versus 50.4 for male-first-authored">
+  <line x1="300" y1="30" x2="300" y2="182" stroke="#15233b" stroke-width="1"/>
+  <!-- scale: 0..60 citations over 300px -> 5 px per citation -->
+  <!-- female-first 37.6 -> 188 (emphasis) -->
+  <text x="292" y="63" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">Female first author</text>
+  <rect x="300" y="48" width="188" height="24" fill="#103a8e"/>
+  <text x="496" y="65" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15233b">37.6</text>
+  <!-- male-first 50.4 -> 252 -->
+  <text x="292" y="113" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" fill="#15233b">Male first author</text>
+  <rect x="300" y="98" width="252" height="24" fill="#0a4fd6"/>
+  <text x="560" y="115" font-family="Helvetica Neue,Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15233b">50.4</text>
+  <text x="300" y="158" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#41506b">Mean citations per paper — a ~34% gap that survives controls for academic age and topic.</text>
+</svg>
+<div class="cap"><b>Figure 2. The citation penalty in NLP.</b> Mean citations per paper, ACL Anthology through 2016
+(n ≈ 27,000 papers with citation data). Source: Mohammad, ACL (2020). Gender name-inferred; pre-2023 (<code>[dated]</code>).</div>
+</div>
+
+<div class="callout">
+  <div class="n">~34%</div>
+  <div class="t">fewer citations for female-first-authored NLP papers — and the gap holds after controlling for how
+  long the author has been publishing.</div>
+  <div class="src">Mohammad, <i>Gender Gap in NLP Research</i>, ACL 2020</div>
+</div>
+
+<h2><span class="no">03</span>The one lever with evidence</h2>
+<div class="h2sub">Take the names off, and the numbers move</div>
+<p>Most proposed fixes for this gap have never been measured. One has. The controlled experiment at WSDM 2017
+gave every paper both single- and double-blind reviewers: single-blind reviewers were markedly more generous to
+famous authors (acceptance odds <b>×1.63</b>), top universities (<b>×1.58</b>) and top companies (<b>×2.10</b>),
+while the female-author odds multiplier sat below parity at <b>0.78</b> (Figure 3). Because women are
+underrepresented among exactly the famous, top-institution authors that single-blind review rewards, taking the
+names off removes a headwind that lands hardest on them. Journal evidence corroborates it: when
+<i>Behavioral Ecology</i> moved to double-blind review, female first-authorship rose significantly while a
+name-visible control journal did not (Budden et al., 2008).</p>
+
+<div class="figure">
+<svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Single-blind reviewers favor famous authors and top companies above parity; female authors fall below parity at 0.78">
+  <!-- baseline (no bias) at x=392 : scale 181.8 px per unit from origin x=210 (=0.0) -->
+  <line x1="392" y1="28" x2="392" y2="212" stroke="#15233b" stroke-width="1.2"/>
+  <text x="392" y="228" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="#71809b">no bias — ×1.0</text>
+  <!-- Top companies 2.10 -> x2 = 210+381.8 = 591.8 ; bar 392..592 -->
+  <text x="384" y="52" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#15233b">Top companies</text>
+  <rect x="392" y="40" width="200" height="18" fill="#0a4fd6"/>
+  <text x="598" y="54" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#15233b">×2.10</text>
+  <!-- Famous authors 1.63 -> 210+296.3=506 ; bar 392..506 -->
+  <text x="384" y="88" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#15233b">Famous authors</text>
+  <rect x="392" y="76" width="114" height="18" fill="#0a4fd6"/>
+  <text x="512" y="90" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#15233b">×1.63</text>
+  <!-- Top universities 1.58 -> 210+287.2=497 ; bar 392..497 -->
+  <text x="384" y="124" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#15233b">Top universities</text>
+  <rect x="392" y="112" width="105" height="18" fill="#0a4fd6"/>
+  <text x="503" y="126" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#15233b">×1.58</text>
+  <!-- Female authors 0.78 -> 210+141.8=352 ; bar 352..392 (left of baseline, penalty) -->
+  <text x="384" y="160" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="#15233b">Female authors</text>
+  <rect x="352" y="148" width="40" height="18" fill="#103a8e"/>
+  <text x="346" y="162" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="700" fill="#103a8e">×0.78</text>
+</svg>
+<div class="cap"><b>Figure 3. What single-blind review rewards.</b> Acceptance-odds multipliers for single- vs double-blind
+reviewers at WSDM 2017; bars right of the line favor a group, left penalize it. The female-author effect was
+significant only when meta-analyzed with prior experiments. Source: Tomkins et al., <i>PNAS</i> (2017). <code>[dated]</code>.</div>
+</div>
+
+<div class="pull">Women are ~24% of the field's PhDs and ~10% of its top-venue first authors. The gap between the
+credential and the byline is the story — and it is roughly a factor of two.</div>
+
+<h2><span class="no">04</span>What the evidence no longer measures</h2>
+<div class="h2sub">The blind spot is itself the finding</div>
+<p>For a field that benchmarks its every capability, the gaps here are conspicuous. There is <b>no venue-specific
+women's-authorship share for 2023–2025</b> — the strongest numbers above (ICLR 2020, ACL to 2019, Nesta's arXiv
+census) all predate 2021. Worse, <b>Stanford's AI Index has quietly dropped author-gender reporting</b>: the 2024
+edition still carried it; the 2025 and 2026 editions surface none. <b>No source cross-tabulates gender by AI
+specialty</b>, so the widely repeated "~19–21% of AI PhDs are women" cannot be checked against the primary survey.
+And every figure in this report rests on <b>name-based gender inference</b>, which mishandles unisex and many
+East-Asian names and erases non-binary researchers. The most-promoted interventions are, tellingly, the
+least-measured.</p>
+
+<h2><span class="no">05</span>What works</h2>
+<div class="h2sub">One measured lever, and honest labels on the rest</div>
+<ul>
+  <li><b>Double-blind review</b> — the strongest causal evidence in this topic (WSDM 2017 / <i>PNAS</i> 2017;
+  <i>Behavioral Ecology</i> 2008; EvoLang 2016). Cheap to adopt, and it moves acceptance and first-authorship
+  toward parity by removing the prestige signal that women are least likely to carry.</li>
+  <li><b>Women in Machine Learning (WiML)</b> — the NeurIPS-co-located workshop drew a cohort that was 84.2%
+  female-identifying in 2022 and mobilizes 50+ senior mentors; strong participation, but its causal effect on later
+  authorship has not been formally evaluated.</li>
+  <li><b>Rising Stars in EECS</b> — an academic-career workshop for women since 2012; MIT reports recent EECS hiring
+  cohorts "nearly 50% women." Descriptive placement data, no controlled evaluation.</li>
+</ul>
+
+<div class="section-label">Recommended actions</div>
+<ol class="actions">
+  <li><b>Read</b> — Tran et al., <i>An Open Review of OpenReview</i> (2020): the clearest dissection of how gender,
+  seniority and institution move through the acceptance funnel, and the template for the fresh study the field is
+  missing.</li>
+  <li><b>Share</b> — the pairing: women are ~24% of CS PhDs but only ~10% of top-venue first authors. The gap
+  between credential and byline is roughly a factor of two.</li>
+  <li><b>Ask</b> — of any venue you influence: "Are we double-blind, and if not, what is our defense given the
+  <i>PNAS</i> evidence?"</li>
+  <li><b>Track</b> — the female senior (last) author share at the venue closest to your work. At ~9.7% it is the
+  most senior signal — and, since the AI Index stopped reporting it, a number worth counting yourself.</li>
+  <li><b>Act</b> — if you review, sponsor a first-time female first author this cycle; if you chair or edit, move one
+  venue to double-blind. It is the one change here with causal evidence that it shifts the numbers.</li>
+</ol>
+
+<div class="references section-label" style="border-top:2px solid #15233b">References</div>
+<div class="references">
+<ol>
+  <li><b>Tran, D. et al.</b> <i>An Open Review of OpenReview: A Critical Analysis of the ML Conference Review
+    Process</i> (2020). <a href="https://arxiv.org/abs/2010.05137">arxiv.org/abs/2010.05137</a> <span class="tag">Tier 1</span></li>
+  <li><b>Nesta.</b> <i>Gender Diversity in AI Research</i> (2019). <a href="https://www.nesta.org.uk/report/gender-diversity-ai/">nesta.org.uk/report/gender-diversity-ai</a> <span class="tag">Tier 2</span></li>
+  <li><b>Mohammad, S.</b> <i>Gender Gap in Natural Language Processing Research: Disparities in Authorship and
+    Citations</i>, ACL 2020. <a href="https://aclanthology.org/2020.acl-main.702/">aclanthology.org/2020.acl-main.702</a> <span class="tag">Tier 1</span></li>
+  <li><b>Element AI.</b> <i>Global AI Talent Report 2019</i> (via secondary coverage).
+    <a href="https://techhq.com/2019/04/theres-a-global-ai-talent-shortage-and-a-lack-of-diversity/">techhq.com</a> <span class="tag">Tier 3</span></li>
+  <li><b>Computing Research Association.</b> <i>2023 Taulbee Survey</i> (2024).
+    <a href="https://cra.org/wp-content/uploads/2024/05/2023-CRA-Taulbee-Survey-Report.pdf">cra.org/…/2023-CRA-Taulbee-Survey-Report.pdf</a> <span class="tag">Tier 1</span></li>
+  <li><b>Computing Research Association.</b> <i>2024 Taulbee Survey</i> (data 2023–24).
+    <a href="https://datavisualization.cra.org/TaulbeeSurvey/CRA_Taulbee_Survey_Report_2024.html">datavisualization.cra.org/TaulbeeSurvey</a> <span class="tag">Tier 1</span></li>
+  <li><b>Stanford HAI.</b> <i>AI Index Report 2024 — Diversity (Ch. 8)</i> (2024).
+    <a href="https://hai.stanford.edu/ai-index/2024-ai-index-report/diversity">hai.stanford.edu/ai-index/2024-ai-index-report/diversity</a> <span class="tag">Tier 1</span></li>
+  <li><b>Stanford HAI.</b> <i>AI Index — Diversity ("Unmoving Needle")</i> (2021).
+    <a href="https://hai.stanford.edu/news/ai-index-diversity-report-unmoving-needle">hai.stanford.edu/news/ai-index-diversity-report-unmoving-needle</a> <span class="tag">Tier 2</span></li>
+  <li><b>Tomkins, A., Zhang, M. &amp; Heavlin, W.</b> <i>Reviewer bias in single- versus double-blind peer review</i>,
+    PNAS (2017). <a href="https://arxiv.org/abs/1702.00502">arxiv.org/abs/1702.00502</a> <span class="tag">Tier 1</span></li>
+  <li><b>Budden, A. et al.</b> <i>Double-blind review favours increased representation of female authors</i>, Trends
+    in Ecology &amp; Evolution (2008). <a href="https://pubmed.ncbi.nlm.nih.gov/17963996/">pubmed.ncbi.nlm.nih.gov/17963996</a> <span class="tag">Tier 1</span></li>
+  <li><b>World Economic Forum.</b> <i>Global Gender Gap Report 2025</i> (2025).
+    <a href="https://www.weforum.org/publications/global-gender-gap-report-2025/">weforum.org/publications/global-gender-gap-report-2025</a> <span class="tag">Tier 1</span></li>
+  <li><b>Zhao, F. et al.</b> <i>Voices of Her: Analyzing Gender Differences in the AI Publication World</i> (2023).
+    <a href="https://arxiv.org/abs/2305.14597">arxiv.org/abs/2305.14597</a> <span class="tag">Tier 2</span></li>
+</ol>
+</div>
+
+<div class="colophon">
+  WAI-Research · Week 9 · Standard rotation (row 7). Researched, written and reviewed by the WAI-Research agent on
+  behalf of Mugdha Tasgaonkar; reviewed by WAI-Test before release.
+  Next: <i>Women founders in AI startups: funding share</i> (rotation row 8). Source data:
+  <code>reports/2026-07-06_research-authorship.md</code>.
+</div>
+
+</body>
+</html>

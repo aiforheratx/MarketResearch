@@ -54,18 +54,19 @@ The agent will detect that it is being run manually, log it as `manual run` in `
 
 ## Schedule registration — REGISTERED
 
-A **cloud routine** is registered (Claude Code `schedule` skill / routines):
+**Three** cloud routines exist (Claude Code `schedule` skill / routines). As of **2026-07-05** the duplicate Monday full-run routine was disabled and the primary routine's topic was retargeted (see "Reconciliation log" below).
 
-| Field | Value |
-|---|---|
-| Name | WAI-Research weekly report |
-| Routine ID | `trig_01EzKTGxN4bMctLR9CM33ShB` |
-| Cron (UTC) | `0 14 * * 1` |
-| Local time | Mondays 09:00 **CDT** (summer) |
-| First run | 2026-07-06 09:00 CDT |
-| Repo | github.com/aiforheratx/MarketResearch |
-| Email | via **Gmail connector**, full distribution = all 4 Medtronic recipients |
-| Manage | https://claude.ai/code/routines/trig_01EzKTGxN4bMctLR9CM33ShB |
+| # | Name | Routine ID | Cron (UTC) | Local (CT) | Enabled | Role |
+|---|---|---|---|---|---|---|
+| 1 | WAI-Research weekly report | `trig_01EzKTGxN4bMctLR9CM33ShB` | `0 14 * * 1` | Mon 09:00 CDT | ✅ **yes** | **Primary** full pipeline: research → QA (WAI-Test) → email all 4 Medtronic recipients (Gmail connector) → commit. Model sonnet. |
+| 2 | WAI-Research — Friday report email | `trig_01Vy8jmfAwLnpMebzR8nxdtt` | `0 14 * * 5` | Fri 09:00 CDT | ✅ yes | Delivery-only: re-emails the latest existing report to Mugdha. Does NOT research or commit. Last fired 2026-07-03. |
+| 3 | wai-research-weekly | `trig_015fhf4YXQPGGAevxxminSiY` | `0 15 * * 1` | Mon 10:00 CDT | ⛔ **disabled 2026-07-05** | Legacy full pipeline (no white paper / PDF / QA / email; commit+push only, model opus-4-7). Disabled because it duplicated routine #1 an hour later. |
+
+Manage all: https://claude.ai/code/routines
+
+### Reconciliation log
+- **2026-07-05** — Two full-run Monday routines (#1 at 09:00, #3 at 10:00) were both firing each Monday, producing duplicate/conflicting Week-N reports and pushes. **Disabled routine #3** (the older, less complete one) so only routine #1 runs Mondays.
+- **2026-07-05** — Routine #1's prompt had hard-coded the next topic as **H2 "Gender bias inside medical AI."** Retargeted it to the **standard rotation row 7 — "Women in AI research: authorship of top-tier papers"** (slug `research-authorship`) per the owner's instruction; the featured healthcare track (H1) ran last week and resumes next month. Next run **2026-07-06 09:00 CDT** will produce Week 9 on this topic.
 
 ### Things to know about the cloud routine
 - **It runs in Anthropic's cloud against the GitHub repo**, not this local machine. For it to use the new pipeline (test agent, healthcare track, updated dashboards), the local changes must be **committed and pushed** to `aiforheratx/MarketResearch`.
