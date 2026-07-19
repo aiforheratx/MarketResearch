@@ -17,6 +17,7 @@ These complement (do not replace) the markdown reports in `../reports/`. Same ev
 | 8 ⭐ | 2026-06-29 | Women & AI in healthcare R&D: the state of representation | [md](../reports/2026-06-29_healthcare-rnd.md) | [white paper](./2026-06-29_healthcare-rnd.html) |
 | 9 | 2026-07-06 | Women & AI research: authorship of top-tier papers | [md](../reports/2026-07-06_research-authorship.md) | [white paper](./2026-07-06_research-authorship.html) |
 | 10 | 2026-07-13 | Women founders in AI startups: funding share | [md](../reports/2026-07-13_startup-funding.md) | [white paper](./2026-07-13_startup-funding.html) |
+| 11 | 2026-07-19 | Women in AI leadership at large tech companies | [md](../reports/2026-07-19_leadership-big-tech.md) | [white paper](./2026-07-19_leadership-big-tech.html) |
 
 ## Style
 

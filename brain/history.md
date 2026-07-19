@@ -26,6 +26,21 @@ Append a new entry at the **top** of this file after every weekly run. Use the f
 
 ## Entries (newest first)
 
+### 2026-07-19 — Week 11 — Women in AI leadership at large tech companies
+
+- Report: reports/2026-07-19_leadership-big-tech.md (+ whitepaper, + PDF)
+- Topic source: rotation row 9 (standard ISO-week rotation; confirmed as next by Week 10 colophon). Featured Healthcare R&D track (H2) last ran 2026-06-29 — within its 4-week window — so no override; H2 (gender bias inside medical AI) becomes eligible next week. **Manual/off-schedule run** — owner initiated this run on Sunday, a day ahead of the Monday 09:00 CST routine. Logged as owner-initiated.
+- Top 3 statistics found:
+  1. Women hold <14% of senior executive roles in AI (vs 22% of the AI workforce, ~29% at AI entry level) — Interface EU *AI's Missing Link* 2024 (Revelio Labs, ~1.6M AI professionals)
+  2. At 39 leading AI orgs, women are 30% of leadership overall but 10% of CEO/top-tech roles (4 CEOs, 4 CTOs); 86% of HR execs vs 22% of product/eng/science execs — Russell Reynolds *AI for All* 2025
+  3. Google, Meta, and Microsoft published no diversity report in 2025 — ending Google's 11-year women-in-leadership series at 32.8% (from 20.8% in 2014); women's share of new C-suite hires plateaued at ~27% since 2022 (WEF/LinkedIn 2026)
+- Sources cited: 21 (Tier 1: 3, Tier 2: 12, Tier 3: 6)
+- New sources added to sources.md: WEF *Closing the Gender Gap in Senior Leadership 2026*; Russell Reynolds *AI for All*; Google *2024 Diversity Annual Report*; Amazon *Our Workforce Data*; Apple *Inclusion & Diversity*; NVIDIA *Sustainability Report FY2025*; Intel *2023-24 CSR Report*; Meta *2022 Diversity Report*; illumyn Impact/Partners Project (via Crunchbase News); Spencer Stuart *2025 US Technology Board Index*; Altrata *Gender Diversity in Corporate America 2025*; Revelio Labs *Rise and Fall of DEI*; The Conference Board *Corporate Diversity Disclosure 2025*; Coqual *The Sponsor Dividend*; HR Brew diversity-report cessation coverage
+- WAI-Test review: **SHIP — 100%** (format 6/6, content 6/6, data 6/6); test/results/leadership-big-tech.json
+- Tracked metrics updated in dashboard/metrics.md: women in AI/technical executive leadership (new series); company-reported women-in-leadership by firm (new series); women's share of new C-suite/CEO/CTO hires (new series); women on AI-company boards vs public benchmarks (new series)
+- Notable gaps in evidence this week: Google/Meta/Microsoft stopped publishing diversity reports in 2025 (evidence base is shrinking); no frontier AI lab (OpenAI, Anthropic, DeepMind) has ever published workforce diversity data; no gender split exists for Chief AI Officers; "leadership" defined 7 incompatible ways across company reports; no race × gender cut in any AI-leadership dataset
+- Run health: OK
+
 ### 2026-07-13 — Week 10 — Women founders in AI startups: funding share
 
 - Report: reports/2026-07-13_startup-funding.md (+ whitepaper, + PDF)

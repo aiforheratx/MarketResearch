@@ -1,6 +1,6 @@
 # WAI-Research Dashboard
 
-*Last updated: 2026-07-13 — 9 reports filed (weeks 1–6 + Week 8 featured Healthcare R&D + Week 9 research authorship + Week 10 startup funding)*
+*Last updated: 2026-07-19 — 10 reports filed (weeks 1–6 + Week 8 featured Healthcare R&D + Week 9 research authorship + Week 10 startup funding + Week 11 AI leadership at big tech)*
 
 The agent overwrites this file at the end of every weekly run. It is the at-a-glance view of the knowledge base.
 
@@ -12,6 +12,12 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Metric | Latest value | Year | Source | Report |
 |---|---|---|---|---|
+| Women in senior executive AI roles | **<14%** (vs 22% of AI workforce) | 2024 | Interface EU (Revelio Labs) | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Women in CEO + top-tech roles at 39 leading AI orgs | **10%** (30% of leadership overall) | 2024 | Russell Reynolds AI for All | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Women among CTOs globally (lowest of 17 C-suite roles) | **8.6%** | 2025 | WEF / LinkedIn (Closing the Gender Gap 2026) | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Women's share of new C-suite hires (plateau since 2022) | **~27%** (CTO hires ~9%) | 2025 | WEF / LinkedIn | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Google women in leadership — final data point (no 2025 report) | **32.8%** (20.8% in 2014) | 2024 | Google 2024 DAR | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Board seats at private AI companies held by women | **15%** (43% of CA AI cos: zero) | 2025 | illumyn / Partners Project | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
 | Female-founded share of US VC deal value (≥1 female founder) | **27.7%** (record; $73.6B) | 2025 | PitchBook 2025 US All In | [Week 10](../reports/2026-07-13_startup-funding.md) |
 | US VC to **all-women** founding teams | **1%** (6% of deals) | 2024 | PitchBook 2024 US All In | [Week 10](../reports/2026-07-13_startup-funding.md) |
 | Female-founded VC dollars, ex-Anthropic + Scale AI | **$42.8B** (below 2021–22) | 2025 | PitchBook / Fortune | [Week 10](../reports/2026-07-13_startup-funding.md) |
@@ -58,7 +64,7 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Early career | 1 (partial) | 2026-06-01 | No 12-month AI-role retention split by gender |
 | Mid-career | 1 | 2026-06-15 | No AI-specific broken-rung number; technical-roles cut (52) not refreshed since 2021 |
 | Senior | 1 | 2026-07-06 | No venue-specific women's-authorship share for 2023–2025; AI Index dropped author-gender reporting |
-| Executive / founder | 2 | 2026-07-13 | No recurring AI-sector × gender funding series; "≥1 female founder" metric composition-sensitive; no health-AI/femtech funding cut |
+| Executive / founder | 3 | 2026-07-19 | Google/Meta/Microsoft stopped diversity reporting in 2025; no AI-lab or CAIO gender data; "leadership" defined 7 incompatible ways |
 | Re-entry | 0 | — | — |
 | All phases | 2 | 2026-06-08 | Pay gap, workforce representation |
 
@@ -103,6 +109,7 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 
 | Date | Week | Topic | Markdown | White paper |
 |---|---|---|---|---|
+| 2026-07-19 | 11 | Women in AI leadership at large tech companies | [md](../reports/2026-07-19_leadership-big-tech.md) | [white paper](../whitepapers/2026-07-19_leadership-big-tech.html) |
 | 2026-07-13 | 10 | Women founders in AI startups: funding share | [md](../reports/2026-07-13_startup-funding.md) | [white paper](../whitepapers/2026-07-13_startup-funding.html) |
 | 2026-07-06 | 9 | Women & AI research: authorship of top-tier papers | [md](../reports/2026-07-06_research-authorship.md) | [white paper](../whitepapers/2026-07-06_research-authorship.html) |
 | 2026-06-29 | 8 ⭐ | Women & AI in healthcare R&D: the state of representation | [md](../reports/2026-06-29_healthcare-rnd.md) | [white paper](../whitepapers/2026-06-29_healthcare-rnd.html) |
@@ -118,12 +125,12 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Source | Times cited (reports) | Tier |
 |---|---|---|
 | Stanford HAI — AI Index Report (2023/2024/2025) | 5 | 1 |
+| WEF (GGGR / Intelligent Age / Senior Leadership 2026) | 5 | 1 |
+| McKinsey/LeanIn Women in the Workplace (2021/2023/2024/2025) | 5 | 1 |
 | CRA Taulbee Survey (2022/2023/2024) | 4 | 1 |
-| WEF Global Gender Gap Report 2024 | 4 | 1 |
+| LinkedIn Economic Graph | 4 | 1 |
+| Interface EU — AI's Missing Link | 4 | 2 |
 | UNESCO Women for Ethical AI (2024) | 3 | 1 |
-| McKinsey/LeanIn Women in the Workplace (2021/2023/2024/2025) | 4 | 1 |
-| LinkedIn Economic Graph | 3 | 1 |
-| Interface EU — AI's Missing Link | 3 | 2 |
 | NSF NCSES Diversity and STEM | 3 | 1 |
 | NCES IPEDS Digest | 2 | 1 |
 | Eurostat | 2 | 1 |
@@ -147,6 +154,10 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | Sponsorship parity (vs. mentorship) | McKinsey/LeanIn finding | When women get equal career support, the promotion-ambition gap disappears entirely | [Week 6](../reports/2026-06-15_broken-rung.md) |
 | AnitaB.org Top Companies benchmark | AnitaB.org (paused 2024) | 7 consecutive years of rising tech-women hire share at participating firms | [Week 1](../reports/2026-05-11_workforce-representation.md) |
 | Double-blind peer review | WSDM 2017 experiment / PNAS 2017; Behavioral Ecology 2001; EvoLang 2016 | Removes prestige bias that penalizes women; single-blind favored famous authors ×1.63, top companies ×2.10, female authors ×0.78; journal switch raised female first-authorship | [Week 9](../reports/2026-07-06_research-authorship.md) |
+| Sponsorship (vs mentorship), measured | McKinsey/LeanIn 2025; Coqual Sponsor Dividend | 65% of sponsored employees promoted in 2 yrs vs 35% without; with sponsors, women promoted at same rate as men | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Promotion self-nomination nudges | Google People Ops (2014, company-reported) [dated] | Data-backed nudge emails closed women engineers' promotion-application gap to parity or above | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Public, dated leadership targets | Accenture (2017–2024) | Reached 48% women workforce / 30% women managing directors by FY2024 — targets met before Feb 2025 sunset | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
+| Compensation-linked diversity goals | Intel ($300M commitment) [dated] | US "full representation" hit 2 yrs early; women in leadership 17.7% (2015) → 20.7% (2018) | [Week 11](../reports/2026-07-19_leadership-big-tech.md) |
 
 ## What's missing — evidence gaps logged
 
@@ -176,6 +187,11 @@ The agent overwrites this file at the end of every weekly run. It is the at-a-gl
 | No venue-specific women's-authorship share for 2023–2025 (best data pre-2021) | Week 9 | Open — the field stopped publishing it |
 | Stanford AI Index dropped author-gender reporting after its 2024 edition | Week 9 | Open |
 | No gender × AI-specialty PhD cross-tab (the "~19–21%" figure is unverifiable) | Week 9 | Open — [methodology gap] |
+| Google, Meta, Microsoft stopped publishing diversity reports in 2025 — decade-long leadership series ended | Week 11 | Open — the evidence base is shrinking |
+| No frontier AI lab (OpenAI, Anthropic, DeepMind) has ever published workforce diversity data | Week 11 | Open |
+| No gender split exists for Chief AI Officers (Spencer Stuart tracks adoption, not demographics) | Week 11 | Open — [methodology gap] |
+| "Leadership" defined 7 incompatible ways across company reports; none isolates AI leadership | Week 11 | Open — [methodology gap] |
+| No race × gender cut in any AI-leadership dataset (Interface, Russell Reynolds don't disaggregate) | Week 11 | Open |
 
 ---
 

@@ -246,6 +246,43 @@ Row format: `| date_observed | value | year_of_value | source | report_file | no
 
 ---
 
+## Women in AI leadership at large tech companies (added Week 11)
+
+### % women in AI / technical executive leadership (independent measurements)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-19 | <14% | 2024 | Interface EU, AI's Missing Link (Revelio Labs) | reports/2026-07-19_leadership-big-tech.md | Senior executives within ~1.6M AI professionals; extends Week 1 series |
+| 2026-07-19 | 12.2% | 2024 | WEF Gender Parity in the Intelligent Age (LinkedIn) | reports/2026-07-19_leadership-big-tech.md | STEM C-suite (vs 24.4% STEM managers) |
+| 2026-07-19 | 10% | 2024 | Russell Reynolds AI for All | reports/2026-07-19_leadership-big-tech.md | CEO + top-tech roles at 39 AI orgs (30% of leadership overall; 22% of product/eng/science execs) |
+| 2026-07-19 | 8.6% | 2025 | WEF Closing the Gender Gap in Senior Leadership 2026 (LinkedIn) | reports/2026-07-19_leadership-big-tech.md | CTOs — lowest of 17 C-suite roles; CEOs 19.1%; C-suite excl. VP 24.6% |
+
+### Company-reported % women in leadership (self-defined bands; reporting status noted)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-19 | 36.7% | 2022 | Meta 2022 Diversity Report [dated] | reports/2026-07-19_leadership-big-tech.md | Director+; FINAL report — none since |
+| 2026-07-19 | 33% | 2024 | Apple Inclusion & Diversity | reports/2026-07-19_leadership-big-tech.md | All managers; still publishing |
+| 2026-07-19 | 32.8% | 2024 | Google 2024 DAR | reports/2026-07-19_leadership-big-tech.md | 20.8% in 2014; FINAL report — no 2025 edition |
+| 2026-07-19 | 29.0% | 2024 | Microsoft 2024 GDIR | reports/2026-07-19_leadership-big-tech.md | Executive band; only level to fall (-0.1pp); FINAL report |
+| 2026-07-19 | 26.3% | 2024 | Amazon Our Workforce Data | reports/2026-07-19_leadership-big-tech.md | Senior leaders L8+, global; 22.1% in 2020; still publishing |
+| 2026-07-19 | 19.0% | 2023 | Intel 2023-24 CSR Report | reports/2026-07-19_leadership-big-tech.md | Senior leadership = grade 10+; 2030 goal 25% |
+| 2026-07-19 | 13.5% | FY2025 | NVIDIA Sustainability Report FY2025 | reports/2026-07-19_leadership-big-tech.md | "Leaders" band; Managers 18.7%; workforce 21.2% |
+
+### Women's share of new executive hires (WEF / LinkedIn hiring flow)
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-19 | 20.2% | 2015 | WEF Closing the Gender Gap in Senior Leadership 2026 | reports/2026-07-19_leadership-big-tech.md | All C-suite hires, 41 economies |
+| 2026-07-19 | 26.6% | 2022 | WEF Closing the Gender Gap in Senior Leadership 2026 | reports/2026-07-19_leadership-big-tech.md | Peak of the growth phase |
+| 2026-07-19 | ~27% | 2025 | WEF Closing the Gender Gap in Senior Leadership 2026 | reports/2026-07-19_leadership-big-tech.md | Plateau since 2022; CEO hires 21.1%; CTO hires ~9% flat |
+
+### Women on boards — AI companies vs public benchmarks
+| Observed | Value | Year of value | Source | Report | Notes |
+|---|---|---|---|---|---|
+| 2026-07-19 | 15% | 2025 | illumyn Impact / Partners Project (Crunchbase News) | reports/2026-07-19_leadership-big-tech.md | Private AI companies (CA HQ); 43% have zero women directors |
+| 2026-07-19 | 33.7% | 2025 | Altrata | reports/2026-07-19_leadership-big-tech.md | S&P 500 board seats — first YoY decline in a decade |
+| 2026-07-19 | 34% | 2025 | Spencer Stuart US Technology Board Index | reports/2026-07-19_leadership-big-tech.md | Women's share of NEW tech-board seats, down from 39% (2024) |
+
+---
+
 ## Adding a new tracked metric
 
 When a weekly report introduces a number worth tracking over time:

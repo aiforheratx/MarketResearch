@@ -223,3 +223,36 @@ When a new credible source is discovered during a weekly run, append it here (no
 - Crunchbase News (Teare, G.) — *As Funding Fell, So Did the Number of New Female-Founded Unicorn Startups* (2025). Only 7 US female-founded unicorns across 2023–24 (5 of 7 AI-related) vs dozens in 2021. https://news.crunchbase.com/diversity/female-founded-unicorn-startups-ai-anthropic-zum/ — Tier 3
 
 **Data note (Week 10):** No recurring series measures the female-founded share of *AI-sector* funding specifically — it surfaces only in one-off analyses. The "≥1 female founder" metric is composition-sensitive: two 2025 mega-rounds (Anthropic, Scale AI) swing the US aggregate to a record 27.7% while access measures (all-female-team share, deal counts) regress. Health-AI/femtech gender-funding cut remains unbroken-out (closest anchor: Rock Health "women+ health" 6.6% of digital-health funding, from Week 8).
+
+---
+
+## Sources discovered and confirmed — Week 11 (2026-07-19, AI leadership at large tech companies)
+
+### Tier 1 — primary / institutional
+- **WEF, *Closing the Gender Gap in Senior Leadership* (June 2026)** — LinkedIn EGRI data, 39–41 economies; C-suite hires time series 2015–2025; CTO share 8.6%. https://reports.weforum.org/docs/WEF_Closing_the_Gender_Gap_in_Senior_Leadership_2026.pdf
+- **WEF, *Gender Parity in the Intelligent Age* (March 2025)** — LinkedIn EGRI; STEM C-suite 12.2% vs STEM managers 24.4%. https://reports.weforum.org/docs/WEF_Gender_Parity_in_the_Intelligent_Age_2025.pdf
+
+### Tier 2 — company-reported primary data (self-reported; final editions noted)
+- **Google, *2024 Diversity Annual Report*** — 11-year women-in-leadership series 20.8%→32.8% (2014–2024); FINAL edition, no 2025 report. https://static.googleusercontent.com/media/belonging.google/en//diversity-annual-report/2024/static/pdfs/google_2024_diversity_annual_report.pdf
+- **Microsoft, *2024 Global Diversity & Inclusion Report*** — Executive band 29.0% (only falling level); FINAL edition. https://blogs.microsoft.com/blog/2024/10/23/microsofts-2024-global-diversity-inclusion-report-our-most-global-transparent-report-yet/
+- **Meta, *2022 Diversity Report*** — 36.7% leadership (director+); FINAL edition (nothing since 2022) [dated]. https://about.fb.com/news/2022/07/metas-diversity-report-2022/
+- **Amazon, *Our Workforce Data*** — senior leaders (L8+) 26.3% global (2024); still publishing. https://www.aboutamazon.com/news/workplace/our-workforce-data
+- **Apple, *Inclusion & Diversity*** — leadership (all managers) 33% (Dec 2024); still publishing. https://www.apple.com/diversity/
+- **NVIDIA, *Sustainability Report FY2025*** — "Leaders" 13.5%, Managers 18.7%, workforce 21.2%. https://images.nvidia.com/aem-dam/Solutions/documents/NVIDIA-Sustainability-Report-Fiscal-Year-2025.pdf
+- **Intel, *2023-24 Corporate Responsibility Report*** — senior leadership (grade 10+) 19.0% (2023). https://csrreportbuilder.intel.com/pdfbuilder/pdfs/CSR-2023-24-Full-Report.pdf
+- **Spencer Stuart, *2025 U.S. Technology Board Index*** — women 34% of new tech-board seats (down from 39%). https://www.spencerstuart.com/-/media/2025/10/techbi/2025-us-technology-spencer-stuart-board-index.pdf
+- **Altrata, *Gender Diversity in Corporate America 2025*** — S&P 500 board share 33.7%, first decline in a decade. https://altrata.com/reports/gender-diversity-in-corporate-america-in-2025
+- **Revelio Labs, *The Rise and Fall of DEI in Corporate America* (2025)** — 2,600+ DEI-titled roles cut since 2023; women 71% of DEI incumbents. https://www.reveliolabs.com/news/social/the-rise-and-fall-of-dei-in-corporate-america/
+- **The Conference Board, *Corporate Diversity Disclosure 2025*** — S&P 500 women-in-management disclosure down 16%. https://www.conference-board.org/press/corporate-diversity-disclosure-2025
+- **Coqual, *The Sponsor Dividend* (2019)** — with sponsors, women promoted at the same rate as men [dated]. https://coqual.org/wp-content/uploads/2020/09/CoqualTheSponsorDividend_KeyFindingsCombined090720.pdf
+
+### Tier 3 — named industry research / coverage
+- **Russell Reynolds, *AI for All: The Case for More Women Leaders in AI* (Feb 2025)** — 426 executives at 39 AI orgs; 30% leadership / 10% CEO+top-tech; 86% HR vs 22% technical execs. https://www.russellreynolds.com/en/insights/articles/the-case-for-more-women-leaders-in-ai
+- **illumyn Impact / Partners Project via Crunchbase News (Oct 2025)** — 15% of private-AI board seats; 43% of CA private AI cos zero women directors. https://news.crunchbase.com/diversity/governing-ai-companies-california-partners-project-illumyn/
+- **HR Brew (Nov 2025)** — confirms Google/Meta/Microsoft published no 2025 diversity reports. https://www.hr-brew.com/stories/2025/11/19/some-tech-companies-abandon-diversity-reports-as-they-go-mum-on-dei
+- **ESG Dive / Reuters (Feb 2025)** — Accenture DEI-goal sunset; 48% women / 30% women MDs reached. https://www.esgdive.com/news/accenture-rolls-back-dei-goals-to-comply-with-trump-executive-orders/739958/
+
+### Negative findings worth remembering (do not cite the following)
+- "OpenAI 2024 DEI report / 16% women in technical roles" — unverifiable; no such report exists on any OpenAI property.
+- KORE1 "~22% of CAIO hires are women" — single staffing firm's own placements, sample undisclosed; anecdotal only.
+- Gitnux Google-leadership figures — contradicted by Google's primary PDF; avoid gitnux.org.
